@@ -1,0 +1,12 @@
+
+˜Scenario Outline: Unsuccessful sign up with invalid name                                               # src/test/resources/features/signup.feature:13
+h  Given User enter invalid "@Lakesh Sahu", valid "randomNewEmail2423@gmail.com" and valid "9868546793"
+#  When User clicks sign up button
+F  Then Error "Your name can contain only alphabets." should be shown
+"  And User should not be sign up
+
+–Scenario Outline: Unsuccessful sign up with invalid name                                             # src/test/resources/features/signup.feature:14
+f  Given User enter invalid "Raj$User", valid "randomNewEmailMe2123@gmail.com" and valid "1257465983"
+#  When User clicks sign up button
+F  Then Error "Your name can contain only alphabets." should be shown
+"  And User should not be sign up

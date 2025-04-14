@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testRunner.TestRunner" tests="2" skipped="0" failures="2" errors="0" timestamp="2025-04-13T18:05:07" hostname="LAKESH-LAPTOP" time="0.163">
+  <properties/>
+  <testcase name="runScenario[0](&quot;Unsuccessful sign up with invalid name&quot;, &quot;Sign Up Functionality&quot;)" classname="testRunner.TestRunner" time="0.125">
+    <failure message="io.cucumber.testng.UndefinedStepException: The step 'User enter invalid &quot;@Lakesh Sahu&quot;, valid &quot;randomNewEmail2423@gmail.com&quot; and valid &quot;9868546793&quot;' and 3 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;User enter invalid {string}, valid {string} and valid {string}&quot;)&#10;public void user_enter_invalid_valid_and_valid(String string, String string2, String string3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User clicks sign up button&quot;)&#10;public void user_clicks_sign_up_button() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Error {string} should be shown&quot;)&#10;public void error_should_be_shown(String string) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;User should not be sign up&quot;)&#10;public void user_should_not_be_sign_up() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.testng.UndefinedStepException">io.cucumber.testng.UndefinedStepException: The step 'User enter invalid &quot;@Lakesh Sahu&quot;, valid &quot;randomNewEmail2423@gmail.com&quot; and valid &quot;9868546793&quot;' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;User enter invalid {string}, valid {string} and valid {string}&quot;)
+public void user_enter_invalid_valid_and_valid(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;User clicks sign up button&quot;)
+public void user_clicks_sign_up_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Error {string} should be shown&quot;)
+public void error_should_be_shown(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;User should not be sign up&quot;)
+public void user_should_not_be_sign_up() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at app//io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at app//io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at app//io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:136)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at app//io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at app//io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at app//org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at app//org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at app//org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at app//org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at app//org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base@21.0.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base@21.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at app//org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base@21.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base@21.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base@21.0.1/java.lang.Thread.run(Thread.java:1583)
+</failure>
+  </testcase>
+  <testcase name="runScenario[1](&quot;Unsuccessful sign up with invalid name&quot;, &quot;Sign Up Functionality&quot;)" classname="testRunner.TestRunner" time="0.029">
+    <failure message="io.cucumber.testng.UndefinedStepException: The step 'User enter invalid &quot;Raj$User&quot;, valid &quot;randomNewEmailMe2123@gmail.com&quot; and valid &quot;1257465983&quot;' and 3 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;User enter invalid {string}, valid {string} and valid {string}&quot;)&#10;public void user_enter_invalid_valid_and_valid(String string, String string2, String string3) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User clicks sign up button&quot;)&#10;public void user_clicks_sign_up_button() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Error {string} should be shown&quot;)&#10;public void error_should_be_shown(String string) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;User should not be sign up&quot;)&#10;public void user_should_not_be_sign_up() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.testng.UndefinedStepException">io.cucumber.testng.UndefinedStepException: The step 'User enter invalid &quot;Raj$User&quot;, valid &quot;randomNewEmailMe2123@gmail.com&quot; and valid &quot;1257465983&quot;' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given(&quot;User enter invalid {string}, valid {string} and valid {string}&quot;)
+public void user_enter_invalid_valid_and_valid(String string, String string2, String string3) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When(&quot;User clicks sign up button&quot;)
+public void user_clicks_sign_up_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;Error {string} should be shown&quot;)
+public void error_should_be_shown(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then(&quot;User should not be sign up&quot;)
+public void user_should_not_be_sign_up() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at app//io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at app//io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at app//io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:136)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at app//io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at app//io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base@21.0.1/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base@21.0.1/java.lang.reflect.Method.invoke(Method.java:580)
+	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at app//org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at app//org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at app//org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at app//org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at app//org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base@21.0.1/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base@21.0.1/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at app//org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base@21.0.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base@21.0.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base@21.0.1/java.lang.Thread.run(Thread.java:1583)
+</failure>
+  </testcase>
+  <system-out><![CDATA[
+Scenario Outline: Unsuccessful sign up with invalid name                                               # src/test/resources/features/signup.feature:13
+  Given User enter invalid "@Lakesh Sahu", valid "randomNewEmail2423@gmail.com" and valid "9868546793"
+  When User clicks sign up button
+  Then Error "Your name can contain only alphabets." should be shown
+  And User should not be sign up
+
+Scenario Outline: Unsuccessful sign up with invalid name                                             # src/test/resources/features/signup.feature:14
+  Given User enter invalid "Raj$User", valid "randomNewEmailMe2123@gmail.com" and valid "1257465983"
+  When User clicks sign up button
+  Then Error "Your name can contain only alphabets." should be shown
+  And User should not be sign up
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
