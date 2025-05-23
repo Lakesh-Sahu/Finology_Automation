@@ -16,13 +16,14 @@ public class GoogleSignInPage extends CommonMethods {
     WebDriver driver;
     WebDriverWait wait;
     static Logger log = LogManager.getLogger(GoogleSignInPage.class);
-    private final String urlPart = "https://accounts.google.com/";
+    private final String urlPart;
 
     public GoogleSignInPage(WebDriver driver) {
         this.driver = driver;
         AjaxElementLocatorFactory ajax = new AjaxElementLocatorFactory(driver, 15);
         PageFactory.initElements(ajax, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        urlPart = "https://accounts.google.com/";
     }
 
     public boolean verifyOnGoogleSignInPage() {

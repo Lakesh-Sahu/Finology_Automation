@@ -27,35 +27,21 @@ public class LoginPage extends CommonMethods {
     @FindBy(xpath = "//label[text()='Enter Your Mobile Number']/following-sibling::input")
     private WebElement mobileNumberInputBox;
 
-    @FindBy(xpath = "//span[@id='mobile-error' and text()='Invalid Mobile']")
-    private WebElement invalidMobileNumberText;
-
     @FindBy(xpath = "//label[text()='Enter Your Mobile Number']/following-sibling::button")
-    private WebElement continueButton;
+    private WebElement continueBtn;
 
-    @FindBy(name = "password")
-    private WebElement passwordInputBox;
-
-    @FindBy(id = "btnLogin")
-    private WebElement loginBtn;
+    // After entering invalid mobile number and clicking continue button
+    @FindBy(id = "mobile-error")
+    private WebElement invalidOrRequiredMobileNumberText;
 
     @FindBy(partialLinkText = "Sign in with Google")
     private WebElement signInWithGoogleBtn;
 
-//    @FindBy(xpath = "//a[contains(., 'Sign in with Google')]")
-//    private WebElement signInWithGoogleBtn;
-
     @FindBy(linkText = "Login with Email")
     private WebElement loginWithEmailBtn;
 
-    @FindBy(name = "emailMobile")
-    private WebElement emailMobileInputBox;
-
     @FindBy(linkText = "Reset Password")
     private WebElement resetPasswordBtn;
-
-    @FindBy(linkText = "Back to Login")
-    private WebElement backToLoginBtn;
 
     // Error while Sign Up with already created account details
     @FindBy(xpath = "//p[normalize-space()='ERROR']/following-sibling::p")
@@ -64,17 +50,18 @@ public class LoginPage extends CommonMethods {
     @FindBy(xpath = "//p[normalize-space()='ERROR']/following-sibling::a")
     private WebElement alreadyAccountErrorMessageOkBtn;
 
-
     WebDriver driver;
     WebDriverWait wait;
     static Logger log = LogManager.getLogger(LoginPage.class);
-    private final String url = "https://www.finology.in/login?ReturnUrl=%2Faccount%2Fdashboard";
+    private final String url;
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         AjaxElementLocatorFactory ajax = new AjaxElementLocatorFactory(driver, 15);
         PageFactory.initElements(ajax, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//        url = "https://www.finology.in/login?ReturnUrl=%2Faccount%2Fdashboard";
+        url = "https://www.finology.in/login";
     }
 
     public boolean goToLoginPage() {
@@ -88,7 +75,7 @@ public class LoginPage extends CommonMethods {
 
     public boolean verifyOnLoginPage() {
         try {
-            return wait.until(ExpectedConditions.urlContains("https://www.finology.in/login"));
+            return wait.until(ExpectedConditions.urlMatches("https://www.finology.in/login(?!/auth)"));
         } catch (Exception e) {
             return false;
         }
@@ -104,35 +91,19 @@ public class LoginPage extends CommonMethods {
 
     public boolean clickContinueBtn() {
         try {
-            return click(driver, continueButton);
+            return click(driver, continueBtn);
         } catch (Exception e) {
             return false;
         }
     }
 
-    public boolean enterPassword(String password) {
-        try {
-            return sendKeys(passwordInputBox, password);
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public boolean clickLoginBtn() {
-        try {
-           return click(driver, loginBtn);
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    public boolean loginUsingMobileNumber(String number, String password) {
-        try {
-            return goToLoginPage() && verifyOnLoginPage() && enterMobileNumber(number) && clickContinueBtn() && enterPassword(password) && clickLoginBtn();
-        } catch (Exception e) {
-            return false;
-        }
-    }
+//    public boolean loginUsingMobileNumberAndEmail(String number, String emailOrMobileNumber, String password) {
+//        try {
+//            return goToLoginPage() && verifyOnLoginPage() && enterMobileNumber(number) && clickContinueBtn() && enterMobileNumberOrEmail(emailOrMobileNumber) && enterPassword(password) && clickLoginBtn();
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
 
     public boolean clickSignInWithGoogleBtn() {
         try {
@@ -144,58 +115,140 @@ public class LoginPage extends CommonMethods {
 
     public boolean clickLoginInWithEmailBtn() {
         try {
-           return click(driver, loginWithEmailBtn);
+            return click(driver, loginWithEmailBtn);
         } catch (Exception e) {
             return false;
         }
     }
 
-    public boolean enterEmailOrMobileNumber(String emailOrMobileNumber) {
+//    public boolean enterMobileNumberOrEmail(String emailOrMobileNumber) {
+//        try {
+//            return sendKeys(emailMobileInputBox, emailOrMobileNumber);
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
+
+//    public boolean loginUsingEmailOrMobileNumber(String emailOrMobileNumber, String password) {
+//        try {
+//            return goToLoginPage() && verifyOnLoginPage() && clickLoginInWithEmailBtn() && enterMobileNumberOrEmail(emailOrMobileNumber) && enterPassword(password) && clickLoginBtn();
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
+
+
+    public boolean verifyAllElementsAreDisplayed() {
         try {
-            return sendKeys(emailMobileInputBox, emailOrMobileNumber);
+            return finologyLogoIsDisplayed() && homeButtonIsDisplayed() && signUpBtnIsDisplayed() && mobileNumberInputBoxIsDisplayed() && continueBtnIsDisplayed() && signInWithGoogleBtnIsDisplayed() && loginWithEmailBtnIsDisplayed() && resetPasswordBtnIsDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
-    public boolean loginUsingEmailOrMobileNumber(String emailOrMobileNumber, String password) {
+    public String getAlreadyAccountErrorMessage() {
         try {
-            return goToLoginPage() && verifyOnLoginPage() && clickLoginInWithEmailBtn() && enterEmailOrMobileNumber(emailOrMobileNumber) && enterPassword(password) && clickLoginBtn();
+            return alreadyAccountErrorMessage.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public String getInvalidOrRequiredMobileNumberText() {
+        try {
+            return invalidOrRequiredMobileNumberText.getText();
+        } catch (Exception e) {
+            return "";
+        }
+    }
+
+    public boolean finologyLogoIsDisplayed() {
+        try {
+            return finologyLogo.isDisplayed();
         } catch (Exception e) {
             return false;
         }
     }
 
+    public boolean homeButtonIsDisplayed() {
+        try {
+            return homeBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    public boolean signUpBtnIsDisplayed() {
+        try {
+            return signUpBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    public boolean mobileNumberInputBoxIsDisplayed() {
+        try {
+            return mobileNumberInputBox.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    public boolean continueBtnIsDisplayed() {
+        try {
+            return continueBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    public boolean invalidOrRequiredMobileNumberTextIsDisplayed() {
+        try {
+            return invalidOrRequiredMobileNumberText.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    public boolean signInWithGoogleBtnIsDisplayed() {
+        try {
+            return signInWithGoogleBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    public boolean loginWithEmailBtnIsDisplayed() {
+        try {
+            return loginWithEmailBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    public boolean resetPasswordBtnIsDisplayed() {
+        try {
+            return resetPasswordBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
+    // Error while Sign Up with already created account details
 
+    public boolean alreadyAccountErrorMessageIsDisplayed() {
+        try {
+            return alreadyAccountErrorMessage.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    public boolean alreadyAccountErrorMessageOkBtnIsDisplayed() {
+        try {
+            return alreadyAccountErrorMessageOkBtn.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
 }

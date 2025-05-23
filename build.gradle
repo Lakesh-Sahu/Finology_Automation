@@ -45,9 +45,10 @@ test {
         // to get the step definition in the terminal
         exceptionFormat = 'full'
 
-        showStandardStreams = true
-
         // Optionally do:
         showStackTraces = true
     }
+
+    testLogging.showStandardStreams = true
+
 }

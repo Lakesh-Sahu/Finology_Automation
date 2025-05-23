@@ -43,6 +43,10 @@ public class HomePage extends CommonMethods {
     @FindBy(linkText = "Login")
     private WebElement loginBtn;
 
+    // After login
+    @FindBy(linkText = "Dashboard")
+    private WebElement dashboardBtn;
+
     @FindBy(xpath = "(//a[text()='View Plans'])[1]")
     private WebElement topViewPlansBtn;
 
@@ -125,6 +129,14 @@ public class HomePage extends CommonMethods {
         AjaxElementLocatorFactory ajax = new AjaxElementLocatorFactory(driver, 10);
         PageFactory.initElements(ajax, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    public boolean verifyOnHomePagePage() {
+        try {
+            return wait.until(ExpectedConditions.urlContains(url));
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     // Return the faq question WebElement
