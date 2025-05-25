@@ -1,0 +1,234 @@
+
+[INFO ] 2025-05-25 00:04:39.972 utils.listeners.TestListener 69 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 00:04:40.448 finology.stepDefns.Hooks 29 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 00:08:13.841 utils.listeners.TestListener 69 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 00:08:14.320 finology.stepDefns.Hooks 29 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 00:08:17.306 utils.listeners.TestListener 74 - ##### Test Cases Ended ##### [Test worker]
+
+[INFO ] 2025-05-25 00:08:57.222 utils.listeners.TestListener 69 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 00:08:57.682 finology.stepDefns.Hooks 29 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 00:13:40.580 utils.listeners.TestListener 69 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 00:13:41.041 finology.stepDefns.Hooks 29 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 00:58:15.800 utils.listeners.TestListener 70 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 00:58:16.309 finology.stepDefns.Hooks 31 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 01:13:51.849 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 01:13:52.327 finology.stepDefns.Hooks 31 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 01:25:55.874 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 01:25:56.301 finology.stepDefns.Hooks 31 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 11:29:08.951 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 11:29:09.537 finology.stepDefns.Hooks 31 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:30.515 openxml4j.opc.PackageRelationshipCollection 307 - Parsing relationship: /xl/_rels/workbook.xml.rels [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:30.526 openxml4j.opc.PackageRelationshipCollection 307 - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:30.528 openxml4j.opc.PackageRelationshipCollection 307 - Parsing relationship: /_rels/.rels [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.810 impl.common.XBeanDebug 199 - Loading type system org.apache.poi.schemas.ooxml.system.ooxml [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.816 impl.common.XBeanDebug 199 - Loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.818 impl.common.XBeanDebug 199 - Loading type system org.apache.xmlbeans.metadata.system.sXMLLANG [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.820 impl.common.XBeanDebug 199 - Loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.820 impl.common.XBeanDebug 199 - Loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.822 impl.common.XBeanDebug 237 - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLTOOLS [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.833 impl.common.XBeanDebug 209 - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLTOOLS [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.835 impl.common.XBeanDebug 237 - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.839 impl.common.XBeanDebug 209 - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLSCHEMA [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.841 impl.common.XBeanDebug 237 - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLLANG [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.841 impl.common.XBeanDebug 209 - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLLANG [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.843 impl.common.XBeanDebug 237 - Reading unresolved handles for type system org.apache.xmlbeans.metadata.system.sXMLCONFIG [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.846 impl.common.XBeanDebug 209 - Finished loading type system org.apache.xmlbeans.metadata.system.sXMLCONFIG [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.846 impl.common.XBeanDebug 237 - Reading unresolved handles for type system org.apache.poi.schemas.ooxml.system.ooxml [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.902 impl.common.XBeanDebug 209 - Finished loading type system org.apache.poi.schemas.ooxml.system.ooxml [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.902 impl.common.XBeanDebug 946 - Resolving type for handle themefd26doctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.960 impl.common.XBeanDebug 946 - Resolving type for handle stylesheet5d8bdoctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.980 impl.common.XBeanDebug 946 - Resolving type for handle ctstylesheet4257type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.988 impl.common.XBeanDebug 946 - Resolving type for handle ctnumfmtsb58btype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.991 impl.common.XBeanDebug 946 - Resolving type for handle ctfonts6623type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.991 impl.common.XBeanDebug 946 - Resolving type for handle ctfont14d8type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:30.991 impl.common.XBeanDebug 946 - Resolving type for handle ctfills2c6ftype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.009 impl.common.XBeanDebug 946 - Resolving type for handle ctfill550ctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.011 impl.common.XBeanDebug 946 - Resolving type for handle ctborders0d66type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.011 impl.common.XBeanDebug 946 - Resolving type for handle ctborderf935type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.011 impl.common.XBeanDebug 946 - Resolving type for handle ctcellxfs1322type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.023 impl.common.XBeanDebug 946 - Resolving type for handle ctxf97f7type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.023 impl.common.XBeanDebug 946 - Resolving type for handle ctcellstylexfsa81ftype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.033 impl.common.XBeanDebug 946 - Resolving type for handle ctdxfsb26atype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.038 impl.common.XBeanDebug 946 - Resolving type for handle cttablestyles872ftype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.046 impl.common.XBeanDebug 946 - Resolving type for handle sstf81fdoctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.050 impl.common.XBeanDebug 946 - Resolving type for handle ctsst44f3type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.060 impl.common.XBeanDebug 946 - Resolving type for handle ctrsta472type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.088 impl.common.XBeanDebug 946 - Resolving type for handle workbookec17doctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.095 impl.common.XBeanDebug 946 - Resolving type for handle ctworkbook83c3type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.097 impl.common.XBeanDebug 946 - Resolving type for handle ctsheets49fdtype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.102 impl.common.XBeanDebug 946 - Resolving type for handle ctsheet4dbetype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.102 impl.common.XBeanDebug 946 - Resolving type for handle strelationshipid1e94type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.110 impl.common.XBeanDebug 946 - Resolving type for handle worksheetf539doctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.120 impl.common.XBeanDebug 946 - Resolving type for handle ctworksheet530dtype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.134 impl.common.XBeanDebug 946 - Resolving type for handle ctcols627ctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.139 impl.common.XBeanDebug 946 - Resolving type for handle ctcola95ftype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.156 impl.common.XBeanDebug 946 - Resolving type for handle ctsheetdata8408type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.160 impl.common.XBeanDebug 946 - Resolving type for handle ctrowdd39type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.167 impl.common.XBeanDebug 946 - Resolving type for handle ctcell842btype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.182 impl.common.XBeanDebug 946 - Resolving type for handle stcellrefe4e0type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.190 impl.common.XBeanDebug 946 - Resolving type for handle cthyperlinks6416type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.195 impl.common.XBeanDebug 946 - Resolving type for handle cthyperlink0c85type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.223 impl.common.XBeanDebug 946 - Resolving type for handle stxstringf179type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.231 impl.common.XBeanDebug 946 - Resolving type for handle stcelltypebf95type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.238 impl.common.XBeanDebug 946 - Resolving type for handle stcellstylexfid70c7type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.250 impl.common.XBeanDebug 946 - Resolving type for handle ctsheetdimensiond310type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.255 impl.common.XBeanDebug 946 - Resolving type for handle stref90a2type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.278 impl.common.XBeanDebug 946 - Resolving type for handle propertiesee84doctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.283 impl.common.XBeanDebug 946 - Resolving type for handle ctproperties3f10type [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.288 impl.common.XBeanDebug 946 - Resolving type for handle properties288cdoctype [TestNG-test-Test case execution on Chrome browser-1]
+
+[TRACE] 2025-05-25 11:29:31.291 impl.common.XBeanDebug 946 - Resolving type for handle ctproperties2c18type [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.300 openxml4j.opc.ZipPackage 673 - Save content types part [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.388 openxml4j.opc.ZipPackage 680 - Save package relationships [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.392 openxml4j.opc.ZipPackage 697 - Save part 'docProps/app.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.392 openxml4j.opc.ZipPackage 697 - Save part 'docProps/core.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.395 openxml4j.opc.ZipPackage 697 - Save part 'xl/sharedStrings.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.395 openxml4j.opc.ZipPackage 697 - Save part 'xl/styles.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.395 openxml4j.opc.ZipPackage 697 - Save part 'xl/theme/theme1.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.395 openxml4j.opc.ZipPackage 697 - Save part 'xl/workbook.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.395 openxml4j.opc.ZipPackage 697 - Save part 'xl/worksheets/sheet1.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.406 openxml4j.opc.ZipPackage 697 - Save part 'xl/worksheets/sheet2.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.406 openxml4j.opc.ZipPackage 697 - Save part 'xl/worksheets/sheet3.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[DEBUG] 2025-05-25 11:29:31.406 openxml4j.opc.ZipPackage 697 - Save part 'xl/worksheets/sheet4.xml' [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 11:30:41.331 utils.listeners.TestListener 79 - ##### Test Cases Ended ##### [Test worker]
+
+[INFO ] 2025-05-25 12:03:30.245 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 12:04:04.101 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 12:04:04.574 finology.stepDefns.Hooks 31 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 12:05:43.953 utils.listeners.TestListener 79 - ##### Test Cases Ended ##### [Test worker]
+
+[INFO ] 2025-05-25 12:21:54.410 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 12:21:54.895 finology.stepDefns.Hooks 31 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 12:24:28.977 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 12:24:29.415 finology.stepDefns.Hooks 31 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 12:26:19.016 utils.listeners.TestListener 79 - ##### Test Cases Ended ##### [Test worker]
+
+[INFO ] 2025-05-25 12:28:06.114 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 12:28:06.562 finology.stepDefns.Hooks 31 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 12:28:54.628 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 12:28:55.060 finology.stepDefns.Hooks 27 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 12:30:32.882 utils.listeners.TestListener 79 - ##### Test Cases Ended ##### [Test worker]
+
+[INFO ] 2025-05-25 12:31:16.523 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 12:31:16.984 finology.stepDefns.Hooks 27 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 12:32:52.074 utils.listeners.TestListener 79 - ##### Test Cases Ended ##### [Test worker]
+
+[INFO ] 2025-05-25 18:25:46.230 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 18:25:46.709 finology.stepDefns.Hooks 27 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 18:27:19.920 utils.listeners.TestListener 79 - ##### Test Cases Ended ##### [Test worker]
+
+[INFO ] 2025-05-25 20:36:17.549 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 20:36:18.055 finology.stepDefns.Hooks 27 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 21:44:51.601 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 21:44:52.125 finology.stepDefns.Hooks 27 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+
+[INFO ] 2025-05-25 21:47:33.597 utils.listeners.TestListener 79 - ##### Test Cases Ended ##### [Test worker]
+
+[INFO ] 2025-05-25 21:57:54.734 utils.listeners.TestListener 74 - ##### Test Cases Started ##### [Test worker]
+
+[INFO ] 2025-05-25 21:57:55.176 finology.stepDefns.Hooks 27 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]

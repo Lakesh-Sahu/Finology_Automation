@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">2</div>
+<div class="counter">7</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">27.567s</div>
+<div class="counter">10m13.40s</div>
 <p>duration</p>
 </div>
 </td>
@@ -66,6 +66,9 @@
 <li>
 <a href="#tab1">Standard output</a>
 </li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -78,13 +81,38 @@
 </tr>
 </thead>
 <tr>
-<td class="success">runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)</td>
-<td class="success">15.067s</td>
+<td class="success">runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)</td>
+<td class="success">2m37.91s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">runScenario[1](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)</td>
-<td class="success">12.500s</td>
+<td class="success">runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)</td>
+<td class="success">2m9.85s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)</td>
+<td class="success">1m12.64s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)</td>
+<td class="success">1m23.42s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)</td>
+<td class="success">54.982s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)</td>
+<td class="success">55.058s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">runScenario[0](&quot;Unsuccessful login with new mobile number&quot;, &quot;Unknown&quot;)</td>
+<td class="success">59.545s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -93,27 +121,230 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-@login @successful_login
-Scenario Outline: Successful login with registered mobile number, email and password                              # src/test/resources/features/login.feature:39
-  Given User is on new login page                                                                                 # stepDefns.Login_Steps.user_is_on_new_login_page()
-  Given User enter &quot;5846975120&quot; in mobile number input box                                                        # stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
-  When User clicks Continue button                                                                                # stepDefns.Login_Steps.user_clicks_continue_button()
-  Then User should be redirected to Login Auth Page                                                               # stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
-  And User enter &quot;5846975120&quot; in the mobile or email input box and &quot;finTestUserAcology&quot; in the password input box # stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-  And User clicks login button                                                                                    # stepDefns.LoginAuth_Steps.user_clicks_login_button()
-  And User should be redirected to account dashboard page                                                         # stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
-  And User should perform logout from account dashboard page                                                      # stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+[INFO ] 2025-05-25 21:44:52.125 finology.stepDefns.Hooks 27 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+########### inside Hooks beforeAll browser name : Chrome
+############ inside testRunner
+
+@login @unsuccessful_login
+Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:17
+
+@login @unsuccessful_login
+Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:18
 
 @login @successful_login
 Scenario Outline: Successful login with registered mobile number, email and password                                           # src/test/resources/features/login.feature:40
-  Given User is on new login page                                                                                              # stepDefns.Login_Steps.user_is_on_new_login_page()
-  Given User enter &quot;5846975120&quot; in mobile number input box                                                                     # stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
-  When User clicks Continue button                                                                                             # stepDefns.Login_Steps.user_clicks_continue_button()
-  Then User should be redirected to Login Auth Page                                                                            # stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
-  And User enter &quot;testuserac121@gmail.com&quot; in the mobile or email input box and &quot;finTestUserAcology&quot; in the password input box # stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-  And User clicks login button                                                                                                 # stepDefns.LoginAuth_Steps.user_clicks_login_button()
-  And User should be redirected to account dashboard page                                                                      # stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
-  And User should perform logout from account dashboard page                                                                   # stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+
+@login @successful_login2
+Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button       # src/test/resources/features/login.feature:56
+
+@login @successful_login
+Scenario Outline: Successful login with registered mobile number, email and password                              # src/test/resources/features/login.feature:39
+
+@login @unsuccessful_login_with_new_mobile
+Scenario: Unsuccessful login with new mobile number                          # src/test/resources/features/login.feature:21
+
+@login @successful_login2
+Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button # src/test/resources/features/login.feature:55
+####### inside Hooks before
+####### inside Hooks before
+browser : Chrome
+browser : Chrome
+####### inside Hooks before
+browser : Chrome
+####### inside Hooks before
+browser : Chrome
+####### inside Hooks before
+browser : Chrome
+####### inside Hooks before
+browser : Chrome
+####### inside Hooks before
+browser : Chrome
+isDriverNull : false
+isDriverNull : false
+isDriverNull : false
+########### inside beforeStep
+########### inside beforeStep
+########### inside beforeStep
+isDriverNull : false
+########### inside beforeStep
+isDriverNull : false
+########### inside beforeStep
+isDriverNull : false
+########### inside beforeStep
+isDriverNull : false
+########### inside beforeStep
+  Given User is on new login page                                                                                 # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new login page                                                                                              # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new login page                                                                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new login page                                                                                              # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User should be on login page                                                                                     # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new login page                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User should be on login page                                                                                           # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new login page                                            # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new login page                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User enter &quot;5846975120&quot; in mobile number input box                                                        # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Given User enter &quot;5846975120&quot; in mobile number input box                                                                     # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Given User enter &quot;@$#637*&quot; in mobile number input box                  # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Given User enter &quot;&quot; in mobile number input box                         # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks Login with Email button                                                                                     # in.finology.stepDefns.Login_Steps.user_clicks_login_with_email_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to Login Auth Page                                                                            # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+########### inside afterStep
+########### inside beforeStep
+  When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Given Generate new mobile number and User enter in mobile number input box # in.finology.stepDefns.Login_Steps.generate_new_mobile_number_and_user_enter_in_mobile_number_input_box()
+########### inside afterStep
+  When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside beforeStep
+########### inside afterStep
+########### inside beforeStep
+  Then Invalid mobile or required error &quot;Invalid Mobile&quot; should be shown # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Then Invalid mobile or required error &quot;*Required&quot; should be shown      # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+########### inside afterStep
+########### inside Hooks after
+  And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+########### inside afterStep
+########### inside Hooks after
+  When User clicks Login with Email button                                                                               # in.finology.stepDefns.Login_Steps.user_clicks_login_with_email_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to Login Auth Page                                                                      # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+########### inside afterStep
+########### inside beforeStep
+########### inside TestListener onTestSuccess
+inside catch of Hooks before
+########### inside TestListener onTestSuccess
+inside catch of Hooks before
+  When User clicks Continue button                                                                                # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to Login Auth Page                                                               # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+########### inside afterStep
+########### inside beforeStep
+  And User enter &quot;testuserac121@gmail.com&quot; in the mobile or email input box and &quot;finTestUserAcology&quot; in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User clicks login button                                                                                                 # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
+########### inside afterStep
+########### inside beforeStep
+  And User enter &quot;5846975120&quot; in the mobile or email input box and &quot;finTestUserAcology&quot; in the password input box        # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User enter &quot;5846975120&quot; in the mobile or email input box and &quot;finTestUserAcology&quot; in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks Continue button                                                                                             # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to Login Auth Page                                                                            # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+########### inside afterStep
+########### inside beforeStep
+  And User clicks login button                                                                                           # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
+########### inside afterStep
+########### inside beforeStep
+  And User clicks login button                                                                                    # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
+########### inside afterStep
+########### inside beforeStep
+  When User clicks Continue button                                           # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to sign up page                             # in.finology.stepDefns.SignUp_Steps.user_should_be_redirected_to_sign_up_page()
+########### inside afterStep
+########### inside Hooks after
+########### inside TestListener onTestSuccess
+inside catch of Hooks before
+  And User enter &quot;testuserac121@gmail.com&quot; in the mobile or email input box and &quot;finTestUserAcology&quot; in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User should be redirected to account dashboard page                                                         # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+########### inside afterStep
+########### inside beforeStep
+  And User clicks login button                                                                                                 # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
+########### inside afterStep
+########### inside beforeStep
+  And User should be redirected to account dashboard page                                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+########### inside afterStep
+########### inside beforeStep
+  And User should be redirected to account dashboard page                                                                # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+########### inside afterStep
+########### inside beforeStep
+  And User should be redirected to account dashboard page                                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+########### inside afterStep
+########### inside beforeStep
+  And User should perform logout from account dashboard page                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+########### inside afterStep
+########### inside Hooks after
+########### inside TestListener onTestSuccess
+inside catch of Hooks before
+  And User should perform logout from account dashboard page                                                                   # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+########### inside afterStep
+########### inside Hooks after
+########### inside TestListener onTestSuccess
+inside catch of Hooks before
+  And User should perform logout from account dashboard page                                                             # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+########### inside afterStep
+########### inside Hooks after
+########### inside TestListener onTestSuccess
+inside catch of Hooks before
+  And User should perform logout from account dashboard page                                                                   # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+########### inside afterStep
+########### inside Hooks after
+########### inside TestListener onTestSuccess
+inside catch of Hooks before
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+May 25, 2025 9:45:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
 </pre>
 </span>
 </div>
@@ -125,7 +356,7 @@ Scenario Outline: Successful login with registered mobile number, email and pass
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 07-May-2025, 11:23:42 pm</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 25-May-2025, 9:47:33 pm</p>
 </div>
 </div>
 </body>

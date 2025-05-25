@@ -1,21 +1,16 @@
 package testCases;
 
-import com.CommonMethods;
-import com.pages.*;
-import driverFactory.DriverFactory;
-import org.openqa.selenium.By;
+import in.finology.utils.CommonMethods;
+import in.finology.utils.driverFactory.DriverFactory;
+import in.finology.pages.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 
 public class TestCase01 extends CommonMethods {
@@ -81,7 +76,7 @@ public class TestCase01 extends CommonMethods {
         mobileNumber = sc.nextLine();
 
 
-        this.driver = DriverFactory.getDriver("Chrome");
+        this.driver = (new DriverFactory()).getDriver("Chrome");
         AjaxElementLocatorFactory ajax = new AjaxElementLocatorFactory(driver, 10);
         PageFactory.initElements(ajax, this);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));

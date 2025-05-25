@@ -7,9 +7,8 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(features = {"src/test/resources/features/"},
-        glue = {"stepDefns"}, monochrome = true,
+        glue = {"in.finology.stepDefns"}, monochrome = true,
         dryRun = false,
-        tags = "@successful_login",
         plugin = {"pretty", "html:reports/html/testReport.html", "json:reports/json/testReport.json"}, publish = true)
 public class TestRunner extends AbstractTestNGCucumberTests {
 
@@ -17,6 +16,7 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     @Test
     @DataProvider(parallel = false)
     public Object[][] scenarios() {
+        System.out.println("############ " + "inside testRunner");
         return super.scenarios();
     }
 }

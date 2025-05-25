@@ -25,8 +25,12 @@ dependencies {
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
     implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.22.0'
 
+
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
     implementation group: 'io.cucumber', name: 'cucumber-testng', version: '7.22.0'
+
+    // https://mvnrepository.com/artifact/com.aventstack/extentreports
+    implementation group: 'com.aventstack', name: 'extentreports', version: '5.1.2'
 
     // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.24.3'
@@ -40,6 +44,16 @@ test {
         suites "src/test/resources/testng.xml"
     }
 
+    afterSuite { desc, result ->
+        if (!desc.parent) {
+            println "\nTEST RESULT: ${result.resultType}"
+            println "TEST SUMMARY: RAN ${result.testCount} TESTS, " +
+                    "${result.successfulTestCount} SUCCEEDED, " +
+                    "${result.failedTestCount} FAILED, " +
+                    "${result.skippedTestCount} SKIPPED"
+        }
+    }
+
     testLogging {
         events "PASSED", "SKIPPED", "FAILED", "STANDARD_OUT", "STANDARD_ERROR"
         // to get the step definition in the terminal
@@ -50,5 +64,5 @@ test {
     }
 
     testLogging.showStandardStreams = true
-
+    test.outputs.upToDateWhen { false }
 }
