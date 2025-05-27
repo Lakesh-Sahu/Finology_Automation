@@ -7,8 +7,10 @@ import org.openqa.selenium.WebDriver;
 // This class is used to create the Object of classes per thread for parallel execution
 public class ObjectCreator extends Base{
     private final WebDriver driver;
-    private final String className;
-    private final String methodName;
+    private final String scenarioName;
+    private final String scenarioLine;
+    private final String featureURI;
+    private final String scenarioTags;
 
     public AccountDashboardPage accountDashboardPage;
     public AccountSubscriptionPage accountSubscriptionPage;
@@ -21,10 +23,12 @@ public class ObjectCreator extends Base{
     public CommonMethods cm;
     public ExtentTest test;
 
-    public ObjectCreator(WebDriver driver, String className, String methodName, String description) {
+    public ObjectCreator(WebDriver driver, String featureURI, String scenarioName, String scenarioLine, String scenarioTags) {
         this.driver = driver;
-        this.className = className;
-        this.methodName = methodName;
+        this.featureURI = featureURI;
+        this.scenarioName = scenarioName;
+        this.scenarioLine = scenarioLine;
+        this.scenarioTags = scenarioTags;
 
         accountDashboardPage = new AccountDashboardPage(driver);
         accountSubscriptionPage = new AccountSubscriptionPage(driver);
@@ -36,18 +40,26 @@ public class ObjectCreator extends Base{
         signUpPage = new SignUpPage(driver);
         cm = new CommonMethods();
 
-        test = reports.createTest(className + " " + methodName + " " + description);
+        test = reports.createTest(featureURI + " " + scenarioName + " " + scenarioLine + " " + scenarioTags);
     }
 
     public WebDriver getDriver() {
         return driver;
     }
 
-    public String getClassNameByUser() {
-        return className;
+    public String getScenarioNameByUser() {
+        return scenarioName;
     }
 
-    public String getMethodNameByUser() {
-        return methodName;
+    public String getScenarioLineByUser() {
+        return scenarioLine;
+    }
+
+    public String getScenarioURIByUser() {
+        return featureURI;
+    }
+
+    public String getScenarioTagsByUser() {
+        return scenarioTags;
     }
 }

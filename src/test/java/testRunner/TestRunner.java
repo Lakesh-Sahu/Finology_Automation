@@ -14,9 +14,10 @@ public class TestRunner extends AbstractTestNGCucumberTests {
 
     @Override
     @Test
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
         System.out.println("############ " + "inside testRunner");
+        System.out.println("#####@@@@@@@@@@@@ Inside TestRunner Thread ID: " + Thread.currentThread().threadId());
         return super.scenarios();
     }
 }

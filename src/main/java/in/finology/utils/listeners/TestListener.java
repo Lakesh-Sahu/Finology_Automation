@@ -27,15 +27,40 @@ public class TestListener extends Base implements ITestListener {
 //        WebDriver driver = DriverFactory.getDriver(browserName);
 //        System.out.println("isDriverNull : " + (driver == null));
 //        ContextManager.init(driver, className, methodName, description);
+
+
+        System.out.println("########### " + "inside TestListener onTestStart");
+        try {
+            System.out.println("result getTestClass : " + result.getTestClass());
+            System.out.println("result getTestName : " + result.getTestName());
+            System.out.println("result getName : " + result.getName());
+            System.out.println("result getStatus : " + result.getStatus());
+            System.out.println("result isNotRunning : " + result.isNotRunning());
+            System.out.println("result isSuccess : " + result.isSuccess());
+        } catch (Exception e) {
+            System.out.println("########### " + "inside catch block of TestListener onTestStart");
+        }
     }
 
     public void onTestSuccess(ITestResult result) {
         try {
-        System.out.println("########### " + "inside TestListener onTestSuccess");
+            System.out.println("########### " + "inside TestListener onTestSuccess");
 
-        String callerInfo = getCallerInfoFromITestResult(result, "PASSED");
+            try {
+                System.out.println("result getTestClass : " + result.getTestClass());
+                System.out.println("result getTestName : " + result.getTestName());
+                System.out.println("result getName : " + result.getName());
+                System.out.println("result getStatus : " + result.getStatus());
+                System.out.println("result isNotRunning : " + result.isNotRunning());
+                System.out.println("result isSuccess : " + result.isSuccess());
+            } catch (Exception e) {
+                System.out.println("########### " + "inside catch block of TestListener onTestSuccess");
+            }
 
-        ObjectManager.getObject().test.pass(callerInfo, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo)).build());
+
+            String callerInfo = getCallerInfoFromITestResult(result, "PASSED");
+
+            ObjectManager.getObject().test.pass(callerInfo, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo)).build());
         } catch (Exception e) {
             System.out.println("inside catch of Hooks before");
         }
@@ -44,10 +69,30 @@ public class TestListener extends Base implements ITestListener {
     public void onTestFailure(ITestResult result) {
         System.out.println("########### " + "inside TestListener onTestFailure");
 
-        String callerInfo = getCallerInfoFromITestResult(result, "FAILED");
-        String throwableCallerInfoMessage = "Error occurred : " + getThrowableCallerInfoMessageFromITestResult(result, "FAILED");
 
-        ObjectManager.getObject().test.fail(throwableCallerInfoMessage, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo)).build());
+            try {
+                System.out.println("result getTestClass : " + result.getTestClass());
+                System.out.println("result getTestName : " + result.getTestName());
+                System.out.println("result getName : " + result.getName());
+                System.out.println("result getStatus : " + result.getStatus());
+                System.out.println("result isNotRunning : " + result.isNotRunning());
+                System.out.println("result isSuccess : " + result.isSuccess());
+            } catch (Exception e) {
+                System.out.println("########### " + "inside catch block of TestListener onTestFailure");
+            }
+
+//        String callerInfo = getCallerInfoFromITestResult(result, "FAILED");
+//        String throwableCallerInfoMessage = "Error occurred : " + getThrowableCallerInfoMessageFromITestResult(result, "FAILED");
+
+        System.out.println("###$$$");
+
+        String throwableCallerInfoMessage = "To be implemented";
+        String callerInfo = "To be implemented soon";
+
+        // TODO : Failing, migrated to Hooks afterScenario
+//        ObjectManager.getObject().test.fail(throwableCallerInfoMessage, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo)).build());
+
+        System.out.println("###");
 
         logResultInLog(result, "FAILED");
     }
@@ -56,11 +101,10 @@ public class TestListener extends Base implements ITestListener {
         try {
             System.out.println("########### " + "inside TestListener onTestSkipped");
 
-            String callerInfo = getCallerInfoFromITestResult(result, "SKIPPED");
-            String throwableCallerInfoMessage = "Error occurred : " + getThrowableCallerInfoMessageFromITestResult(result, "SKIPPED");
+//            String callerInfo = getCallerInfoFromITestResult(result, "SKIPPED");
+//            String throwableCallerInfoMessage = "Error occurred : " + getThrowableCallerInfoMessageFromITestResult(result, "SKIPPED");
 
-            ObjectManager.getObject().test.skip(throwableCallerInfoMessage, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo)).build());
-
+//            ObjectManager.getObject().test.skip(throwableCallerInfoMessage, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo)).build());
             logResultInLog(result, "SKIPPED");
         } catch (Exception e) {
             System.out.println("##### Unable to call the getCallerInfo for the extent report #####");

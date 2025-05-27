@@ -27,8 +27,38 @@ public class Screenshot extends Base {
                 return relativePath;
             }
         } catch (Exception e) {
-            ObjectManager.getObject().test.warning(getCallerInfoFromStackTrace(e.getStackTrace()) + " Taking screenshot : Fail : " + getMessageFromException(e));
-            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), "Taking screenshot : Fail", e, Level.WARN);
+            ObjectManager.getObject().test.warning(getCallerInfoFromStackTrace(e.getStackTrace()) + " callerInfo : " + callerInfo + " : Taking screenshot at capture : Fail : " + getMessageFromException(e));
+            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), " callerInfo : " + callerInfo + " : Taking screenshot at capture : Fail : " + getMessageFromException(e), e, Level.WARN);
+        }
+        return "";
+    }
+
+    public static byte[] captureAsBYTE(String callerInfo) {
+        try {
+            WebDriver driver = ObjectManager.getObject().getDriver();
+
+            if (driver != null) {
+                TakesScreenshot scrShot = ((TakesScreenshot) driver);
+                return scrShot.getScreenshotAs(OutputType.BYTES);
+            }
+        } catch (Exception e) {
+            ObjectManager.getObject().test.warning(getCallerInfoFromStackTrace(e.getStackTrace()) + " callerInfo : " + callerInfo + " : Taking screenshot at captureAsBYTE : Fail : " + getMessageFromException(e));
+            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), " callerInfo : " + callerInfo + " : Taking screenshot at captureAsBYTE : Fail : " + getMessageFromException(e), e, Level.WARN);
+        }
+        return new byte[]{};
+    }
+
+    public static String captureAsBASE64(String callerInfo) {
+        try {
+            WebDriver driver = ObjectManager.getObject().getDriver();
+
+            if (driver != null) {
+                TakesScreenshot scrShot = ((TakesScreenshot) driver);
+                return scrShot.getScreenshotAs(OutputType.BASE64);
+            }
+        } catch (Exception e) {
+            ObjectManager.getObject().test.warning(getCallerInfoFromStackTrace(e.getStackTrace()) + " callerInfo : " + callerInfo + " : Taking screenshot at captureAsBASE64 : Fail : " + getMessageFromException(e));
+            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), " callerInfo : " + callerInfo + " : Taking screenshot at captureAsBASE64 : Fail : " + getMessageFromException(e), e, Level.WARN);
         }
         return "";
     }

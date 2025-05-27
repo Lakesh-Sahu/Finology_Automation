@@ -1,103 +1,732 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testRunner.TestRunner" tests="7" skipped="0" failures="0" errors="0" timestamp="2025-05-25T16:14:52" hostname="LAKESH-LAPTOP" time="157.913">
+<testsuite name="testRunner.TestRunner" tests="22" skipped="0" failures="7" errors="0" timestamp="2025-05-27T08:55:22" hostname="LAKESH-LAPTOP" time="209.781">
   <properties/>
-  <testcase name="runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="54.982"/>
-  <testcase name="runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="55.058"/>
-  <testcase name="runScenario[0](&quot;Unsuccessful login with new mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="59.545"/>
-  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="72.635"/>
-  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="83.417"/>
-  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="129.853"/>
-  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="157.913"/>
+  <testcase name="runScenario[0](&quot;Unsuccessful login with new mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="17.968"/>
+  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="25.114"/>
+  <testcase name="runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="31.839"/>
+  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="35.694"/>
+  <testcase name="runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="39.612"/>
+  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="54.653"/>
+  <testcase name="runScenario[0](&quot;&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="56.515">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+</failure>
+  </testcase>
+  <testcase name="runScenario[0](&quot;&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="71.513">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+</failure>
+  </testcase>
+  <testcase name="runScenario[0](&quot;&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="73.393">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+</failure>
+  </testcase>
+  <testcase name="runScenario[0](&quot;&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="88.076">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+</failure>
+  </testcase>
+  <testcase name="runScenario[1](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="71.724"/>
+  <testcase name="runScenario[2](&quot;Successful sign up with valid name, valid email and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="88.245">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:37)
+	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:12)
+</failure>
+  </testcase>
+  <testcase name="runScenario[3](&quot;Successful sign up with valid name, valid email and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="82.291">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:37)
+	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:12)
+</failure>
+  </testcase>
+  <testcase name="runScenario[4](&quot;Unsuccessful sign up with invalid name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="97.147"/>
+  <testcase name="runScenario[5](&quot;Unsuccessful sign up with invalid name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="94.83"/>
+  <testcase name="runScenario[6](&quot;Unsuccessful sign up with invalid name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="99.022"/>
+  <testcase name="runScenario[7](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="97.55"/>
+  <testcase name="runScenario[8](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="102.87"/>
+  <testcase name="runScenario[9](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="101.587"/>
+  <testcase name="runScenario[11](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="103.006"/>
+  <testcase name="runScenario[10](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="111.135">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:43)
+	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:63)
+</failure>
+  </testcase>
+  <testcase name="runScenario[12](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="96.42"/>
   <system-out><![CDATA[
-[INFO ] 2025-05-25 21:44:52.125 finology.stepDefns.Hooks 27 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
+[INFO ] 2025-05-27 14:25:22.050 finology.stepDefns.Hooks 25 - ##### Test Cases Started ##### [TestNG-test-Test case execution on Chrome browser-1]
 ########### inside Hooks beforeAll browser name : Chrome
 ############ inside testRunner
+#####@@@@@@@@@@@@ Inside TestRunner Thread ID: 33
+########### inside TestListener onTestStart
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+########### inside TestListener onTestStart
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+########### inside TestListener onTestStart
+result getTestName : null
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+########### inside TestListener onTestStart
+result isSuccess : false
+########### inside TestListener onTestStart
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+########### inside TestListener onTestStart
+result getName : runScenario
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getStatus : 16
+result getTestName : null
+result isNotRunning : true
+########### inside TestListener onTestStart
+result isSuccess : false
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+result isSuccess : false
 
-@login @unsuccessful_login
-Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:17
+@account_dashboard
+Scenario:                                                    # src/test/resources/features/accountdashboard.feature:20
 
-@login @unsuccessful_login
-Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:18
-
-@login @successful_login
-Scenario Outline: Successful login with registered mobile number, email and password                                           # src/test/resources/features/login.feature:40
-
-@login @successful_login2
-Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button       # src/test/resources/features/login.feature:56
-
-@login @successful_login
-Scenario Outline: Successful login with registered mobile number, email and password                              # src/test/resources/features/login.feature:39
+@account_dashboard
+Scenario:                                                    # src/test/resources/features/accountdashboard.feature:8
 
 @login @unsuccessful_login_with_new_mobile
 Scenario: Unsuccessful login with new mobile number                          # src/test/resources/features/login.feature:21
 
+@account_dashboard
+Scenario Outline:                                                                                         # src/test/resources/features/accountdashboard.feature:33
+
 @login @successful_login2
 Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button # src/test/resources/features/login.feature:55
-####### inside Hooks before
-####### inside Hooks before
-browser : Chrome
-browser : Chrome
-####### inside Hooks before
-browser : Chrome
-####### inside Hooks before
-browser : Chrome
-####### inside Hooks before
-browser : Chrome
-####### inside Hooks before
-browser : Chrome
-####### inside Hooks before
-browser : Chrome
+
+@login @successful_login
+Scenario Outline: Successful login with registered mobile number, email and password                                           # src/test/resources/features/login.feature:40
+
+@login @unsuccessful_login
+Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:18
+
+@login @unsuccessful_login
+Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:17
+
+@login @successful_login
+Scenario Outline: Successful login with registered mobile number, email and password                              # src/test/resources/features/login.feature:39
+
+@account_dashboard
+Scenario:                                                    # src/test/resources/features/accountdashboard.feature:14
 isDriverNull : false
 isDriverNull : false
-isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+
+Class : class io.cucumber.java.Scenario
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 43
+####### inside Hooks before complete
+#####$$$$$ Inside beforeScenario Thread ID: 41
+####### inside Hooks before complete
 ########### inside beforeStep
 ########### inside beforeStep
-########### inside beforeStep
-isDriverNull : false
-########### inside beforeStep
-isDriverNull : false
-########### inside beforeStep
-isDriverNull : false
-########### inside beforeStep
-isDriverNull : false
-########### inside beforeStep
-  Given User is on new login page                                                                                 # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  Given User is on new login page                                            # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
 ########### inside afterStep
 ########### inside beforeStep
   Given User is on new login page                                                                                              # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User enter "5846975120" in mobile number input box                                                                     # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+########### inside afterStep
+  Given Generate new mobile number and User enter in mobile number input box # in.finology.stepDefns.Login_Steps.generate_new_mobile_number_and_user_enter_in_mobile_number_input_box()
+########### inside afterStep
+########### inside beforeStep
+########### inside beforeStep
+  When User clicks Continue button                                                                                             # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to Login Auth Page                                                                            # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+########### inside afterStep
+########### inside beforeStep
+  And User enter "testuserac121@gmail.com" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User clicks login button                                                                                                 # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
+########### inside afterStep
+########### inside beforeStep
+  When User clicks Continue button                                           # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to sign up page                             # in.finology.stepDefns.SignUp_Steps.user_should_be_redirected_to_sign_up_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.login.feature_21_PASSED [image/png 163576 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@login @successful_login2
+Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button       # src/test/resources/features/login.feature:56
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 44
+####### inside Hooks before complete
+########### inside beforeStep
+  And User should be redirected to account dashboard page                                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
 ########### inside afterStep
 ########### inside beforeStep
   Given User is on new login page                                                                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
 ########### inside afterStep
 ########### inside beforeStep
-  Given User is on new login page                                                                                              # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
-########### inside afterStep
-########### inside beforeStep
   Given User should be on login page                                                                                     # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
 ########### inside afterStep
 ########### inside beforeStep
+  And User should perform logout from account dashboard page                                                                   # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.login.feature_40_PASSED [image/png 98356 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @successful_signup
+Scenario Outline: Successful sign up with valid name, valid email and valid mobile number                                       # src/test/resources/features/signUp.feature:18
+  When User clicks Login with Email button                                                                               # in.finology.stepDefns.Login_Steps.user_clicks_login_with_email_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to Login Auth Page                                                                      # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+########### inside afterStep
+########### inside beforeStep
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 40
+####### inside Hooks before complete
+########### inside beforeStep
+  And User enter "5846975120" in the mobile or email input box and "finTestUserAcology" in the password input box        # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
   Given User is on new login page                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
 ########### inside afterStep
 ########### inside beforeStep
-  Given User should be on login page                                                                                           # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+  And User clicks login button                                                                                           # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
 ########### inside afterStep
 ########### inside beforeStep
-  Given User is on new login page                                            # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  Given User enter "" in mobile number input box                         # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
 ########### inside afterStep
 ########### inside beforeStep
+  When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Then Invalid mobile or required error "*Required" should be shown      # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.login.feature_18_PASSED [image/png 144721 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @successful_signup
+Scenario Outline: Successful sign up with valid name, valid email and valid mobile number                                       # src/test/resources/features/signUp.feature:19
+  And User should be redirected to account dashboard page                                                                # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+########### inside afterStep
+########### inside beforeStep
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 39
+####### inside Hooks before complete
+########### inside beforeStep
+  And User should perform logout from account dashboard page                                                             # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.login.feature_55_PASSED [image/png 98356 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @invalid_name_signup
+Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number       # src/test/resources/features/signUp.feature:30
   Given User is on new login page                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
 ########### inside afterStep
 ########### inside beforeStep
-  Given User enter "5846975120" in mobile number input box                                                        # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
-########### inside afterStep
-########### inside beforeStep
-  Given User enter "5846975120" in mobile number input box                                                                     # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
-########### inside afterStep
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 42
+####### inside Hooks before complete
 ########### inside beforeStep
   Given User enter "@$#637*" in mobile number input box                  # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
 ########### inside afterStep
 ########### inside beforeStep
-  Given User enter "" in mobile number input box                         # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+  When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Then Invalid mobile or required error "Invalid Mobile" should be shown # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+  Given User is on new login page                                                                                 # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+
+    Embedding features.login.feature_17_PASSED [image/png 146399 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @invalid_name_signup
+Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number       # src/test/resources/features/signUp.feature:31
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 37
+####### inside Hooks before complete
+########### inside beforeStep
+  Given User enter "5846975120" in mobile number input box                                                        # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks Continue button                                                                                # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to Login Auth Page                                                               # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+########### inside afterStep
+########### inside beforeStep
+  And User enter "5846975120" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User clicks login button                                                                                    # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
+########### inside afterStep
+########### inside beforeStep
+  And User should be redirected to account dashboard page                                                         # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+########### inside afterStep
+########### inside beforeStep
+  And User should perform logout from account dashboard page                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.login.feature_39_PASSED [image/png 98356 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @invalid_name_signup
+Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number # src/test/resources/features/signUp.feature:42
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 36
+####### inside Hooks before complete
+########### inside beforeStep
+First application-level stack trace: in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+getFileName : AccountDashboard_Steps.java
+getClassName : in.finology.stepDefns.AccountDashboard_Steps
+getMethodName : userIsLoggedInAndOnAccountDashboardPage
+getLineNumber : 46
+  Given User is logged in and on account dashboard page      # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+      	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+########### inside afterStep
+  Given User should be on account dashboard page             # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  When User clicks user profile                              # in.finology.stepDefns.AccountDashboard_Steps.userClicksUserProfile()
+  Then All user photo elements should be displayed           # in.finology.stepDefns.AccountDashboard_Steps.allUserPhotoElementsShouldBeDisplayed()
+  And User should perform logout from account dashboard page # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+
+    scenario.isFailed : true
+
+
+    taking screenshot isFailed = true
+
+
+    Embedding features.accountdashboard.feature_20_FAILED [image/png 7274 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestFailure
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 2
+result isNotRunning : false
+result isSuccess : false
+###$$$
+###
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @invalid_email_signup
+Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number            # src/test/resources/features/signUp.feature:53
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 38
+####### inside Hooks before complete
+########### inside beforeStep
+First application-level stack trace: in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+getFileName : AccountDashboard_Steps.java
+getClassName : in.finology.stepDefns.AccountDashboard_Steps
+getMethodName : userIsLoggedInAndOnAccountDashboardPage
+getLineNumber : 46
+  Given User is logged in and on account dashboard page      # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+      	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+########### inside afterStep
+  Given User should be on account dashboard page             # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  When User clicks user profile                              # in.finology.stepDefns.AccountDashboard_Steps.userClicksUserProfile()
+  Then All user photo elements should be displayed           # in.finology.stepDefns.AccountDashboard_Steps.allUserPhotoElementsShouldBeDisplayed()
+  And User should perform logout from account dashboard page # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+
+    scenario.isFailed : true
+
+
+    taking screenshot isFailed = true
+
+
+    Embedding features.accountdashboard.feature_14_FAILED [image/png 7274 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestFailure
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 2
+result isNotRunning : false
+result isSuccess : false
+###$$$
+###
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @invalid_email_signup
+Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number            # src/test/resources/features/signUp.feature:54
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 35
+####### inside Hooks before complete
+########### inside beforeStep
+First application-level stack trace: in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+getFileName : AccountDashboard_Steps.java
+getClassName : in.finology.stepDefns.AccountDashboard_Steps
+getMethodName : userIsLoggedInAndOnAccountDashboardPage
+getLineNumber : 46
+  Given User is logged in and on account dashboard page                                                   # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+      	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+########### inside afterStep
+  Given User should be on account dashboard page                                                          # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  When User should be on account dashboard page                                                           # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  Then Welcome "Welcome to Finology. Access our state of the art products from here." should be displayed # in.finology.stepDefns.AccountDashboard_Steps.welcomeShouldBeDisplayed(java.lang.String)
+
+    scenario.isFailed : true
+
+
+    taking screenshot isFailed = true
+
+
+    Embedding features.accountdashboard.feature_33_FAILED [image/png 7274 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestFailure
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 2
+result isNotRunning : false
+result isSuccess : false
+###$$$
+###
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @invalid_email_signup
+Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number # src/test/resources/features/signUp.feature:55
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 41
+####### inside Hooks before complete
+########### inside beforeStep
+  Given User is on new login page                                                                                              # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User should be on login page                                                                                           # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
 ########### inside afterStep
 ########### inside beforeStep
   When User clicks Login with Email button                                                                                     # in.finology.stepDefns.Login_Steps.user_clicks_login_with_email_button()
@@ -106,79 +735,7 @@ isDriverNull : false
   Then User should be redirected to Login Auth Page                                                                            # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
 ########### inside afterStep
 ########### inside beforeStep
-  When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-########### inside afterStep
-########### inside beforeStep
-  Given Generate new mobile number and User enter in mobile number input box # in.finology.stepDefns.Login_Steps.generate_new_mobile_number_and_user_enter_in_mobile_number_input_box()
-########### inside afterStep
-  When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-########### inside beforeStep
-########### inside afterStep
-########### inside beforeStep
-  Then Invalid mobile or required error "Invalid Mobile" should be shown # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
-########### inside afterStep
-########### inside beforeStep
-  Then Invalid mobile or required error "*Required" should be shown      # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
-########### inside afterStep
-########### inside beforeStep
-  And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
-########### inside afterStep
-########### inside Hooks after
-  And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
-########### inside afterStep
-########### inside Hooks after
-  When User clicks Login with Email button                                                                               # in.finology.stepDefns.Login_Steps.user_clicks_login_with_email_button()
-########### inside afterStep
-########### inside beforeStep
-  Then User should be redirected to Login Auth Page                                                                      # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
-########### inside afterStep
-########### inside beforeStep
-########### inside TestListener onTestSuccess
-inside catch of Hooks before
-########### inside TestListener onTestSuccess
-inside catch of Hooks before
-  When User clicks Continue button                                                                                # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-########### inside afterStep
-########### inside beforeStep
-  Then User should be redirected to Login Auth Page                                                               # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
-########### inside afterStep
-########### inside beforeStep
   And User enter "testuserac121@gmail.com" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-########### inside afterStep
-########### inside beforeStep
-  And User clicks login button                                                                                                 # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
-########### inside afterStep
-########### inside beforeStep
-  And User enter "5846975120" in the mobile or email input box and "finTestUserAcology" in the password input box        # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-########### inside afterStep
-########### inside beforeStep
-  And User enter "5846975120" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-########### inside afterStep
-########### inside beforeStep
-  When User clicks Continue button                                                                                             # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-########### inside afterStep
-########### inside beforeStep
-  Then User should be redirected to Login Auth Page                                                                            # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
-########### inside afterStep
-########### inside beforeStep
-  And User clicks login button                                                                                           # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
-########### inside afterStep
-########### inside beforeStep
-  And User clicks login button                                                                                    # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
-########### inside afterStep
-########### inside beforeStep
-  When User clicks Continue button                                           # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-########### inside afterStep
-########### inside beforeStep
-  Then User should be redirected to sign up page                             # in.finology.stepDefns.SignUp_Steps.user_should_be_redirected_to_sign_up_page()
-########### inside afterStep
-########### inside Hooks after
-########### inside TestListener onTestSuccess
-inside catch of Hooks before
-  And User enter "testuserac121@gmail.com" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-########### inside afterStep
-########### inside beforeStep
-  And User should be redirected to account dashboard page                                                         # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
 ########### inside afterStep
 ########### inside beforeStep
   And User clicks login button                                                                                                 # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
@@ -187,46 +744,614 @@ inside catch of Hooks before
   And User should be redirected to account dashboard page                                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
 ########### inside afterStep
 ########### inside beforeStep
-  And User should be redirected to account dashboard page                                                                # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
-########### inside afterStep
-########### inside beforeStep
-  And User should be redirected to account dashboard page                                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
-########### inside afterStep
-########### inside beforeStep
-  And User should perform logout from account dashboard page                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
-########### inside afterStep
-########### inside Hooks after
-########### inside TestListener onTestSuccess
-inside catch of Hooks before
+First application-level stack trace: in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+getFileName : AccountDashboard_Steps.java
+getClassName : in.finology.stepDefns.AccountDashboard_Steps
+getMethodName : userIsLoggedInAndOnAccountDashboardPage
+getLineNumber : 46
   And User should perform logout from account dashboard page                                                                   # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
 ########### inside afterStep
-########### inside Hooks after
-########### inside TestListener onTestSuccess
-inside catch of Hooks before
-  And User should perform logout from account dashboard page                                                             # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+
+    scenario.isFailed : false
+
+  Given User is logged in and on account dashboard page      # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:46)
+      	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
 ########### inside afterStep
-########### inside Hooks after
+  Given User should be on account dashboard page             # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  When User should be on account dashboard page              # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  Then All dashboard elements should be displayed            # in.finology.stepDefns.AccountDashboard_Steps.allDashboardElementsShouldBeDisplayed()
+  And User should perform logout from account dashboard page # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+
+    scenario.isFailed : true
+
+
+    taking screenshot isFailed = false
+
+
+    taking screenshot isFailed = true
+
+
+    Embedding features.login.feature_56_PASSED [image/png 98356 bytes]
+
+
+    taking screenshot isFailed = true
+
+
+    Embedding features.accountdashboard.feature_8_FAILED [image/png 7274 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestFailure
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 2
+result isNotRunning : false
+result isSuccess : false
+###$$$
+###
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @unsuccessful_duplicate_account_signup
+Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number      # src/test/resources/features/signUp.feature:69
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 43
+####### inside Hooks before complete
+########### inside beforeStep
 ########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
 inside catch of Hooks before
-  And User should perform logout from account dashboard page                                                                   # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @unsuccessful_duplicate_account_signup
+Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number # src/test/resources/features/signUp.feature:70
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 40
+####### inside Hooks before complete
+########### inside beforeStep
+  Given User is on new sign up page                                                                                             # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
 ########### inside afterStep
-########### inside Hooks after
+########### inside beforeStep
+  Given User is on new sign up page                                                                                             # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "TestUserRieeeeeeeeeeeee", "testuserrieeeeeeeeeeeee2726@gmail.com" and "9437525638"                         # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "Reriserrrrrrrrrrrrrr", "reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com" and "8335957041"                   # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                                               # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                                               # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+First application-level stack trace: in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:37)
+getFileName : OTPVerification_Steps.java
+getClassName : in.finology.stepDefns.OTPVerification_Steps
+getMethodName : user_should_redirect_to_otp_verification_page
+getLineNumber : 37
+  Then User should redirect to OTP verification page                                                                            # in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+      	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:37)
+      	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:12)
+########### inside afterStep
+  And Finology logo, home button, enter otp text, otp input box, verify otp button should be displayed on OTP verification page # in.finology.stepDefns.OTPVerification_Steps.finology_logo_home_button_enter_otp_text_otp_input_box_verify_otp_button_should_be_displayed_on_OTP_verification_page()
+
+    scenario.isFailed : true
+
+
+    taking screenshot isFailed = true
+
+
+    Embedding features.signUp.feature_18_FAILED [image/png 151891 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestFailure
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 2
+result isNotRunning : false
+result isSuccess : false
+###$$$
+###
+########### inside TestListener onTestStart
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 16
+result isNotRunning : true
+result isSuccess : false
+
+@Signup @unsuccessful_duplicate_account_signup
+Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number            # src/test/resources/features/signUp.feature:71
+First application-level stack trace: in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:37)
+getFileName : OTPVerification_Steps.java
+getClassName : in.finology.stepDefns.OTPVerification_Steps
+getMethodName : user_should_redirect_to_otp_verification_page
+getLineNumber : 37
+  Then User should redirect to OTP verification page                                                                            # in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+      	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:37)
+      	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:12)
+########### inside afterStep
+  And Finology logo, home button, enter otp text, otp input box, verify otp button should be displayed on OTP verification page # in.finology.stepDefns.OTPVerification_Steps.finology_logo_home_button_enter_otp_text_otp_input_box_verify_otp_button_should_be_displayed_on_OTP_verification_page()
+
+    scenario.isFailed : true
+
+
+    taking screenshot isFailed = true
+
+
+    Embedding features.signUp.feature_19_FAILED [image/png 151812 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestFailure
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 2
+result isNotRunning : false
+result isSuccess : false
+###$$$
+###
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 44
+####### inside Hooks before complete
+########### inside beforeStep
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 39
+####### inside Hooks before complete
+########### inside beforeStep
+  Given User is on new sign up page                                                                    # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new sign up page                                                                    # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "@Lakesh Sahu", "randomNewEmail2423@gmail.com" and "9868546793"                    # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "Raj$User12", "randomNewEmailMe2123@gmail.com" and "1257465983"                    # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                      # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  Then Invalid name Error "Your name can contain only alphabets." should be shown below name input box # in.finology.stepDefns.SignUp_Steps.invalid_name_error_should_be_shown_below_name_input_box(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                      # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  Then Invalid name Error "Your name can contain only alphabets." should be shown below name input box # in.finology.stepDefns.SignUp_Steps.invalid_name_error_should_be_shown_below_name_input_box(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User should not be redirected to otp verification page                                           # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.signUp.feature_30_PASSED [image/png 170243 bytes]
+
+
+    taking screenshot isFailed = true
+
 ########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+  And User should not be redirected to otp verification page                                           # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.signUp.feature_31_PASSED [image/png 169332 bytes]
+
+
+    taking screenshot isFailed = true
+
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 42
+####### inside Hooks before complete
+########### inside beforeStep
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 37
+####### inside Hooks before complete
+########### inside beforeStep
+  Given User is on new sign up page                                                              # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new sign up page                                                                         # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "", "lakeshsahu758@gmail.com" and "5784692345"                               # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "Rita", "rita2056gmail.com" and "9868546756"                                            # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  Then Empty name Error "*Required" should be shown below name input box                         # in.finology.stepDefns.SignUp_Steps.empty_name_error_should_be_shown_below_name_input_box(java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                           # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  Then Error "Invalid Email" or "Please enter a valid email address." should be shown below email input box # in.finology.stepDefns.SignUp_Steps.error_should_be_shown_below_email_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User should not be redirected to otp verification page                                     # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.signUp.feature_42_PASSED [image/png 168167 bytes]
+
+
+    taking screenshot isFailed = true
+
+  And User should not be redirected to otp verification page                                                # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+########### inside TestListener onTestSuccess
+
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+    taking screenshot isFailed = false
+
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+
+    Embedding features.signUp.feature_53_PASSED [image/png 164941 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 36
+####### inside Hooks before complete
+########### inside beforeStep
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 38
+####### inside Hooks before complete
+########### inside beforeStep
+  Given User is on new sign up page                                                                         # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new sign up page                                                              # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "Ram Shyam", "shyammaster675@gmail" and "1257465943"                                    # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "Hitesh", "" and "8646597458"                                                # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                           # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  Then Error "Invalid Email" or "Please enter a valid email address." should be shown below email input box # in.finology.stepDefns.SignUp_Steps.error_should_be_shown_below_email_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  Then Error "*Required" or "*Required" should be shown below email input box                    # in.finology.stepDefns.SignUp_Steps.error_should_be_shown_below_email_input_box(java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  And User should not be redirected to otp verification page                                                # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.signUp.feature_54_PASSED [image/png 165868 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+  And User should not be redirected to otp verification page                                     # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.signUp.feature_55_PASSED [image/png 163292 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 35
+####### inside Hooks before complete
+########### inside beforeStep
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 41
+####### inside Hooks before complete
+########### inside beforeStep
+  Given User is on new sign up page                                                                     # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User is on new sign up page                                                                # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "TestUserRieeeeeeeeeeeee", "testuserrieeeeeeeeeeeee2726@gmail.com" and "5598705134" # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  Given User enters "Reriserrrrrrrrrrrrrr", "otherneewuueeemail211317@gmail.com" and "8335957041"  # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                       # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                  # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to login page                                                     # in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page()
+########### inside afterStep
+########### inside beforeStep
+  And Already account "You already have an account. Please Login to continue." should be shown     # in.finology.stepDefns.Login_Steps.already_account_should_be_shown(java.lang.String)
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.signUp.feature_70_PASSED [image/png 151839 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
+inside catch of Hooks before
+isDriverNull : false
+
+    logging using the scenario methods beforeScenario
+
+Class : class io.cucumber.java.Scenario
+#####$$$$$ Inside beforeScenario Thread ID: 43
+####### inside Hooks before complete
+########### inside beforeStep
+  Given User is on new sign up page                                                                           # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+########### inside afterStep
+########### inside beforeStep
+First application-level stack trace: in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:43)
+getFileName : Login_Steps.java
+getClassName : in.finology.stepDefns.Login_Steps
+getMethodName : user_should_be_redirected_to_login_page
+getLineNumber : 43
+  Then User should be redirected to login page                                                          # in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:104)
+      	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:43)
+      	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:63)
+########### inside afterStep
+  And Already account "You already have an account. Please Login to continue." should be shown          # in.finology.stepDefns.Login_Steps.already_account_should_be_shown(java.lang.String)
+
+    scenario.isFailed : true
+
+
+    taking screenshot isFailed = true
+
+
+    Embedding features.signUp.feature_69_FAILED [image/png 175610 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestFailure
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 2
+result isNotRunning : false
+result isSuccess : false
+###$$$
+###
+  Given User enters "Reriserrrrrrrrrrrrrr", "reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com" and "8335957041" # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+########### inside afterStep
+########### inside beforeStep
+  When User clicks sign up button                                                                             # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+########### inside afterStep
+########### inside beforeStep
+  Then User should be redirected to login page                                                                # in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page()
+########### inside afterStep
+########### inside beforeStep
+  And Already account "You already have an account. Please Login to continue." should be shown                # in.finology.stepDefns.Login_Steps.already_account_should_be_shown(java.lang.String)
+########### inside afterStep
+
+    scenario.isFailed : false
+
+
+    taking screenshot isFailed = false
+
+
+    Embedding features.signUp.feature_71_PASSED [image/png 154851 bytes]
+
+
+    taking screenshot isFailed = true
+
+########### inside TestListener onTestSuccess
+result getTestClass : [TestClass name=class testRunner.TestRunner]
+result getTestName : null
+result getName : runScenario
+result getStatus : 1
+result isNotRunning : false
+result isSuccess : true
 inside catch of Hooks before
 ]]></system-out>
-  <system-err><![CDATA[May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[May 27, 2025 2:27:16 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
-May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 27, 2025 2:27:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
-May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 27, 2025 2:27:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
-May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 27, 2025 2:27:37 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
-May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 27, 2025 2:27:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
-May 25, 2025 9:45:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 27, 2025 2:27:57 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
-May 25, 2025 9:45:09 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+May 27, 2025 2:28:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+May 27, 2025 2:28:18 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
+May 27, 2025 2:28:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 136, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 136
 ]]></system-err>
 </testsuite>

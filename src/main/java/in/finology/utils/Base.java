@@ -135,7 +135,8 @@ public class Base {
     public static void logWarningInExtentReport(Exception e, String message) {
         try {
             ObjectCreator oc = ObjectManager.getObject();
-            String className = oc.getClassNameByUser();
+//            String className = oc.getClassNameByUser();
+            String className = "need to update";
             StringBuilder sb = new StringBuilder();
             StackTraceElement parent = null;
 
@@ -181,13 +182,19 @@ public class Base {
     public static void logInfoInExtentReport(String message) {
         try {
             ObjectCreator oc = ObjectManager.getObject();
-            String className = oc.getClassNameByUser();
-            String methodName = oc.getMethodNameByUser();
+//            String className = oc.getClassNameByUser();
+//            String methodName = oc.getMethodNameByUser();
 
-            StringBuilder sb = new StringBuilder();
-            String callerInfo = sb.append(className).append(" ").append(methodName).toString();
-            sb.append(" ").append(message).append(" - INFO");
-            ObjectManager.getObject().test.info(sb.toString(), MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo + " - INFO")).build());
+            String className = oc.getScenarioURIByUser();
+            String methodName = oc.getScenarioNameByUser();
+
+//            StringBuilder sb = new StringBuilder();
+//            String callerInfo = sb.append(className).append(" ").append(methodName).toString();
+//            sb.append(" ").append(message).append(" - INFO");
+            String callerInfo = " class name, method name to be updated for logInfoInExtentReport";
+            String callerInfoForExtent = className + " " + methodName + " " + message + " - INFO";
+//            ObjectManager.getObject().test.info(sb.toString(), MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo + " - INFO")).build());
+            ObjectManager.getObject().test.info(callerInfoForExtent, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo + " - INFO")).build());
         } catch (Exception e) {
             String callerInfo = getCallerInfoFromStackTrace(e.getStackTrace());
             ObjectManager.getObject().test.warning("Unable to log Info in extent report", MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfo + " - WARN")).build());
