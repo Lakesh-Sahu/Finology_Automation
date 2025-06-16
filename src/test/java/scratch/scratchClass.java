@@ -13,82 +13,82 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Scanner;
 
-public class TestCase01 extends CommonMethods {
+//public class TestCase01 extends CommonMethods {
 
-    @FindBy(linkText = "Go to Insider")
-    private static WebElement goToInsiderBtn;
+//    @FindBy(linkText = "Go to Insider")
+//    private static WebElement goToInsiderBtn;
+//
+//    @FindBy(linkText = "Got more questions?")
+//    private static WebElement gotMoreQuestionsBtn;
+//
+//    @FindBy(linkText = "Privacy Policy")
+//    private static WebElement privacyPolicyBtn;
+//
+//    @FindBy(xpath = "(//div[@class='col33'])[1]")
+//    private static WebElement card;
+//
+//    @FindBy(xpath = "//p[contains(text(), 'Demat Account')]/..")
+//    private static WebElement dematCard;
+//
+//    @FindBy(xpath = "/html/body/div[5]")
+//    private static WebElement bigCard;
+//
+//    @FindBy(partialLinkText = "Sign up with Google")
+//    private WebElement signUpWithGoogleBtn;
+//
+//    @FindBy(linkText = "Login")
+//    private WebElement loginBtn;
+//
+//    @FindBy(linkText = "Sign Up")
+//    private WebElement signUpBtn;
+//
+//    @FindBy(partialLinkText = "Sign up with Google")
+//    private WebElement signInWithGoogleBtnTest;
 
-    @FindBy(linkText = "Got more questions?")
-    private static WebElement gotMoreQuestionsBtn;
+//    WebDriver driver;
+//    WebDriverWait wait;
+//    HomePage hp;
+//    SignUpPage sup;
+//    OTPVerificationPage otpvp;
+//    LoginPage lp;
+//    LoginAuthPage lap;
+//    AccountDashboardPage adp;
+//
+//
+//    String registrationNumber;
+//    String chassisNumber;
+//    String engineNumber;
+//    String mobileNumber;
+//
+//    public TestCase01() {
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Enter registration number : ");
+//        registrationNumber = sc.nextLine();
+//
+//        System.out.println("Enter Chassis Number : ");
+//        chassisNumber = sc.nextLine();
+//
+//        System.out.println("Enter Engine Number : ");
+//        engineNumber = sc.nextLine();
+//
+//        System.out.println("Enter Mobile Number : ");
+//        mobileNumber = sc.nextLine();
+//
+//
+//        this.driver = (new DriverFactory()).getDriver("Chrome");
+//        AjaxElementLocatorFactory ajax = new AjaxElementLocatorFactory(driver, 10);
+//        PageFactory.initElements(ajax, this);
+//        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        hp = new HomePage(driver);
+//        sup = new SignUpPage(driver);
+//        otpvp = new OTPVerificationPage(driver);
+//        lp = new LoginPage(driver);
+//        lap = new LoginAuthPage(driver);
+//        adp = new AccountDashboardPage(driver);
+//    }
 
-    @FindBy(linkText = "Privacy Policy")
-    private static WebElement privacyPolicyBtn;
-
-    @FindBy(xpath = "(//div[@class='col33'])[1]")
-    private static WebElement card;
-
-    @FindBy(xpath = "//p[contains(text(), 'Demat Account')]/..")
-    private static WebElement dematCard;
-
-    @FindBy(xpath = "/html/body/div[5]")
-    private static WebElement bigCard;
-
-    @FindBy(partialLinkText = "Sign up with Google")
-    private WebElement signUpWithGoogleBtn;
-
-    @FindBy(linkText = "Login")
-    private WebElement loginBtn;
-
-    @FindBy(linkText = "Sign Up")
-    private WebElement signUpBtn;
-
-    @FindBy(partialLinkText = "Sign up with Google")
-    private WebElement signInWithGoogleBtnTest;
-
-    WebDriver driver;
-    WebDriverWait wait;
-    HomePage hp;
-    SignUpPage sup;
-    OTPVerificationPage otpvp;
-    LoginPage lp;
-    LoginAuthPage lap;
-    AccountDashboardPage adp;
-
-
-    String registrationNumber;
-    String chassisNumber;
-    String engineNumber;
-    String mobileNumber;
-
-    public TestCase01() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Enter registration number : ");
-        registrationNumber = sc.nextLine();
-
-        System.out.println("Enter Chassis Number : ");
-        chassisNumber = sc.nextLine();
-
-        System.out.println("Enter Engine Number : ");
-        engineNumber = sc.nextLine();
-
-        System.out.println("Enter Mobile Number : ");
-        mobileNumber = sc.nextLine();
-
-
-        this.driver = (new DriverFactory()).getDriver("Chrome");
-        AjaxElementLocatorFactory ajax = new AjaxElementLocatorFactory(driver, 10);
-        PageFactory.initElements(ajax, this);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        hp = new HomePage(driver);
-        sup = new SignUpPage(driver);
-        otpvp = new OTPVerificationPage(driver);
-        lp = new LoginPage(driver);
-        lap = new LoginAuthPage(driver);
-        adp = new AccountDashboardPage(driver);
-    }
-
-    public void runMe() throws InterruptedException {
+//    public void runMe() throws InterruptedException {
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //        driver.get("https://www.finology.in/");
 
@@ -222,9 +222,9 @@ public class TestCase01 extends CommonMethods {
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Mobile Number']"))).sendKeys(registrationNumber);
 //    -----------------XXX-------------------------
 
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        (new TestCase01()).runMe();
-    }
-}
+//    }
+//
+//    public static void main(String[] args) throws InterruptedException {
+//        (new TestCase01()).runMe();
+//    }
+//}
