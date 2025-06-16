@@ -31,6 +31,7 @@ public class GoogleSignInPage extends CommonMethods {
             wait.until(ExpectedConditions.urlContains(urlPart));
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verify on Google Sign In Page");
             return false;
         }
     }

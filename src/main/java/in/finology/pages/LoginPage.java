@@ -69,6 +69,7 @@ public class LoginPage extends CommonMethods {
             driver.get(url);
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while navigating to Login Page");
             return false;
         }
     }
@@ -77,6 +78,7 @@ public class LoginPage extends CommonMethods {
         try {
             return wait.until(ExpectedConditions.urlMatches("https://www.finology.in/login(?!/auth)"));
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying on Login Page");
             return false;
         }
     }
@@ -85,6 +87,7 @@ public class LoginPage extends CommonMethods {
         try {
             return sendKeys(mobileNumberInputBox, number);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while entering Mobile Number on Login Page");
             return false;
         }
     }
@@ -93,22 +96,16 @@ public class LoginPage extends CommonMethods {
         try {
             return click(driver, continueBtn);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Continue Button on Login Page");
             return false;
         }
     }
-
-//    public boolean loginUsingMobileNumberAndEmail(String number, String emailOrMobileNumber, String password) {
-//        try {
-//            return goToLoginPage() && verifyOnLoginPage() && enterMobileNumber(number) && clickContinueBtn() && enterMobileNumberOrEmail(emailOrMobileNumber) && enterPassword(password) && clickLoginBtn();
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
 
     public boolean clickSignInWithGoogleBtn() {
         try {
             return click(driver, signInWithGoogleBtn);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Sign in With Google Button on Login Page");
             return false;
         }
     }
@@ -117,31 +114,16 @@ public class LoginPage extends CommonMethods {
         try {
             return click(driver, loginWithEmailBtn);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Login in With Email Button on Login Page");
             return false;
         }
     }
-
-//    public boolean enterMobileNumberOrEmail(String emailOrMobileNumber) {
-//        try {
-//            return sendKeys(emailMobileInputBox, emailOrMobileNumber);
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
-
-//    public boolean loginUsingEmailOrMobileNumber(String emailOrMobileNumber, String password) {
-//        try {
-//            return goToLoginPage() && verifyOnLoginPage() && clickLoginInWithEmailBtn() && enterMobileNumberOrEmail(emailOrMobileNumber) && enterPassword(password) && clickLoginBtn();
-//        } catch (Exception e) {
-//            return false;
-//        }
-//    }
-
 
     public boolean verifyAllElementsAreDisplayed() {
         try {
             return finologyLogoIsDisplayed() && homeButtonIsDisplayed() && signUpBtnIsDisplayed() && mobileNumberInputBoxIsDisplayed() && continueBtnIsDisplayed() && signInWithGoogleBtnIsDisplayed() && loginWithEmailBtnIsDisplayed() && resetPasswordBtnIsDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying All Elements are Displayed on Login Page");
             return false;
         }
     }
@@ -150,6 +132,7 @@ public class LoginPage extends CommonMethods {
         try {
             return alreadyAccountErrorMessage.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Already Account Error Message on Login Page");
             return "";
         }
     }
@@ -158,6 +141,7 @@ public class LoginPage extends CommonMethods {
         try {
             return invalidOrRequiredMobileNumberText.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Invalid or Required Mobile Number Text on Login Page");
             return "";
         }
     }
@@ -166,6 +150,7 @@ public class LoginPage extends CommonMethods {
         try {
             return finologyLogo.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying finology Logo is Displayed on Login Page");
             return false;
         }
     }
@@ -174,6 +159,7 @@ public class LoginPage extends CommonMethods {
         try {
             return homeBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying home Button is Displayed on Login Page");
             return false;
         }
     }
@@ -182,6 +168,7 @@ public class LoginPage extends CommonMethods {
         try {
             return signUpBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying sign Up Button is Displayed on Login Page");
             return false;
         }
     }
@@ -190,6 +177,7 @@ public class LoginPage extends CommonMethods {
         try {
             return mobileNumberInputBox.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying mobile Number Input Box is Displayed on Login Page");
             return false;
         }
     }
@@ -198,6 +186,7 @@ public class LoginPage extends CommonMethods {
         try {
             return continueBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying continue Button is Displayed on Login Page");
             return false;
         }
     }
@@ -206,6 +195,7 @@ public class LoginPage extends CommonMethods {
         try {
             return invalidOrRequiredMobileNumberText.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying invalid or Required Mobile Number Text is Displayed on Login Page");
             return false;
         }
     }
@@ -214,6 +204,7 @@ public class LoginPage extends CommonMethods {
         try {
             return signInWithGoogleBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying sign In With Google Button is Displayed on Login Page");
             return false;
         }
     }
@@ -222,6 +213,7 @@ public class LoginPage extends CommonMethods {
         try {
             return loginWithEmailBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying login With Email Button is Displayed on Login Page");
             return false;
         }
     }
@@ -230,6 +222,7 @@ public class LoginPage extends CommonMethods {
         try {
             return resetPasswordBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying reset Password Button is Displayed on Login Page");
             return false;
         }
     }
@@ -240,6 +233,7 @@ public class LoginPage extends CommonMethods {
         try {
             return alreadyAccountErrorMessage.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying already Account Error Message is Displayed on Login Page");
             return false;
         }
     }
@@ -248,6 +242,7 @@ public class LoginPage extends CommonMethods {
         try {
             return alreadyAccountErrorMessageOkBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying already Account Error Message Ok Button on Login Page");
             return false;
         }
     }

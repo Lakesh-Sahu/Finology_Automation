@@ -4,6 +4,8 @@ import com.aventstack.extentreports.ExtentTest;
 import in.finology.pages.*;
 import org.openqa.selenium.WebDriver;
 
+import java.util.HashMap;
+
 // This class is used to create the Object of classes per thread for parallel execution
 public class ObjectCreator extends Base{
     private final WebDriver driver;
@@ -21,6 +23,7 @@ public class ObjectCreator extends Base{
     public OTPVerificationPage otpVerificationPage;
     public SignUpPage signUpPage;
     public CommonMethods cm;
+    public HashMap<String, String> examplesKeyValue;
     public ExtentTest test;
 
     public ObjectCreator(WebDriver driver, String featureURI, String scenarioName, String scenarioLine, String scenarioTags) {
@@ -39,8 +42,10 @@ public class ObjectCreator extends Base{
         otpVerificationPage = new OTPVerificationPage(driver);
         signUpPage = new SignUpPage(driver);
         cm = new CommonMethods();
+        examplesKeyValue = new HashMap<>();
 
         test = reports.createTest(featureURI + " " + scenarioName + " " + scenarioLine + " " + scenarioTags);
+
     }
 
     public WebDriver getDriver() {
@@ -61,5 +66,9 @@ public class ObjectCreator extends Base{
 
     public String getScenarioTagsByUser() {
         return scenarioTags;
+    }
+
+    public void setExamplesKeyValueInHashMap(String key, String value) {
+        examplesKeyValue.put(key, value);
     }
 }

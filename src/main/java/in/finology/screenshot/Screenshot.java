@@ -3,7 +3,8 @@ package in.finology.screenshot;
 import in.finology.utils.Base;
 import in.finology.utils.ObjectManager;
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 
 public class Screenshot extends Base {
+    static Logger log = LogManager.getLogger(Screenshot.class);
 
     // takes the screenshot to attach in the Extent Report
     public static String capture(String callerInfo) {
@@ -19,7 +21,7 @@ public class Screenshot extends Base {
 
             if (driver != null) {
                 String timestamp = String.valueOf(java.time.LocalDateTime.now()).replaceAll("[.:]", "");
-                String relativePath = "/extent_reports/" + getSingleTimeStamp() + "/" + timestamp + "_" + callerInfo + ".png";
+                String relativePath = "/extentReports/" + singleTimeStamp + "/" + timestamp + "_" + callerInfo + ".png";
                 TakesScreenshot scrShot = ((TakesScreenshot) driver);
                 File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
                 File DestFile = new File(System.getProperty("user.dir") + relativePath);
@@ -27,13 +29,12 @@ public class Screenshot extends Base {
                 return relativePath;
             }
         } catch (Exception e) {
-            ObjectManager.getObject().test.warning(getCallerInfoFromStackTrace(e.getStackTrace()) + " callerInfo : " + callerInfo + " : Taking screenshot at capture : Fail : " + getMessageFromException(e));
-            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), " callerInfo : " + callerInfo + " : Taking screenshot at capture : Fail : " + getMessageFromException(e), e, Level.WARN);
+            logWarningInLogAndExtentReportWithoutScreenshot(log, e, "Taking screenshot at capture : Fail");
         }
-        return "";
+        return "/src/main/resources/Error_while_capturing_screenshot.png";
     }
 
-    public static byte[] captureAsBYTE(String callerInfo) {
+    public static byte[] captureAsBYTE() {
         try {
             WebDriver driver = ObjectManager.getObject().getDriver();
 
@@ -42,13 +43,12 @@ public class Screenshot extends Base {
                 return scrShot.getScreenshotAs(OutputType.BYTES);
             }
         } catch (Exception e) {
-            ObjectManager.getObject().test.warning(getCallerInfoFromStackTrace(e.getStackTrace()) + " callerInfo : " + callerInfo + " : Taking screenshot at captureAsBYTE : Fail : " + getMessageFromException(e));
-            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), " callerInfo : " + callerInfo + " : Taking screenshot at captureAsBYTE : Fail : " + getMessageFromException(e), e, Level.WARN);
+            logWarningInLogAndExtentReportWithoutScreenshot(log, e, "Taking screenshot at captureAsBYTE : Fail");
         }
         return new byte[]{};
     }
 
-    public static String captureAsBASE64(String callerInfo) {
+    public static String captureAsBASE64() {
         try {
             WebDriver driver = ObjectManager.getObject().getDriver();
 
@@ -57,8 +57,7 @@ public class Screenshot extends Base {
                 return scrShot.getScreenshotAs(OutputType.BASE64);
             }
         } catch (Exception e) {
-            ObjectManager.getObject().test.warning(getCallerInfoFromStackTrace(e.getStackTrace()) + " callerInfo : " + callerInfo + " : Taking screenshot at captureAsBASE64 : Fail : " + getMessageFromException(e));
-            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), " callerInfo : " + callerInfo + " : Taking screenshot at captureAsBASE64 : Fail : " + getMessageFromException(e), e, Level.WARN);
+            logWarningInLogAndExtentReportWithoutScreenshot(log, e, "Taking screenshot at captureAsBASE64 : Fail");
         }
         return "";
     }

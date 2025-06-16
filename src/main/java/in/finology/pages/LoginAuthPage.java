@@ -15,7 +15,6 @@ import java.time.Duration;
 
 public class LoginAuthPage extends CommonMethods {
 
-
     @FindBy(xpath = "//div[@class='logo']//img")
     private WebElement finologyLogo;
 
@@ -63,7 +62,7 @@ public class LoginAuthPage extends CommonMethods {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(LoginPage.class);
+    static Logger log = LogManager.getLogger(LoginAuthPage.class);
     private final String url;
 
     public LoginAuthPage(WebDriver driver) {
@@ -80,6 +79,7 @@ public class LoginAuthPage extends CommonMethods {
             driver.get(url);
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while navigation to Login Auth Page");
             return false;
         }
     }
@@ -88,6 +88,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return wait.until(ExpectedConditions.urlToBe(url));
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying on Login Auth Page");
             return false;
         }
     }
@@ -96,6 +97,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return sendKeys(emailMobileInputBox, emailOrMobileNumber);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while entering Mobile Number or Email on Login Auth Page");
             return false;
         }
     }
@@ -104,6 +106,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return sendKeys(passwordInputBox, password);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while entering Password on Login Auth Page");
             return false;
         }
     }
@@ -112,6 +115,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return click(driver, loginBtn);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Login Button on Login Auth Page");
             return false;
         }
     }
@@ -120,6 +124,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return goToLoginAuthPage() && verifyOnLoginAuthPage() && enterMobileNumberOrEmail(emailOrMobileNumber) && enterPassword(password) && clickLoginBtn();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while performing Login Using Mobile Number or Email on Login Auth Page");
             return false;
         }
     }
@@ -128,6 +133,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return click(driver, signInWithGoogleBtn);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Sign In With Google Button on Login Auth Page");
             return false;
         }
     }
@@ -136,6 +142,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return finologyLogoIsDisplayed() && homeButtonIsDisplayed() && signUpBtnIsDisplayed() && emailMobileInputBoxIsDisplayed() && passwordInputBoxIsDisplayed() && loginBtnIsDisplayed() && signInWithGoogleBtnIsDisplayed() && backToLoginBtnIsDisplayed() && resetPasswordBtnIsDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying All Elements are Displayed on Login Auth Page");
             return false;
         }
     }
@@ -145,6 +152,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return wrongDetailsErrorMessage.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Wrong Details Error Message on Login Auth Page");
             return "";
         }
     }
@@ -153,6 +161,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return requiredEmailMobileNumberText.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Required Email Mobile Number Error Message on Login Auth Page");
             return "";
         }
     }
@@ -161,6 +170,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return requiredPasswordText.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Required Password Error Message on Login Auth Page");
             return "";
         }
     }
@@ -170,6 +180,7 @@ public class LoginAuthPage extends CommonMethods {
             homeBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Home Button on Login Auth Page");
             return false;
         }
     }
@@ -179,6 +190,7 @@ public class LoginAuthPage extends CommonMethods {
             signUpBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Sign Up Button on Login Auth Page");
             return false;
         }
     }
@@ -187,6 +199,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return finologyLogo.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying finology Logo is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -195,6 +208,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return homeBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying home Button is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -203,6 +217,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return signUpBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying sign Up Button is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -211,6 +226,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return signInWithGoogleBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying sign In With Google Button is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -219,6 +235,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return resetPasswordBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying reset Password Button is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -228,6 +245,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return wrongDetailsErrorMessage.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying wrong Details Error Message is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -236,6 +254,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return wrongDetailsErrorMessageOkBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying wrong Details Error Message Ok Button is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -244,6 +263,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return emailMobileInputBox.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying email Mobile Input Box is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -252,6 +272,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return passwordInputBox.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying password Input Box is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -260,6 +281,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return loginBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying login Button is Displayed on Login Auth Page");
             return false;
         }
     }
@@ -268,6 +290,7 @@ public class LoginAuthPage extends CommonMethods {
         try {
             return backToLoginBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying back To Login Button is Displayed on Login Auth Page");
             return false;
         }
     }

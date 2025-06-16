@@ -1,0 +1,1650 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>YouTube Automation Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Functional Testing</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jun 16, 2025 08:05:40 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="warning" href="#"><span>Warning</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/accountdashboard.feature Welcome message should be displayed on dashboard page 27 @account_dashboard</p>
+            <p class="text-sm">
+              <span>8:05:47 pm</span> / <span>00:00:36:137</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/accountdashboard.feature Welcome message should be displayed on dashboard page 27 @account_dashboard</h5>
+<span class='badge badge-success'>06.16.2025 8:05:47 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:06:23 pm</span>
+<span class='badge badge-default'>00:00:36:137</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:06:19 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 114 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200617378933300_in.finology.pages.AccountDashboardPage 114 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200617378933300_in.finology.pages.AccountDashboardPage 114 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:06:20 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200619156687500_userIsLoggedInAndOnAccountDashboardPage_16 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200619156687500_userIsLoggedInAndOnAccountDashboardPage_16 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:06:23 pm</td>
+        <td>
+          features/accountdashboard.feature : Welcome message should be displayed on dashboard page : 27 : @account_dashboard : FAILED Examples  :: 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200622743941800_features.accountdashboard.feature_27_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200622743941800_features.accountdashboard.feature_27_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/accountdashboard.feature All user photo element should be displayed on dashboard page 14 @account_dashboard</p>
+            <p class="text-sm">
+              <span>8:05:48 pm</span> / <span>00:00:35:384</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/accountdashboard.feature All user photo element should be displayed on dashboard page 14 @account_dashboard</h5>
+<span class='badge badge-success'>06.16.2025 8:05:48 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:06:23 pm</span>
+<span class='badge badge-default'>00:00:35:384</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:06:19 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 114 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200618963110800_in.finology.pages.AccountDashboardPage 114 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200618963110800_in.finology.pages.AccountDashboardPage 114 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:06:20 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200620154707200_userIsLoggedInAndOnAccountDashboardPage_16 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200620154707200_userIsLoggedInAndOnAccountDashboardPage_16 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:06:23 pm</td>
+        <td>
+          features/accountdashboard.feature : All user photo element should be displayed on dashboard page : 14 : @account_dashboard : FAILED Examples  :: 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200622937722800_features.accountdashboard.feature_14_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200622937722800_features.accountdashboard.feature_14_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="3"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/login.feature Successful login with registered mobile number, email and password by clicking Login with Email button 56 @login, @successful_login2</p>
+            <p class="text-sm">
+              <span>8:05:49 pm</span> / <span>00:00:35:441</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/login.feature Successful login with registered mobile number, email and password by clicking Login with Email button 56 @login, @successful_login2</h5>
+<span class='badge badge-success'>06.16.2025 8:05:49 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:06:24 pm</span>
+<span class='badge badge-default'>00:00:35:441</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:06:22 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 114 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 21 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200622295599100_in.finology.pages.AccountDashboardPage 114 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200622295599100_in.finology.pages.AccountDashboardPage 114 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:06:23 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Account Dashboard Page
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 21 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200622740118_user_should_be_redirected_to_account_dashboard_page_21 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200622740118_user_should_be_redirected_to_account_dashboard_page_21 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:06:24 pm</td>
+        <td>
+          features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 56 : @login, @successful_login2 : FAILED Examples  :: password = finTestUserAcology, mobile number or email = testtuserac121@gmail.com, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200624294013600_features.login.feature_56_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200624294013600_features.login.feature_56_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="4"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/login.feature Successful login with registered mobile number, email and password by clicking Login with Email button 55 @login, @successful_login2</p>
+            <p class="text-sm">
+              <span>8:05:50 pm</span> / <span>00:00:33:829</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">features/login.feature Successful login with registered mobile number, email and password by clicking Login with Email button 55 @login, @successful_login2</h5>
+<span class='badge badge-success'>06.16.2025 8:05:50 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:06:24 pm</span>
+<span class='badge badge-default'>00:00:33:829</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:06:24 pm</td>
+        <td>
+          features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 55 : @login, @successful_login2 : PASSED Examples  :: password = finTestUserAcology, mobile number or email = 5846975120, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200623893584600_features.login.feature_55_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200623893584600_features.login.feature_55_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="5"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/login.feature Unsuccessful login with invalid or empty mobile number 18 @login, @unsuccessful_login</p>
+            <p class="text-sm">
+              <span>8:05:52 pm</span> / <span>00:00:12:910</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">features/login.feature Unsuccessful login with invalid or empty mobile number 18 @login, @unsuccessful_login</h5>
+<span class='badge badge-success'>06.16.2025 8:05:52 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:06:05 pm</span>
+<span class='badge badge-default'>00:00:12:910</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:06:05 pm</td>
+        <td>
+          features/login.feature : Unsuccessful login with invalid or empty mobile number : 18 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = , message = *Required, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200602720384500_features.login.feature_18_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200602720384500_features.login.feature_18_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/login.feature Successful login with registered mobile number, email and password 40 @login, @successful_login</p>
+            <p class="text-sm">
+              <span>8:05:56 pm</span> / <span>00:00:35:225</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">features/login.feature Successful login with registered mobile number, email and password 40 @login, @successful_login</h5>
+<span class='badge badge-success'>06.16.2025 8:05:56 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:06:31 pm</span>
+<span class='badge badge-default'>00:00:35:225</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:06:31 pm</td>
+        <td>
+          features/login.feature : Successful login with registered mobile number, email and password : 40 : @login, @successful_login : PASSED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = testuserac121@gmail.com, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200631051020_features.login.feature_40_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200631051020_features.login.feature_40_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="7"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/login.feature Unsuccessful login with invalid or empty mobile number 17 @login, @unsuccessful_login</p>
+            <p class="text-sm">
+              <span>8:06:15 pm</span> / <span>00:00:13:236</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">features/login.feature Unsuccessful login with invalid or empty mobile number 17 @login, @unsuccessful_login</h5>
+<span class='badge badge-success'>06.16.2025 8:06:15 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:06:28 pm</span>
+<span class='badge badge-default'>00:00:13:236</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:06:28 pm</td>
+        <td>
+          features/login.feature : Unsuccessful login with invalid or empty mobile number : 17 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = @$#637*, message = Invalid Mobile, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200628256031_features.login.feature_17_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200628256031_features.login.feature_17_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/login.feature Successful login with registered mobile number, email and password 39 @login, @successful_login</p>
+            <p class="text-sm">
+              <span>8:06:36 pm</span> / <span>00:00:22:770</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">features/login.feature Successful login with registered mobile number, email and password 39 @login, @successful_login</h5>
+<span class='badge badge-success'>06.16.2025 8:06:36 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:06:59 pm</span>
+<span class='badge badge-default'>00:00:22:770</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:06:59 pm</td>
+        <td>
+          features/login.feature : Successful login with registered mobile number, email and password : 39 : @login, @successful_login : PASSED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = 5846975120, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200659167132300_features.login.feature_39_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200659167132300_features.login.feature_39_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/accountdashboard.feature All dashboard element should be displayed on dashboard page 8 @account_dashboard</p>
+            <p class="text-sm">
+              <span>8:06:36 pm</span> / <span>00:00:23:928</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/accountdashboard.feature All dashboard element should be displayed on dashboard page 8 @account_dashboard</h5>
+<span class='badge badge-success'>06.16.2025 8:06:36 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:00 pm</span>
+<span class='badge badge-default'>00:00:23:928</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:06:59 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 114 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200659795272700_in.finology.pages.AccountDashboardPage 114 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200659795272700_in.finology.pages.AccountDashboardPage 114 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:00 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200659985379500_userIsLoggedInAndOnAccountDashboardPage_16 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200659985379500_userIsLoggedInAndOnAccountDashboardPage_16 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:07:00 pm</td>
+        <td>
+          features/accountdashboard.feature : All dashboard element should be displayed on dashboard page : 8 : @account_dashboard : FAILED Examples  :: 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200700450279200_features.accountdashboard.feature_8_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200700450279200_features.accountdashboard.feature_8_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="10"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/login.feature Unsuccessful login with new mobile number 21 @login, @unsuccessful_login_with_new_mobile</p>
+            <p class="text-sm">
+              <span>8:06:41 pm</span> / <span>00:00:24:548</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">features/login.feature Unsuccessful login with new mobile number 21 @login, @unsuccessful_login_with_new_mobile</h5>
+<span class='badge badge-success'>06.16.2025 8:06:41 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:06 pm</span>
+<span class='badge badge-default'>00:00:24:548</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:07:06 pm</td>
+        <td>
+          features/login.feature : Unsuccessful login with new mobile number : 21 : @login, @unsuccessful_login_with_new_mobile : PASSED Examples  :: 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200705886930500_features.login.feature_21_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200705886930500_features.login.feature_21_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="11"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Successful sign up with valid name, valid email and valid mobile number 18 @Signup, @successful_signup</p>
+            <p class="text-sm">
+              <span>8:06:48 pm</span> / <span>00:00:30:105</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/signUp.feature Successful sign up with valid name, valid email and valid mobile number 18 @Signup, @successful_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:06:48 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:18 pm</span>
+<span class='badge badge-default'>00:00:30:105</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:17 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPage 64 Exception while verifying on OTP Verification Page #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200717536611500_in.finology.pages.OTPVerificationPage 64 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200717536611500_in.finology.pages.OTPVerificationPage 64 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:18 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to OTP Verification Page with valid user credentials
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200717901446_user_should_redirect_to_otp_verification_page_17 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200717901446_user_should_redirect_to_otp_verification_page_17 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:07:18 pm</td>
+        <td>
+          features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 18 : @Signup, @successful_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 9437525638, name = TestUserRieeeeeeeeeeeee, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200718499169100_features.signUp.feature_18_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200718499169100_features.signUp.feature_18_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="12"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Successful sign up with valid name, valid email and valid mobile number 19 @Signup, @successful_signup</p>
+            <p class="text-sm">
+              <span>8:06:50 pm</span> / <span>00:00:32:095</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/signUp.feature Successful sign up with valid name, valid email and valid mobile number 19 @Signup, @successful_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:06:50 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:22 pm</span>
+<span class='badge badge-default'>00:00:32:095</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:20 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPage 64 Exception while verifying on OTP Verification Page #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200720306881400_in.finology.pages.OTPVerificationPage 64 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200720306881400_in.finology.pages.OTPVerificationPage 64 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:21 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to OTP Verification Page with valid user credentials
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200720685413500_user_should_redirect_to_otp_verification_page_17 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200720685413500_user_should_redirect_to_otp_verification_page_17 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:07:22 pm</td>
+        <td>
+          features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 19 : @Signup, @successful_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200721877535100_features.signUp.feature_19_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200721877535100_features.signUp.feature_19_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="13"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 30 @Signup, @invalid_name_signup</p>
+            <p class="text-sm">
+              <span>8:06:51 pm</span> / <span>00:00:18:442</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 30 @Signup, @invalid_name_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:06:51 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:09 pm</span>
+<span class='badge badge-default'>00:00:18:442</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:09 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200708986256100_in.finology.pages.OTPVerificationPage 55 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200708986256100_in.finology.pages.OTPVerificationPage 55 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:07:09 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 30 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmail2423@gmail.com, mobile number = 9868546793, name = @Lakesh Sahu, message = Your name can contain only alphabets., 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200709492897800_features.signUp.feature_30_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200709492897800_features.signUp.feature_30_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="14"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 31 @Signup, @invalid_name_signup</p>
+            <p class="text-sm">
+              <span>8:07:00 pm</span> / <span>00:00:15:168</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 31 @Signup, @invalid_name_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:07:00 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:16 pm</span>
+<span class='badge badge-default'>00:00:15:168</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:15 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] Invalid name error message below name input box matches with "Your name can contain only alphabets."
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.SignUp_Steps invalid_name_error_should_be_shown_below_name_input_box 39 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200715467843300_invalid_name_error_should_be_shown_below_name_input_box_39 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200715467843300_invalid_name_error_should_be_shown_below_name_input_box_39 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:07:16 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 31 : @Signup, @invalid_name_signup : FAILED Examples  :: email id = randomNewEmailMe2123@gmail.com, mobile number = 1257465983, name = Raj$User12, message = Your name can contain only alphabets., 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200715878116400_features.signUp.feature_31_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200715878116400_features.signUp.feature_31_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="15"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 42 @Signup, @invalid_name_signup</p>
+            <p class="text-sm">
+              <span>8:07:03 pm</span> / <span>00:00:21:960</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 42 @Signup, @invalid_name_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:07:03 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:25 pm</span>
+<span class='badge badge-default'>00:00:21:960</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:25 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200724901204500_in.finology.pages.OTPVerificationPage 55 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200724901204500_in.finology.pages.OTPVerificationPage 55 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:07:25 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 42 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = lakeshsahu758@gmail.com, mobile number = 5784692345, name = , message = *Required, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200725448310300_features.signUp.feature_42_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200725448310300_features.signUp.feature_42_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="16"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 53 @Signup, @invalid_email_signup</p>
+            <p class="text-sm">
+              <span>8:07:07 pm</span> / <span>00:00:25:548</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 53 @Signup, @invalid_email_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:07:07 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:33 pm</span>
+<span class='badge badge-default'>00:00:25:548</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:32 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200732381821400_in.finology.pages.OTPVerificationPage 55 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200732381821400_in.finology.pages.OTPVerificationPage 55 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:07:33 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 53 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = rita2056gmail.com, mobile number = 9868546756, name = Rita, message2 = Please enter a valid email address., message1 = Invalid Email, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200732985099900_features.signUp.feature_53_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200732985099900_features.signUp.feature_53_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="17"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 54 @Signup, @invalid_email_signup</p>
+            <p class="text-sm">
+              <span>8:07:11 pm</span> / <span>00:00:22:301</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 54 @Signup, @invalid_email_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:07:11 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:33 pm</span>
+<span class='badge badge-default'>00:00:22:301</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:33 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200733136749500_in.finology.pages.OTPVerificationPage 55 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200733136749500_in.finology.pages.OTPVerificationPage 55 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:07:33 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 54 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = shyammaster675@gmail, mobile number = 1257465943, name = Ram Shyam, message2 = Please enter a valid email address., message1 = Invalid Email, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200733623050200_features.signUp.feature_54_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200733623050200_features.signUp.feature_54_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="warning" test-id="18"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 55 @Signup, @invalid_email_signup</p>
+            <p class="text-sm">
+              <span>8:07:17 pm</span> / <span>00:00:17:645</span>
+              <span class="badge warning-bg log float-right">Warning</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-warning">features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 55 @Signup, @invalid_email_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:07:17 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:35 pm</span>
+<span class='badge badge-default'>00:00:17:645</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:35 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200735024089800_in.finology.pages.OTPVerificationPage 55 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200735024089800_in.finology.pages.OTPVerificationPage 55 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>8:07:35 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 55 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = , mobile number = 8646597458, name = Hitesh, message2 = *Required, message1 = *Required, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200735400434900_features.signUp.feature_55_PASSED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200735400434900_features.signUp.feature_55_PASSED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="19"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 69 @Signup, @unsuccessful_duplicate_account_signup</p>
+            <p class="text-sm">
+              <span>8:07:26 pm</span> / <span>00:00:26:650</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 69 @Signup, @unsuccessful_duplicate_account_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:07:26 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:53 pm</span>
+<span class='badge badge-default'>00:00:26:650</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:52 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200752492698800_in.finology.pages.LoginPage 79 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200752492698800_in.finology.pages.LoginPage 79 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:52 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200752662692500_user_should_be_redirected_to_login_page_25 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200752662692500_user_should_be_redirected_to_login_page_25 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:07:53 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 69 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 5598705134, name = TestUserRieeeeeeeeeeeee, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200752993956400_features.signUp.feature_69_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200752993956400_features.signUp.feature_69_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="20"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 70 @Signup, @unsuccessful_duplicate_account_signup</p>
+            <p class="text-sm">
+              <span>8:07:27 pm</span> / <span>00:00:25:536</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 70 @Signup, @unsuccessful_duplicate_account_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:07:27 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:53 pm</span>
+<span class='badge badge-default'>00:00:25:536</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:52 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200752732281800_in.finology.pages.LoginPage 79 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200752732281800_in.finology.pages.LoginPage 79 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:53 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200752901471100_user_should_be_redirected_to_login_page_25 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200752901471100_user_should_be_redirected_to_login_page_25 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:07:53 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 70 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = otherneewuueeemail211317@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200753276331100_features.signUp.feature_70_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200753276331100_features.signUp.feature_70_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="21"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 71 @Signup, @unsuccessful_duplicate_account_signup</p>
+            <p class="text-sm">
+              <span>8:07:28 pm</span> / <span>00:00:27:635</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 71 @Signup, @unsuccessful_duplicate_account_signup</h5>
+<span class='badge badge-success'>06.16.2025 8:07:28 pm</span>
+<span class='badge badge-danger'>06.16.2025 8:07:55 pm</span>
+<span class='badge badge-default'>00:00:27:635</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:55 pm</td>
+        <td>
+          org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200755064787200_in.finology.pages.LoginPage 79 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200755064787200_in.finology.pages.LoginPage 79 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log warning-bg">Warning</span></td>
+        <td>8:07:55 pm</td>
+        <td>
+          Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200755248363700_user_should_be_redirected_to_login_page_25 - WARN.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200755248363700_user_should_be_redirected_to_login_page_25 - WARN.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>8:07:55 pm</td>
+        <td>
+          features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 71 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr, 
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='/extentReports/2025-06-16T200539664/2025-06-16T200755602195800_features.signUp.feature_71_FAILED.png' src="/extentReports/2025-06-16T200539664/2025-06-16T200755602195800_features.signUp.feature_71_FAILED.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jun 16, 2025 08:05:40 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jun 16, 2025 08:07:56 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>6</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>10</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='28%'>
+<b>6</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='47%'><b>10</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='23%'>5</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='24%'><b>11</b> events passed</small></div>
+<div>
+<small data-tooltip='22%'><b>10</b> events failed,
+<b data-tooltip='%'>24</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"features/accountdashboard.feature Welcome message should be displayed on dashboard page 27 @account_dashboard":36.137,"features/accountdashboard.feature All user photo element should be displayed on dashboard page 14 @account_dashboard":35.384,"features/login.feature Successful login with registered mobile number, email and password by clicking Login with Email button 56 @login, @successful_login2":35.441,"features/login.feature Successful login with registered mobile number, email and password by clicking Login with Email button 55 @login, @successful_login2":33.829,"features/login.feature Unsuccessful login with invalid or empty mobile number 18 @login, @unsuccessful_login":12.91,"features/login.feature Successful login with registered mobile number, email and password 40 @login, @successful_login":35.225,"features/login.feature Unsuccessful login with invalid or empty mobile number 17 @login, @unsuccessful_login":13.236,"features/login.feature Successful login with registered mobile number, email and password 39 @login, @successful_login":22.77,"features/accountdashboard.feature All dashboard element should be displayed on dashboard page 8 @account_dashboard":23.928,"features/login.feature Unsuccessful login with new mobile number 21 @login, @unsuccessful_login_with_new_mobile":24.548,"features/signUp.feature Successful sign up with valid name, valid email and valid mobile number 18 @Signup, @successful_signup":30.105,"features/signUp.feature Successful sign up with valid name, valid email and valid mobile number 19 @Signup, @successful_signup":32.095,"features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 30 @Signup, @invalid_name_signup":18.442,"features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 31 @Signup, @invalid_name_signup":15.168,"features/signUp.feature Unsuccessful sign up with invalid name, valid email id and valid mobile number 42 @Signup, @invalid_name_signup":21.96,"features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 53 @Signup, @invalid_email_signup":25.548,"features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 54 @Signup, @invalid_email_signup":22.301,"features/signUp.feature Unsuccessful sign up with valid name, invalid email id and valid mobile number 55 @Signup, @invalid_email_signup":17.645,"features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 69 @Signup, @unsuccessful_duplicate_account_signup":26.65,"features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 70 @Signup, @unsuccessful_duplicate_account_signup":25.536,"features/signUp.feature Unsuccessful sign up with valid name, duplicate email or duplicate mobile number 71 @Signup, @unsuccessful_duplicate_account_signup":27.635
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Computer Name</td>
+<td>Lakesh-Laptop</td>
+</tr>
+<tr>
+<td>Environment Name</td>
+<td>Production</td>
+</tr>
+<tr>
+<td>Tester Name</td>
+<td>Lakesh Sahu</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Windows 11 Home Edition</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>Chrome</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 6,
+failParent: 10,
+warningParent: 5,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 11,
+failEvents: 10,
+warningEvents: 24,
+skipEvents: 0,
+infoEvents: 0
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

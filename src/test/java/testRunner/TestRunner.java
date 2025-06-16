@@ -9,15 +9,13 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(features = {"src/test/resources/features/"},
         glue = {"in.finology.stepDefns"}, monochrome = true,
         dryRun = false,
-        plugin = {"pretty", "html:reports/html/testReport.html", "json:reports/json/testReport.json"}, publish = true)
+        plugin = {"pretty", "html:cucumberReports/htmlReport/html_report.html", "json:cucumberReports/jsonReport/json_report.json"}, publish = true)
 public class TestRunner extends AbstractTestNGCucumberTests {
 
     @Override
     @Test
     @DataProvider(parallel = true)
     public Object[][] scenarios() {
-        System.out.println("############ " + "inside testRunner");
-        System.out.println("#####@@@@@@@@@@@@ Inside TestRunner Thread ID: " + Thread.currentThread().threadId());
         return super.scenarios();
     }
 }

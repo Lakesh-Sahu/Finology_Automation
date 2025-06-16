@@ -135,34 +135,44 @@ public class HomePage extends CommonMethods {
         try {
             return wait.until(ExpectedConditions.urlContains(url));
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying on Home Page");
             return false;
         }
     }
 
     // Return the faq question WebElement
-    public WebElement question(String question) {
-        return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='" + question + "']")));
+    public WebElement getFAQQuestionWebElementOfQuestion(String question) {
+        try {
+            return wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//a[text()='" + question + "']")));
+        } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting the FAQ Question WebElement of a Question on Home Page");
+            return null;
+        }
     }
 
     // Return the answer in String format without space of a faq question
-    public String faqAnswer(String question) {
+    public String getFAQAnswerOfQuestion(String question) {
+        try {
+            List<WebElement> answers = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//a[text()='" + question + "']/following-sibling::div/p[@class='faqAns']/following-sibling::p")));
+            StringBuilder sb = new StringBuilder();
 
-        List<WebElement> answers = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//a[text()='" + question + "']/following-sibling::div/p[@class='faqAns']/following-sibling::p")));
-        StringBuilder sb = new StringBuilder();
-
-        for (WebElement ans : answers) {
-            sb.append(ans.getText());
+            for (WebElement ans : answers) {
+                sb.append(ans.getText());
+            }
+            return sb.toString().replaceAll(" ", "");
+        } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting FAQ Answer of a Question on Home Page");
+            return "";
         }
-        return sb.toString().replaceAll(" ", "");
     }
 
-    public boolean goToHomePage(){
+    public boolean goToHomePage() {
         try {
             driver.get(url);
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while navigating to Home Page");
             return false;
         }
     }
-
 }

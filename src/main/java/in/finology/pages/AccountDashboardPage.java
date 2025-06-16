@@ -104,6 +104,7 @@ public class AccountDashboardPage extends CommonMethods {
             driver.get(url);
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while navigation to Account Dashboard Page");
             return false;
         }
     }
@@ -112,6 +113,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return wait.until(ExpectedConditions.urlToBe(url));
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying on Account Dashboard Page");
             return false;
         }
     }
@@ -121,6 +123,7 @@ public class AccountDashboardPage extends CommonMethods {
             userPhotoImgBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Image on Account Dashboard Page");
             return false;
         }
     }
@@ -132,6 +135,7 @@ public class AccountDashboardPage extends CommonMethods {
             wait.until(ExpectedConditions.urlToBe("https://www.finology.in/"));
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while performing Logout from Account Dashboard Page Using User Photo Image Button");
             return false;
         }
     }
@@ -142,6 +146,7 @@ public class AccountDashboardPage extends CommonMethods {
             wait.until(ExpectedConditions.urlToBe("https://www.finology.in/"));
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while performing Logout from Account Dashboard Page Using Side Bar Logout Button");
             return false;
         }
     }
@@ -150,6 +155,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return finologyLogo.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying finology Logo is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -158,6 +164,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return welcomeText.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying welcome Text is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -166,6 +173,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return goToRecipeBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying go To Recipe Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -174,6 +182,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return goToQuestBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying go To Quest Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -182,6 +191,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return trackYourPortfolioBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying track Your Portfolio Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -190,6 +200,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return goToSelectBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying go To Select Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -198,6 +209,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return goToInsiderBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying go To Insider Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -206,6 +218,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return goToReserveBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying go To Reserve Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -214,6 +227,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return sideBarHomeBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying side Bar Home Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -222,6 +236,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return sideBarSubscriptionBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying side Bar Subscription Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -230,6 +245,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return sideBarProfileBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying side Bar Profiles Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -238,6 +254,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return sideBarPasswordBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying side Bar Password Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -246,6 +263,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return sideBaSupportBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying side Bar Support Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -254,6 +272,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return sideBarLogoutBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying side Bar Logout Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -262,6 +281,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return userPhotoImgBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying user Photo Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -272,6 +292,7 @@ public class AccountDashboardPage extends CommonMethods {
             finologyLogo.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Finology Logo on Account Dashboard Page");
             return false;
         }
     }
@@ -281,6 +302,7 @@ public class AccountDashboardPage extends CommonMethods {
             goToRecipeBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Go To Recipe Button on Account Dashboard Page");
             return false;
         }
     }
@@ -290,6 +312,7 @@ public class AccountDashboardPage extends CommonMethods {
             goToQuestBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Go To Quest Button on Account Dashboard Page");
             return false;
         }
     }
@@ -299,6 +322,7 @@ public class AccountDashboardPage extends CommonMethods {
             trackYourPortfolioBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Track Your Portfolio Button on Account Dashboard Page");
             return false;
         }
     }
@@ -308,6 +332,7 @@ public class AccountDashboardPage extends CommonMethods {
             goToSelectBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Go To Select Button on Account Dashboard Page");
             return false;
         }
     }
@@ -317,6 +342,7 @@ public class AccountDashboardPage extends CommonMethods {
             goToInsiderBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Go To Insider Button on Account Dashboard Page");
             return false;
         }
     }
@@ -326,6 +352,7 @@ public class AccountDashboardPage extends CommonMethods {
             goToReserveBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Go To Reserve Button on Account Dashboard Page");
             return false;
         }
     }
@@ -335,6 +362,7 @@ public class AccountDashboardPage extends CommonMethods {
             sideBarHomeBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Home Button on Account Dashboard Page");
             return false;
         }
     }
@@ -344,6 +372,7 @@ public class AccountDashboardPage extends CommonMethods {
             sideBarSubscriptionBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Subscription Button on Account Dashboard Page");
             return false;
         }
     }
@@ -353,6 +382,7 @@ public class AccountDashboardPage extends CommonMethods {
             sideBarProfileBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Profile Button on Account Dashboard Page");
             return false;
         }
     }
@@ -362,6 +392,7 @@ public class AccountDashboardPage extends CommonMethods {
             sideBarPasswordBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking SideBar Password Button on Account Dashboard Page");
             return false;
         }
     }
@@ -371,6 +402,7 @@ public class AccountDashboardPage extends CommonMethods {
             sideBaSupportBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Support Button on Account Dashboard Page");
             return false;
         }
     }
@@ -380,6 +412,7 @@ public class AccountDashboardPage extends CommonMethods {
             sideBarLogoutBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Logout Button on Account Dashboard Page");
             return false;
         }
     }
@@ -390,6 +423,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return userPhotoDashboardBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Dashboard Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -398,6 +432,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return userPhotoProfileBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Profile Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -406,6 +441,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return userPhotoSupportBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Support Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -414,6 +450,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return userPhotoLogoutBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Logout Button isDisplayed on Account Dashboard Page");
             return false;
         }
     }
@@ -423,6 +460,7 @@ public class AccountDashboardPage extends CommonMethods {
             userPhotoDashboardBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Dashboard Button on Account Dashboard Page");
             return false;
         }
     }
@@ -432,6 +470,7 @@ public class AccountDashboardPage extends CommonMethods {
             userPhotoProfileBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Profile Button on Account Dashboard Page");
             return false;
         }
     }
@@ -441,6 +480,7 @@ public class AccountDashboardPage extends CommonMethods {
             userPhotoSupportBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Support Button on Account Dashboard Page");
             return false;
         }
     }
@@ -450,6 +490,7 @@ public class AccountDashboardPage extends CommonMethods {
             userPhotoLogoutBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Logout Button on Account Dashboard Page");
             return false;
         }
     }
@@ -459,6 +500,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return welcomeText.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Welcome Text on Account Dashboard Page");
             return "";
         }
     }
@@ -467,6 +509,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return finologyLogoIsDisplayed() && welcomeTextIsDisplayed() && userPhotoImgBtnIsDisplayed() && goToRecipeBtnIsDisplayed() && goToQuestBtnIsDisplayed() && trackYourPortfolioBtnIsDisplayed() && goToSelectBtnIsDisplayed() && goToInsiderBtnIsDisplayed() && goToReserveBtnIsDisplayed() && sideBarHomeBtnIsDisplayed() && sideBarSubscriptionBtnIsDisplayed() && sideBarProfileBtnIsDisplayed() && sideBarPasswordBtnIsDisplayed() && sideBarSupportBtnIsDisplayed() && sideBarLogoutBtnIsDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying All Elements are Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -475,6 +518,7 @@ public class AccountDashboardPage extends CommonMethods {
         try {
             return userPhotoDashboardBtnIsDisplayed() && userPhotoProfileBtnIsDisplayed() && userPhotoSupportBtnIsDisplayed() && userPhotoLogoutBtnIsDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying All User Photo Elements are Displayed on Account Dashboard Page");
             return false;
         }
     }

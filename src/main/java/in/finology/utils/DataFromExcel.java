@@ -1,5 +1,7 @@
 package in.finology.utils;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -7,7 +9,9 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.File;
 import java.util.HashMap;
 
-public class DataFromExcel {
+public class DataFromExcel extends Base {
+    private static Logger log = LogManager.getLogger(DataFromExcel.class);
+
     File file;
     String sheetName;
 
@@ -20,7 +24,7 @@ public class DataFromExcel {
     public String getDataOf(String keyHeaderName, String key, String returnColnHeaderName) {
 
         try {
-            try(XSSFWorkbook workbook = new XSSFWorkbook(file)) {
+            try (XSSFWorkbook workbook = new XSSFWorkbook(file)) {
 
                 XSSFSheet sheet = workbook.getSheet(sheetName);
 
@@ -53,6 +57,7 @@ public class DataFromExcel {
                 }
             }
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Data of from Excel keyHeaderName : " + keyHeaderName + " key : " + key + " returnColnHeaderName : " + returnColnHeaderName + " on DataFromExcel");
         }
         return "";
     }
@@ -62,7 +67,7 @@ public class DataFromExcel {
         HashMap<String, String> keyAndValue = new HashMap<>();
 
         try {
-            try(XSSFWorkbook workbook = new XSSFWorkbook(file)) {
+            try (XSSFWorkbook workbook = new XSSFWorkbook(file)) {
 
                 XSSFSheet sheet = workbook.getSheet(sheetName);
 
@@ -92,15 +97,15 @@ public class DataFromExcel {
                     XSSFCell currValueCell = sheet.getRow(rowIdx).getCell(returnColnIdx);
 
                     String currKeyValue = "";
-                    String currValueValue  = "";
+                    String currValueValue = "";
 
-                    XSSFCell[] currKeyValueCell =  new XSSFCell[] {currKeyCell, currValueCell};
-                    for(int i = 0; i < currKeyValueCell.length; i++) {
+                    XSSFCell[] currKeyValueCell = new XSSFCell[]{currKeyCell, currValueCell};
+                    for (int i = 0; i < currKeyValueCell.length; i++) {
                         String currString = getCellValueOf(currKeyValueCell[i]);
 
-                        if(i == 0) {
+                        if (i == 0) {
                             currKeyValue = currString;
-                        } else  {
+                        } else {
                             currValueValue = currString;
                         }
                     }
@@ -108,20 +113,25 @@ public class DataFromExcel {
                 }
             }
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting All Key Value Data from Excel keyHeaderName : " + keyHeaderName + " returnColnHeaderName : " + returnColnHeaderName + " on DataFromExcel");
         }
         return keyAndValue;
     }
 
     private static String getCellValueOf(XSSFCell currKeyValueCell) {
-        String currString;
-
-        currString = switch (currKeyValueCell.getCellType()) {
-            case STRING -> String.valueOf(currKeyValueCell.getStringCellValue());
-            case BOOLEAN -> String.valueOf(currKeyValueCell.getBooleanCellValue());
-            case NUMERIC -> String.valueOf(currKeyValueCell.getNumericCellValue());
-            case ERROR -> String.valueOf(currKeyValueCell.getErrorCellString());
-            default -> "";
-        };
-        return currString;
+        try {
+            String currString;
+            currString = switch (currKeyValueCell.getCellType()) {
+                case STRING -> String.valueOf(currKeyValueCell.getStringCellValue());
+                case BOOLEAN -> String.valueOf(currKeyValueCell.getBooleanCellValue());
+                case NUMERIC -> String.valueOf(currKeyValueCell.getNumericCellValue());
+                case ERROR -> String.valueOf(currKeyValueCell.getErrorCellString());
+                default -> "";
+            };
+            return currString;
+        } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Cell Value Of currKeyValueCell : " + currKeyValueCell + " on DataFromExcel");
+            return "";
+        }
     }
 }

@@ -1,20 +1,26 @@
-package testCases;
-
-import in.finology.utils.CommonMethods;
-import in.finology.utils.driverFactory.DriverFactory;
-import in.finology.pages.*;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
-import java.util.Scanner;
-
-//public class TestCase01 extends CommonMethods {
-
+//package scratch;
+//
+//import in.finology.pages.*;
+//import in.finology.pages.LoginAuthPage;
+//import in.finology.utils.CommonMethods;
+//import in.finology.utils.driverFactory.DriverFactory;
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.JavascriptExecutor;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.FindBy;
+//import org.openqa.selenium.support.PageFactory;
+//import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+//import org.openqa.selenium.support.ui.ExpectedConditions;
+//import org.openqa.selenium.support.ui.WebDriverWait;
+//
+//import java.time.Duration;
+//import java.util.HashMap;
+//import java.util.List;
+//import java.util.Scanner;
+//
+//public class scratchClass extends CommonMethods {
+//
 //    @FindBy(linkText = "Go to Insider")
 //    private static WebElement goToInsiderBtn;
 //
@@ -44,7 +50,7 @@ import java.util.Scanner;
 //
 //    @FindBy(partialLinkText = "Sign up with Google")
 //    private WebElement signInWithGoogleBtnTest;
-
+//
 //    WebDriver driver;
 //    WebDriverWait wait;
 //    HomePage hp;
@@ -60,7 +66,7 @@ import java.util.Scanner;
 //    String engineNumber;
 //    String mobileNumber;
 //
-//    public TestCase01() {
+//    public scratchClass() {
 //        Scanner sc = new Scanner(System.in);
 //
 //        System.out.println("Enter registration number : ");
@@ -87,40 +93,38 @@ import java.util.Scanner;
 //        lap = new LoginAuthPage(driver);
 //        adp = new AccountDashboardPage(driver);
 //    }
-
+//
 //    public void runMe() throws InterruptedException {
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //        driver.get("https://www.finology.in/");
-
-
+//
+//
 //        WebElement img = driver.findElement(By.xpath("//img[@src='image/select.svg']"));
 //        JavascriptExecutor js = (JavascriptExecutor) driver;
 //        js.executeScript("arguments[0].scrollIntoView(true);", img);
 //
 //        WebElement p = driver.findElement(By.xpath("//p[@class='pl2 lh2']"));
 //        System.out.println(p.getText());
-
+//
 //        WebElement rating = driver.findElement(By.xpath("(//p[@class='fs1 c-white pt025'])[2]"));
 //        System.out.println(rating.getText());
 //        Thread.sleep(2000);
 //        WebElement question = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[11]/div[2]/div[2]/div/p[2]")));
 //        System.out.println("qu" + question.getText());
-
+//
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("2. What are the steps involved in financial planning?"))).click();
 //        List<WebElement> ls = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(//p[@class='faqAns'])[2]/following-sibling::p")));
 //        StringBuilder sb = new StringBuilder();
 //
 //        for (WebElement li : ls) {
-//            sb.append(li.getText() + " ");
+//            sb.append(li.getText()).append(" ");
 //        }
 //
 //        System.out.println(sb);
-
+//
 //        System.out.println(driver.getCurrentUrl());
 //        wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("2. What are the steps involved in financial planning?"))).click();
-//        List<WebElement> ls = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("(//p[@class='faqAns'])[2]/following-sibling::p")));
-//        StringBuilder sb = new StringBuilder();
-
+//
 //        System.out.println("JavascriptExecutor");
 //        JavascriptExecutor jse = (JavascriptExecutor) driver;
 //        jse.executeScript("arguments[0].scrollIntoView();", goToInsiderBtn);
@@ -132,13 +136,13 @@ import java.util.Scanner;
 //        jse.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center', inline: 'nearest'});", goToInsiderBtn);
 //        Thread.sleep(5000);
 //        jse.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'end', inline: 'center'});", goToInsiderBtn);
-
-
+//
+//
 //        click(driver, loginBtn);
 //        click(driver, signUpBtn);
 //        click(driver, signInWithGoogleBtnTest);
-
-
+//
+//
 //        System.out.println(System.currentTimeMillis());
 //        System.out.println(System.getProperty("user.dir"));
 //
@@ -147,7 +151,7 @@ import java.util.Scanner;
 //        System.out.println(number.length());
 //
 //        System.out.println(mobileNumberGenerateAndAppend());
-
+//
 //        System.out.println(driver.getCurrentUrl());
 //        lp.goToLoginPage();
 //        System.out.println(driver.getCurrentUrl());
@@ -164,26 +168,25 @@ import java.util.Scanner;
 //        driver.get("https://www.finology.in/account/dashboard");
 //        Thread.sleep(15000);
 //        System.out.println(driver.getCurrentUrl());
-
+//
 //        driver.get("https://www.finology.in/signup");
 //        System.out.println(driver.getCurrentUrl());
-
+//
 //        adp.goToAccountDashboardPage();
 //        System.out.println(driver.getCurrentUrl());
 //        Thread.sleep(30000);
 //        long start = System.currentTimeMillis();
-//        adp.logout();
+//        adp.performLogoutFromAccountDashboardPageUsingSideBarLogoutBtn();
 //        long end = System.currentTimeMillis();
 //        System.out.println((end - start));
-
+//
 //        adp.goToAccountDashboardPage();
 //        System.out.println(adp.sideBarHomeBtnIsDisplayed());
 //        adp.clickSideBarHomeBtn();
-
+//
 //        String e = "ok sbi India";
 //
 //        for(String el : e.split(" ")) {
-//
 //            System.out.print(el + ":");
 //        }
 //
@@ -194,37 +197,9 @@ import java.util.Scanner;
 //        String f2 = "LLa";
 //
 //        System.out.println(f1.compareTo(f2));
-
-
-
-//    -----------------XXX-------------------------
-//        driver.get("https://order.realmazon.com/");
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='CHHATTISGARH']"))).click();
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//button[normalize-space()='Close'])[3]"))).click();
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Order HSRP']"))).click();
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Registration Number']"))).clear();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Registration Number']"))).sendKeys(registrationNumber);
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Chassis Number']"))).clear();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Chassis Number']"))).sendKeys(chassisNumber);
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Engine Number']"))).clear();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Engine Number']"))).sendKeys(registrationNumber);
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Mobile Number']"))).clear();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Mobile Number']"))).sendKeys(registrationNumber);
-//
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@Value='Validate']"))).click();
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Mobile Number']"))).sendKeys(registrationNumber);
-//    -----------------XXX-------------------------
-
 //    }
 //
 //    public static void main(String[] args) throws InterruptedException {
-//        (new TestCase01()).runMe();
+//        (new scratchClass()).runMe();
 //    }
 //}

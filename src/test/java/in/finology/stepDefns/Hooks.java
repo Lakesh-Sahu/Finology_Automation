@@ -6,6 +6,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import in.finology.screenshot.Screenshot;
 import in.finology.utils.Base;
+import in.finology.utils.DataToExcel;
 import in.finology.utils.ObjectManager;
 import in.finology.utils.driverFactory.DriverFactory;
 import io.cucumber.java.*;
@@ -15,233 +16,223 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Hooks extends Base {
     private static final Logger log = LogManager.getLogger(Hooks.class);
+    public static List<Object[]> data = new ArrayList<>();
+    public static int SNo = 1;
+
 
     @BeforeAll
-    public static void any_method_name1() {
-        browserName = "Chrome";
-        log.info("##### Test Cases Started #####");
-        System.out.println("########### " + "inside Hooks beforeAll browser name : " + browserName);
+    public static void setup() {
+        try {
+            String filePath = System.getProperty("user.dir") + "/extentReports/extent_report_" + singleTimeStamp + ".html";
+            File file = new File(filePath);
+            if (!file.exists()) {
+                sparkReporter = new ExtentSparkReporter(filePath);
 
-        singleTimeStamp = getSingleTimeStamp();
+                sparkReporter.config().setDocumentTitle("YouTube Automation Report");
+                sparkReporter.config().setReportName("Functional Testing");
+                sparkReporter.config().setTheme(Theme.DARK); //OR Theme.STANDARD
 
-        String filePath = System.getProperty("user.dir") + "/extent_reports/report_" + singleTimeStamp + ".html";
-        File file = new File(filePath);
-        if (!file.exists()) {
-            sparkReporter = new ExtentSparkReporter(filePath);
+                reports = new ExtentReports();
 
-            sparkReporter.config().setDocumentTitle("YouTube Automation Report");
-            sparkReporter.config().setReportName("Functional Testing");
-            sparkReporter.config().setTheme(Theme.DARK); //OR Theme.STANDARD
+                reports.attachReporter(sparkReporter);
 
-            reports = new ExtentReports();
+                reports.setSystemInfo("Computer Name", "Lakesh-Laptop");
+                reports.setSystemInfo("Environment Name", "Production");
+                reports.setSystemInfo("Tester Name", "Lakesh Sahu");
+                reports.setSystemInfo("OS", "Windows 11 Home Edition");
+                reports.setSystemInfo("Browser", browserName);
+            }
 
-            reports.attachReporter(sparkReporter);
-
-            reports.setSystemInfo("Computer Name", "Lakesh-Laptop");
-            reports.setSystemInfo("Environment Name", "Production");
-            reports.setSystemInfo("Tester Name", "Lakesh Sahu");
-            reports.setSystemInfo("OS", "Windows 11 Home Edition");
-            reports.setSystemInfo("Browser", browserName);
+            data.add(new Object[] {"SNo", "Scenario", "Examples", "Status", "URI"});
+        } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while doing setup on setup of Hooks");
         }
     }
 
     @AfterAll
-    public static void any_method_name2() {
-        System.out.println("####### afterAll");
-
+    public static void afterAll() {
         try {
-            System.out.println("########### " + "inside Hooks afterAll flushReport");
-
+            DataToExcel.writeReportDataInExcel(data);
             reports.flush();
         } catch (Exception e) {
-            logWarningInExtentReport(e, "Unable to flush the extent report");
-            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), "Unable to flush the extent report", e, Level.WARN);
+            logWarningInLogFileAndExtentReport(log, e, "Exception while calling writeReportDataInExcel or flushing Extent Report on afterAll of Hooks");
         }
     }
 
     @Before
     public void beforeScenario(Scenario scenario) {
         try {
+            ObjectManager.acquire();
+
             String scenarioName = scenario.getName();
             String scenarioLine = String.valueOf(scenario.getLine());
             String featureURI = String.valueOf(scenario.getUri());
             String folderFileName = featureURI.substring(featureURI.lastIndexOf("features"));
             String scenarioTags = String.join(", ", scenario.getSourceTagNames());
-//            String scenarioStatus = String.valueOf(scenario.getStatus());
-//            String scenarioTagsUsingToString = scenario.getSourceTagNames().toString();
-//            int scenarioHashCode = scenario.hashCode();
-//            String scenarioId = scenario.getId();
-//            boolean isFailed = scenario.isFailed();
-//
-//            System.out.println("result getName : " + scenarioName);
-//            System.out.println("result getLine : " + scenarioLine);
-//            System.out.println("result scenarioStatus : " + scenarioStatus);
-//            System.out.println("result featureURI : " + featureURI);
-//            System.out.println("result folderFileName : " + folderFileName);
-//            System.out.println("result scenarioTags : " + scenarioTags);
-//            System.out.println("result scenarioTagsUsingToString : " + scenarioTagsUsingToString);
-//            System.out.println("result scenarioHashCode : " + scenarioHashCode);
-//            System.out.println("result scenarioId : " + scenarioId);
-//            System.out.println("result isFailed : " + isFailed);
-//            scenario.log("log some text in terminal and in cucumber in-built report");
-//            scenario.attach(Screenshot.captureAsBYTE(getCallerInfoForScreenshotFromScenario(scenario)), "image/png", getCallerInfoForScreenshotFromScenario(scenario));
-//            scenario.attach("have some logging text for cucumber in-built report", "text/plain", "Also logging here");
 
-
-            ObjectManager.acquire();
             WebDriver driver = new DriverFactory().getDriver(browserName);
-            System.out.println("isDriverNull : " + (driver == null));
 
             ObjectManager.init(driver, folderFileName, scenarioName, scenarioLine, scenarioTags);
-
-            scenario.log("logging using the scenario methods beforeScenario");
-            System.out.println("Class : " + scenario.getClass());
-
-            System.out.println("#####$$$$$ Inside beforeScenario Thread ID: " + Thread.currentThread().threadId());
-
-
-            System.out.println("####### inside Hooks before complete");
         } catch (Exception e) {
-            System.out.println("######## Error inside catch of Hooks before");
-            e.printStackTrace();
-            System.out.println("##########################");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting driver, creating Objects, acquiring thread on beforeScenario of Hooks");
         }
     }
 
     @After
     public void afterScenario(Scenario scenario) {
-        try {
-//            String scenarioName = scenario.getName();
-//            String scenarioLine = String.valueOf(scenario.getLine());
-//            String scenarioStatus = String.valueOf(scenario.getStatus());
-//            String featureURI = String.valueOf(scenario.getUri());
-//            String folderFileName = featureURI.substring(featureURI.lastIndexOf("features"));
-//            String scenarioTags = String.join(", ", scenario.getSourceTagNames());
-//            String scenarioTagsUsingToString = scenario.getSourceTagNames().toString();
-//            int scenarioHashCode = scenario.hashCode();
-//            String scenarioId = scenario.getId();
-//            boolean isFailed = scenario.isFailed();
-//
-//            System.out.println("result getName : " + scenarioName);
-//            System.out.println("result getLine : " + scenarioLine);
-//            System.out.println("result scenarioStatus : " + scenarioStatus);
-//            System.out.println("result featureURI : " + featureURI);
-//            System.out.println("result folderFileName : " + folderFileName);
-//            System.out.println("result scenarioTags : " + scenarioTags);
-//            System.out.println("result scenarioTagsUsingToString : " + scenarioTagsUsingToString);
-//            System.out.println("result scenarioHashCode : " + scenarioHashCode);
-//            System.out.println("result scenarioId : " + scenarioId);
-//            System.out.println("result isFailed : " + isFailed);
-//            scenario.log("log some text in terminal and in cucumber in-built report");
-//            scenario.attach(Screenshot.captureAsBYTE( getCallerInfoForScreenshotFromScenario(scenario)), "image/png",  getCallerInfoForScreenshotFromScenario(scenario));
-//            scenario.attach("have some logging text for cucumber in-built report", "text/plain", "Also logging here");
+//        try {
+        addDataInList(scenario);
 
+        String callerInfoForScreenshot = getCallerInfoForScreenshotFromScenario(scenario);
+        String callerInfoTagStatusFromScenarioAndExamplesKeyValue = getCallerInfoTagStatusFromScenario(scenario) + getExamplesKeyValueFromHashMap();
+        Status status = scenario.getStatus();
 
-            String callerInfoForScreenshot = getCallerInfoForScreenshotFromScenario(scenario);
-            String callerInfoForExtentReport = getCallerInfoForExtentFromScenario(scenario);
+        logAndAttachInCucumberReport(scenario, "Test Case Finished " + callerInfoTagStatusFromScenarioAndExamplesKeyValue, "image/png", callerInfoForScreenshot);
+        logLevelInLogFile(log, Level.INFO, "Test Case Finished " + callerInfoTagStatusFromScenarioAndExamplesKeyValue);
 
-            scenario.log("scenario.isFailed : " + scenario.isFailed());
-            if (scenario.isFailed()) {
-                ObjectManager.getObject().test.fail(callerInfoForExtentReport, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfoForScreenshot)).build());
-                scenario.log("taking screenshot isFailed = true");
-                scenario.attach(Screenshot.captureAsBYTE(callerInfoForScreenshot), "image/png", callerInfoForScreenshot);
-            } else {
-                ObjectManager.getObject().test.pass(callerInfoForExtentReport, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfoForScreenshot)).build());
-                scenario.log("taking screenshot isFailed = false");
-                scenario.attach(Screenshot.captureAsBYTE(callerInfoForScreenshot), "image/png", callerInfoForScreenshot);
+        if (status == Status.PASSED) {
+            try {
+                ObjectManager.getObject().test.pass(callerInfoTagStatusFromScenarioAndExamplesKeyValue, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfoForScreenshot)).build());
+            } catch (Exception e) {
+                try {
+                    ObjectManager.getObject().test.pass(callerInfoTagStatusFromScenarioAndExamplesKeyValue);
+                } catch (Exception ee) {
+                    logWarningInLogAndExtentReportWithoutScreenshot(log, ee, "Exception while marking Extent Test as Pass in the afterScenario method of the Hooks class");
+                    logAndAttachInCucumberReport(scenario, "Exception while marking Extent Test as Pass in the afterScenario method of the Hooks class", "image/png", "Test Case Finished " + callerInfoForScreenshot);
+                }
             }
-            scenario.log("taking screenshot isFailed = true");
-
+        } else if (status == Status.SKIPPED) {
+            try {
+                ObjectManager.getObject().test.skip(callerInfoTagStatusFromScenarioAndExamplesKeyValue);
+            } catch (Exception e) {
+                logWarningInLogAndExtentReportWithoutScreenshot(log, e, "Exception while marking Extent Test as Skip in the afterScenario method of the Hooks class");
+                logAndAttachInCucumberReport(scenario, "Exception while marking Extent Test as Skip in the afterScenario method of the Hooks class", "image/png", "Test Case Finished " + callerInfoForScreenshot);
+            }
+        } else {
+            try {
+                ObjectManager.getObject().test.fail(callerInfoTagStatusFromScenarioAndExamplesKeyValue, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfoForScreenshot)).build());
+            } catch (Exception e) {
+                try {
+                    ObjectManager.getObject().test.fail(callerInfoTagStatusFromScenarioAndExamplesKeyValue);
+                } catch (Exception ee) {
+                    logWarningInLogAndExtentReportWithoutScreenshot(log, ee, "Exception while marking Extent Test as Fail in the afterScenario method of Hooks class");
+                    logAndAttachInCucumberReport(scenario, "Exception while marking Extent Test as Fail in the afterScenario method of Hooks class", "image/png", "Test Case Finished " + callerInfoForScreenshot);
+                }
+            }
+        }
+//        } catch (Exception e) {
+//            logWarningInLogFileAndExtentReport(log, e, "Exception while checking the scenarios and quiting driver in the afterScenario method of Hooks class");
+//            logAndAttachInCucumberReport(scenario, "Exception while marking Extent Test as Fail in the afterScenario method of Hooks class", "image/png", "Test Case Finished " + callerInfoForScreenshot);
+//        } finally {
+        try {
             if (ObjectManager.getObject() != null && ObjectManager.getObject().getDriver() != null) {
                 ObjectManager.getObject().getDriver().quit();
                 ObjectManager.remove();
-                ObjectManager.release();
             }
         } catch (Exception e) {
-            logWarningInExtentReport(e, "Unable to tearDown");
-            logExceptionInLog(getCallerInfoFromStackTrace(Thread.currentThread().getStackTrace()), "Unable to tearDown", e, Level.WARN);
+            logWarningInLogFileAndExtentReport(log, e, "Exception while quiting the driver and removing the Object in the afterScenario method of Hooks class");
+            logAndAttachInCucumberReport(scenario, "Exception while quiting the driver and removing the Object in the afterScenario method of Hooks class", "image/png", "Test Case Finished " + callerInfoForScreenshot);
         }
+
+        try {
+            ObjectManager.release();
+        } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while releasing thread in the afterScenario method of Hooks class");
+            logAndAttachInCucumberReport(scenario, "Exception while releasing thread in the afterScenario method of Hooks class", "image/png", "Test Case Finished " + callerInfoForScreenshot);
+        }
+//        }
     }
 
-    @BeforeStep
-    public void beforeStep(Scenario scenario) {
-        System.out.println("########### " + "inside beforeStep");
-    }
+//    @BeforeStep
+//    public void beforeStep(Scenario scenario) {
+//        try {
+//        } catch (Exception e) {
+//            logWarningInLogAndExtentReport(log, e, "Exception while  on beforeStep of Hooks");
+//        }
+//    }
 
-    @AfterStep
-    public void afterStep(Scenario scenario) {
-        System.out.println("########### " + "inside afterStep");
-
-    }
-
+//    @AfterStep
+//    public void afterStep(Scenario scenario) {
+//        try {
+//        } catch (Exception e) {
+//            logWarningInLogAndExtentReport(log, e, "Exception while  on afterStep of Hooks");
+//        }
+//    }
 
     public String getCallerInfoForScreenshotFromScenario(Scenario scenario) {
         try {
-            String scenarioName = scenario.getName();
-            int scenarioLine = scenario.getLine();
-            String scenarioStatus = String.valueOf(scenario.getStatus());
             String featureUri = String.valueOf(scenario.getUri());
             String folderAndClassName = featureUri.substring(featureUri.lastIndexOf("features")).replaceAll("/", ".");
+            int scenarioLine = scenario.getLine();
+            String scenarioStatus = scenario.getStatus().name();
 
             return folderAndClassName + "_" + scenarioLine + "_" + scenarioStatus;
         } catch (Throwable e) {
-            return "Error while getting caller Info for Screenshot for Extent Report in Hooks getCallerInfoForScreenshotFromScenario : " + e.getMessage();
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting caller Info for Screenshot for Extent Report in the getCallerInfoForScreenshotFromScenario method of Hooks class");
+            return "Error getCallerInfoForScreenshotFromScenario";
         }
     }
 
-    public String getCallerInfoForExtentFromScenario(Scenario scenario) {
+    public String getCallerInfoTagStatusFromScenario(Scenario scenario) {
         try {
             String featureUri = String.valueOf(scenario.getUri());
             String folderAndClassName = featureUri.substring(featureUri.lastIndexOf("features"));
             String scenarioName = scenario.getName();
             int scenarioLine = scenario.getLine();
-            String scenarioStatus = String.valueOf(scenario.getStatus());
+            String scenarioStatus = scenario.getStatus().name();
             String tagName = String.join(", ", scenario.getSourceTagNames());
 
             return folderAndClassName + " : " + scenarioName + " : " + scenarioLine + " : " + tagName + " : " + scenarioStatus;
         } catch (Throwable e) {
-            return "Error while getting caller Info for Extent Report in Hooks getCallerInfoForExtentFromScenario : " + e.getMessage();
+            logWarningInLogFileAndExtentReport(log, e, "Error while getting caller Info in the getCallerInfoTagStatusFromScenario method of Hooks class");
+            return "Error while getting caller Info in the getCallerInfoTagStatusFromScenario method of Hooks class : " + e.getMessage();
         }
     }
 
-//    public String getCallerInfoFromScenario(Scenario scenario) {
-//        try {
-////            System.out.println("############ start inside CustomAsserts getCallerInfoForExtent ################");
-////            System.out.println("########### 1");
-////            System.out.println(e.getStackTrace()[0] + "#$#$#$");
-////            System.out.println("########### 2");
-////            for (StackTraceElement ee : e.getStackTrace()) {
-////                System.out.println(ee + "###");
-////            }
-////            System.out.println("########### 3");
-////            System.out.println("getMessage : " + e.getMessage());
-////            System.out.println("########### 4");
-////            System.out.println("getLocalizedMessage : " + e.getLocalizedMessage());
-//
-//
-//            String scenarioName = scenario.getName();
-//            int scenarioLine = scenario.getLine();
-//            String scenarioStatus = String.valueOf(scenario.getStatus());
-//            String featureUri = String.valueOf(scenario.getUri());
-//            String folderAndClassName = featureUri.substring(featureUri.lastIndexOf("features"));
-//
-//            for (StackTraceElement element : e.getStackTrace()) {
-//                if (element.getClassName().startsWith("in.finology") && !element.getClassName().contains("CustomAsserts")) {
-//                    System.out.println("First application-level stack trace: " + element);
-//                    System.out.println("getFileName : " + element.getFileName());
-//                    System.out.println("getClassName : " + element.getClassName());
-//                    System.out.println("getMethodName : " + element.getMethodName());
-//                    System.out.println("getLineNumber : " + element.getLineNumber());
-//
-//                    return element.getClassName() + " : " + element.getMethodName() + " : " + element.getLineNumber() + " :: " + throwableClassName + " : " + throwableMessage;
-//                }
-//            }
-//            return "Unable to find the package name starts with with in.finology in Throwable of CustomAsserts for getCallerInfoMessageForExtent";
-//        } catch (Throwable ee) {
-//            return "Error while getting caller Info and Message for Extent Report in CustomAsserts getCallerInfoMessageForExtent";
-//        }
-//    }
+    public void logInCucumberReport(Scenario scenario, String message) {
+        try {
+            scenario.log(message);
+        } catch (Exception e) {
+            logWarningInLogAndExtentReportWithoutScreenshot(log, e, "Exception while logging in the logInCucumberReport method of Hooks class");
+            try {
+                scenario.log("Exception while logging in the logInCucumberReport method of Hooks class");
+            } catch (Exception ignore) {
+            }
+        }
+    }
+
+    public void attachInCucumberReport(Scenario scenario, String mediaType, String name) {
+        try {
+            scenario.attach(Screenshot.captureAsBYTE(), mediaType, name);
+        } catch (Exception e) {
+            logWarningInLogAndExtentReportWithoutScreenshot(log, e, "Exception while attaching screenshot in the attachInCucumberReport method of Hooks class");
+            try {
+                scenario.log("Exception while attaching screenshot in the attachInCucumberReport method of Hooks class");
+            } catch (Exception ignore) {
+            }
+        }
+    }
+
+    public void logAndAttachInCucumberReport(Scenario scenario, String message, String mediaType, String name) {
+        logInCucumberReport(scenario, message);
+        attachInCucumberReport(scenario, mediaType, name);
+    }
+
+    public void addDataInList(Scenario scenario) {
+        try {
+            String featureFilePath = String.valueOf(scenario.getUri()).replace(System.getProperty("user.dir"), "");
+            int lastIdxOfSrc = featureFilePath.lastIndexOf("src");
+            String featureFileShortPath = featureFilePath.substring(lastIdxOfSrc);
+
+            Object[] singleData = new Object[]{SNo++, scenario.getName(), scenario.getStatus(), getExamplesKeyValueFromHashMap(), featureFileShortPath, scenario.getSourceTagNames()};
+            data.add(singleData);
+        } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while adding data in Object[] in the addDataInList method of Hooks class");
+        }
+    }
 }

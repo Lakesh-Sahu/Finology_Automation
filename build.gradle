@@ -10,8 +10,6 @@ repositories {
 }
 
 dependencies {
-//    testImplementation platform('org.junit:junit-bom:5.10.0')
-//    testImplementation 'org.junit.jupiter:junit-jupiter'
 
     // https://mvnrepository.com/artifact/commons-io/commons-io
     implementation group: 'commons-io', name: 'commons-io', version: '2.18.0'
@@ -24,7 +22,6 @@ dependencies {
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
     implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.22.0'
-
 
     // https://mvnrepository.com/artifact/io.cucumber/cucumber-testng
     implementation group: 'io.cucumber', name: 'cucumber-testng', version: '7.22.0'

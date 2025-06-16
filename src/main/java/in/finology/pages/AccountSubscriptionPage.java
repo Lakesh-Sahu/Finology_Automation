@@ -1,5 +1,6 @@
 package in.finology.pages;
 
+import in.finology.utils.CommonMethods;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class AccountSubscriptionPage {
+public class AccountSubscriptionPage extends CommonMethods {
 
     @FindBy(xpath = "//img[contains(@src, '/finology-logo.svg')]")
     private WebElement finologyLogo;
@@ -65,7 +66,7 @@ public class AccountSubscriptionPage {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(LoginPage.class);
+    static Logger log = LogManager.getLogger(AccountSubscriptionPage.class);
     private final String url;
 
     public AccountSubscriptionPage(WebDriver driver) {
@@ -81,6 +82,7 @@ public class AccountSubscriptionPage {
             driver.get(url);
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while navigating to Account Subscription Page");
             return false;
         }
     }
@@ -89,6 +91,7 @@ public class AccountSubscriptionPage {
         try {
             return wait.until(ExpectedConditions.urlToBe(url));
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying on Account Subscription Page");
             return false;
         }
     }
@@ -98,6 +101,7 @@ public class AccountSubscriptionPage {
             userPhotoImgBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Image Button on Account Subscription Page");
             return false;
         }
     }
@@ -106,6 +110,7 @@ public class AccountSubscriptionPage {
         try {
             return finologyLogo.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying finology Logo is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -114,6 +119,7 @@ public class AccountSubscriptionPage {
         try {
             return welcomeText.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying welcome Text is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -122,6 +128,7 @@ public class AccountSubscriptionPage {
         try {
             return subscribeBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying subscribe Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -130,6 +137,7 @@ public class AccountSubscriptionPage {
         try {
             return sideBarHomeBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying side Bar Home Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -138,6 +146,7 @@ public class AccountSubscriptionPage {
         try {
             return sideBarSubscriptionBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying side Bar Subscription Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -146,6 +155,7 @@ public class AccountSubscriptionPage {
         try {
             return sideBarProfileBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying side Bar Profile Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -154,6 +164,7 @@ public class AccountSubscriptionPage {
         try {
             return sideBarPasswordBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying side Bar Password Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -162,6 +173,7 @@ public class AccountSubscriptionPage {
         try {
             return sideBaSupportBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying side Bar Support Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -170,6 +182,7 @@ public class AccountSubscriptionPage {
         try {
             return sideBarLogoutBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying side Bar Logout Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -178,6 +191,7 @@ public class AccountSubscriptionPage {
         try {
             return userPhotoImgBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Image Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -188,6 +202,7 @@ public class AccountSubscriptionPage {
             finologyLogo.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Finology Logo on Account Subscription Page");
             return false;
         }
     }
@@ -197,11 +212,10 @@ public class AccountSubscriptionPage {
             subscribeBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Subscribe Button on Account Subscription Page");
             return false;
         }
     }
-
-
 
 
     public boolean clickSideBarHomeBtn() {
@@ -209,6 +223,7 @@ public class AccountSubscriptionPage {
             sideBarHomeBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Home Button on Account Subscription Page");
             return false;
         }
     }
@@ -218,6 +233,7 @@ public class AccountSubscriptionPage {
             sideBarSubscriptionBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Subscription Button on Account Subscription Page");
             return false;
         }
     }
@@ -227,6 +243,7 @@ public class AccountSubscriptionPage {
             sideBarProfileBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Profile Button on Account Subscription Page");
             return false;
         }
     }
@@ -236,6 +253,7 @@ public class AccountSubscriptionPage {
             sideBarPasswordBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Password Button on Account Subscription Page");
             return false;
         }
     }
@@ -245,6 +263,7 @@ public class AccountSubscriptionPage {
             sideBaSupportBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Support Button on Account Subscription Page");
             return false;
         }
     }
@@ -254,6 +273,7 @@ public class AccountSubscriptionPage {
             sideBarLogoutBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Side Bar Logout Button on Account Subscription Page");
             return false;
         }
     }
@@ -264,6 +284,7 @@ public class AccountSubscriptionPage {
         try {
             return userPhotoDashboardBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Dashboard Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -272,6 +293,7 @@ public class AccountSubscriptionPage {
         try {
             return userPhotoProfileBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Profile Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -280,6 +302,7 @@ public class AccountSubscriptionPage {
         try {
             return userPhotoSupportBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Support Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -288,6 +311,7 @@ public class AccountSubscriptionPage {
         try {
             return userPhotoLogoutBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying user Photo Logout Button is Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -297,6 +321,7 @@ public class AccountSubscriptionPage {
             userPhotoDashboardBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Dashboard Button on Account Subscription Page");
             return false;
         }
     }
@@ -306,6 +331,7 @@ public class AccountSubscriptionPage {
             userPhotoProfileBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Profile Button on Account Subscription Page");
             return false;
         }
     }
@@ -315,6 +341,7 @@ public class AccountSubscriptionPage {
             userPhotoSupportBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Support Button on Account Subscription Page");
             return false;
         }
     }
@@ -324,6 +351,7 @@ public class AccountSubscriptionPage {
             userPhotoLogoutBtn.click();
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking User Photo Logout Button on Account Subscription Page");
             return false;
         }
     }
@@ -332,6 +360,7 @@ public class AccountSubscriptionPage {
         try {
             return welcomeText.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting get Welcome Text on Account Subscription Page");
             return "";
         }
     }
@@ -340,6 +369,7 @@ public class AccountSubscriptionPage {
         try {
             return finologyLogoIsDisplayed() && welcomeTextIsDisplayed() && subscribeBtnIsDisplayed() && userPhotoImgBtnIsDisplayed() && sideBarHomeBtnIsDisplayed() && sideBarSubscriptionBtnIsDisplayed() && sideBarProfileBtnIsDisplayed() && sideBarPasswordBtnIsDisplayed() && sideBarSupportBtnIsDisplayed() && sideBarLogoutBtnIsDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying All Elements are Displayed on Account Subscription Page");
             return false;
         }
     }
@@ -348,6 +378,7 @@ public class AccountSubscriptionPage {
         try {
             return userPhotoDashboardBtnIsDisplayed() && userPhotoProfileBtnIsDisplayed() && userPhotoSupportBtnIsDisplayed() && userPhotoLogoutBtnIsDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying All User Photo Elements are Displayed on Account Subscription Page");
             return false;
         }
     }

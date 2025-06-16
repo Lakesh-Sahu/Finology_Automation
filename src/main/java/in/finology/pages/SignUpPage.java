@@ -73,6 +73,7 @@ public class SignUpPage extends CommonMethods {
             driver.get(url);
             return true;
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while navigating to Sign Up Page");
             return false;
         }
     }
@@ -81,6 +82,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return wait.until(ExpectedConditions.urlContains(url));
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying on Sign Up Page");
             return false;
         }
     }
@@ -89,6 +91,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return finologyLogoIsDisplayed() && homeButtonIsDisplayed() && signInBtnIsDisplayed() && nameInputBoxIsDisplayed() && emailInputBoxIsDisplayed() && mobileNumberInputBoxIsDisplayed() && signUpBtnIsDisplayed() && signUpWithGoogleBtnIsDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying All Elements are Displayed on Sign Up Page");
             return false;
         }
     }
@@ -97,6 +100,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return enterName(name) && enterEmailId(emailId) && enterMobileNumber(mobileNumber);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while entering Sign Up Details on Sign Up Page");
             return false;
         }
     }
@@ -105,6 +109,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return enterName(name) && enterEmailId(emailId) && enterMobileNumber(mobileNumber) && clickSignUpBtn();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while performing Sign Up Using Name Email Id Mobile Number on Sign Up Page");
             return false;
         }
     }
@@ -113,6 +118,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return clickSignInWithGoogleBtn();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while performing Sign Up Using Sign In With Google Button on Sign Up Page");
             return false;
         }
     }
@@ -121,6 +127,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return invalidNameMessage.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Invalid Name Error Message on Sign Up Page");
             return "";
         }
     }
@@ -129,6 +136,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return emptyNameMessage.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Empty Name Error Message on Sign Up Page");
             return "";
         }
     }
@@ -137,6 +145,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return invalidEmailMessage.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Invalid Email Error Message on Sign Up Page");
             return "";
         }
     }
@@ -145,6 +154,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return incognitoModeErrorMessage.getText();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Incognito Mode Error Message on Sign Up Page");
             return "";
         }
     }
@@ -153,6 +163,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return finologyLogo.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying finology Logo is Displayed on Sign Up Page");
             return false;
         }
     }
@@ -161,6 +172,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return homeBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying home Button is Displayed on Sign Up Page");
             return false;
         }
     }
@@ -169,6 +181,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return signInBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying sign In Button is Displayed on Sign Up Page");
             return false;
         }
     }
@@ -177,6 +190,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return nameInputBox.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying name Input Box is Displayed on Sign Up Page");
             return false;
         }
     }
@@ -185,6 +199,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return emailInputBox.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying email Input Box is Displayed on Sign Up Page");
             return false;
         }
     }
@@ -193,6 +208,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return mobileNumberInputBox.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying mobile Number Input Box is Displayed on Sign Up Page");
             return false;
         }
     }
@@ -201,6 +217,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return signUpBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying sign Up Button is Displayed on Sign Up Page");
             return false;
         }
     }
@@ -209,6 +226,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return signUpWithGoogleBtn.isDisplayed();
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while verifying sign Up With Google Button is Displayed on Sign Up Page");
             return false;
         }
     }
@@ -217,6 +235,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return sendKeys(nameInputBox, name);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while entering Name on Sign Up Page");
             return false;
         }
     }
@@ -225,6 +244,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return sendKeys(emailInputBox, emailId);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while entering Email Id on Sign Up Page");
             return false;
         }
     }
@@ -233,6 +253,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return sendKeys(mobileNumberInputBox, mobileNumber);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while entering Mobile Number on Sign Up Page");
             return false;
         }
     }
@@ -241,6 +262,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return click(driver, signUpBtn);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Sign Up Button on Sign Up Page");
             return false;
         }
     }
@@ -249,6 +271,7 @@ public class SignUpPage extends CommonMethods {
         try {
             return click(driver, signUpWithGoogleBtn);
         } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Sign In With Google Button on Sign Up Page");
             return false;
         }
     }
