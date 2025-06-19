@@ -38,7 +38,7 @@ public class OTPVerificationPage extends CommonMethods {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(OTPVerificationPage.class);
+    private static final Logger log = LogManager.getLogger(OTPVerificationPage.class);
     private final String url;
 
     public OTPVerificationPage(WebDriver driver) {

@@ -1,0 +1,20 @@
+[WARN ] 2025-06-20 00:09:36.923 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id: session deleted as the browser has closed the connection
+ #1 org.openqa.selenium.support.ui.FluentWait until 203 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-3]
+
+[WARN ] 2025-06-20 00:09:36.941 finology.screenshot.Screenshot 173 - org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id
+ #1 org.openqa.selenium.remote.RemoteWebDriver getScreenshotAs 334 #2 in.finology.screenshot.Screenshot capture 26 Taking screenshot at capture : Fail #3 in.finology.utils.Base logWarningInExtentReport 253 - WARNING [TestNG-PoolService-3]
+
+[WARN ] 2025-06-20 00:09:36.957 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-3]
+
+[WARN ] 2025-06-20 00:09:36.968 finology.screenshot.Screenshot 173 - org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id
+ #1 org.openqa.selenium.remote.RemoteWebDriver getScreenshotAs 334 #2 in.finology.screenshot.Screenshot capture 26 Taking screenshot at capture : Fail #3 in.finology.utils.CustomAsserts logWarningInExtentReportForCustomAssert 133 - WARNING [TestNG-PoolService-3]
+
+[WARN ] 2025-06-20 00:09:37.003 finology.screenshot.Screenshot 173 - org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id
+ #1 org.openqa.selenium.remote.RemoteWebDriver getScreenshotAs 334 #2 in.finology.screenshot.Screenshot captureAsBYTE 43 Taking screenshot at captureAsBYTE : Fail #3 in.finology.hooks.Hooks attachInCucumberReport 184 - WARNING [TestNG-PoolService-3]
+
+[INFO ] 2025-06-20 00:09:37.007 finology.hooks.Hooks 152 - Test Case Finished features/accountdashboard.feature : Welcome message should be displayed on dashboard page : 28 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology,  [TestNG-PoolService-3]
+
+[WARN ] 2025-06-20 00:09:37.015 finology.screenshot.Screenshot 173 - org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id
+ #1 org.openqa.selenium.remote.RemoteWebDriver getScreenshotAs 334 #2 in.finology.screenshot.Screenshot capture 26 Taking screenshot at capture : Fail #3 in.finology.hooks.Hooks afterScenario 95 - WARNING [TestNG-PoolService-3]
+

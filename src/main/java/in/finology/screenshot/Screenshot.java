@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 
 public class Screenshot extends Base {
-    static Logger log = LogManager.getLogger(Screenshot.class);
+    private static final Logger log = LogManager.getLogger(Screenshot.class);
 
     // takes the screenshot to attach in the Extent Report
     public static String capture(String callerInfo) {
@@ -21,17 +21,17 @@ public class Screenshot extends Base {
 
             if (driver != null) {
                 String timestamp = String.valueOf(java.time.LocalDateTime.now()).replaceAll("[.:]", "");
-                String relativePath = "/extentReports/" + singleTimeStamp + "/" + timestamp + "_" + callerInfo + ".png";
+                String relativePath = "screenshots/" + timestamp + "_" + callerInfo + ".png";
                 TakesScreenshot scrShot = ((TakesScreenshot) driver);
                 File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
-                File DestFile = new File(System.getProperty("user.dir") + relativePath);
+                File DestFile = new File(System.getProperty("user.dir") + "/extentReports/" + singleTimeStamp + "/" + relativePath);
                 FileUtils.copyFile(SrcFile, DestFile);
                 return relativePath;
             }
         } catch (Exception e) {
             logWarningInLogAndExtentReportWithoutScreenshot(log, e, "Taking screenshot at capture : Fail");
         }
-        return "/src/main/resources/Error_while_capturing_screenshot.png";
+        return "screenshots/Error_while_capturing_screenshot.png";
     }
 
     public static byte[] captureAsBYTE() {

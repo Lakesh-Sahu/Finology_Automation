@@ -1,69 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testRunner.TestRunner" tests="21" skipped="0" failures="10" errors="0" timestamp="2025-06-16T14:35:41" hostname="LAKESH-LAPTOP" time="134.937">
+<testsuite name="testRunner.TestRunner" tests="21" skipped="0" failures="10" errors="0" timestamp="2025-06-19T18:40:38" hostname="LAKESH-LAPTOP" time="121.233">
   <properties/>
-  <testcase name="runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="32.33"/>
-  <testcase name="runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="51.914"/>
-  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="51.973"/>
-  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="57.973"/>
-  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="66.218">
+  <testcase name="runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="24.31"/>
+  <testcase name="runScenario[0](&quot;Unsuccessful login with invalid or empty mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="25.021"/>
+  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="35.622"/>
+  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password by clicking Login with Email button&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="44.402">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-	at in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page(AccountDashboard_Steps.java:21)
+	at in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page(AccountDashboard_Steps.java:25)
 	at ✽.User should be redirected to account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/login.feature:49)
 </failure>
   </testcase>
-  <testcase name="runScenario[0](&quot;All user photo element should be displayed on dashboard page&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="66.291">
+  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="44.534">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:16)
+	at in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page(AccountDashboard_Steps.java:25)
+	at ✽.User should be redirected to account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/login.feature:33)
+</failure>
+  </testcase>
+  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="44.811"/>
+  <testcase name="runScenario[0](&quot;All user photo element should be displayed on dashboard page&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="58.296">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
+	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:20)
 	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
 </failure>
   </testcase>
-  <testcase name="runScenario[0](&quot;Welcome message should be displayed on dashboard page&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="66.735">
+  <testcase name="runScenario[0](&quot;Welcome message should be displayed on dashboard page&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="59.108">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:16)
+	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:20)
 	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
 </failure>
   </testcase>
-  <testcase name="runScenario[0](&quot;Successful login with registered mobile number, email and password&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="78.647"/>
-  <testcase name="runScenario[0](&quot;All dashboard element should be displayed on dashboard page&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="80.379">
+  <testcase name="runScenario[0](&quot;All dashboard element should be displayed on dashboard page&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="71.345">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:16)
+	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:20)
 	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
 </failure>
   </testcase>
-  <testcase name="runScenario[0](&quot;Unsuccessful login with new mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="85.516"/>
-  <testcase name="runScenario[3](&quot;Unsuccessful sign up with invalid name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="37.281"/>
-  <testcase name="runScenario[4](&quot;Unsuccessful sign up with invalid name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="37.415">
-    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-	at in.finology.stepDefns.SignUp_Steps.invalid_name_error_should_be_shown_below_name_input_box(SignUp_Steps.java:39)
-	at ✽.Invalid name Error &quot;Your name can contain only alphabets.&quot; should be shown below name input box(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:25)
-</failure>
-  </testcase>
-  <testcase name="runScenario[1](&quot;Successful sign up with valid name, valid email and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="71.299">
+  <testcase name="runScenario[0](&quot;Unsuccessful login with new mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="72.763"/>
+  <testcase name="runScenario[1](&quot;Successful sign up with valid name, valid email and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="56.212">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -71,10 +69,10 @@
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
 	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:17)
-	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:12)
+	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:13)
 </failure>
   </testcase>
-  <testcase name="runScenario[2](&quot;Successful sign up with valid name, valid email and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="53.318">
+  <testcase name="runScenario[2](&quot;Successful sign up with valid name, valid email and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="56.045">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -82,14 +80,16 @@
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
 	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:17)
-	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:12)
+	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:13)
 </failure>
   </testcase>
-  <testcase name="runScenario[5](&quot;Unsuccessful sign up with invalid name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="39.311"/>
-  <testcase name="runScenario[7](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="46.645"/>
-  <testcase name="runScenario[8](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="36.135"/>
-  <testcase name="runScenario[6](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="48.58"/>
-  <testcase name="runScenario[9](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="51.93">
+  <testcase name="runScenario[3](&quot;Unsuccessful sign up with invalid name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="47.481"/>
+  <testcase name="runScenario[4](&quot;Unsuccessful sign up with invalid name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="44.438"/>
+  <testcase name="runScenario[5](&quot;Unsuccessful sign up with empty name, valid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="46.556"/>
+  <testcase name="runScenario[6](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="51.311"/>
+  <testcase name="runScenario[8](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="44.205"/>
+  <testcase name="runScenario[7](&quot;Unsuccessful sign up with valid name, invalid email id and valid mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="45.166"/>
+  <testcase name="runScenario[9](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="42.333">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -97,10 +97,10 @@
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
 	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:25)
-	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:63)
+	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:67)
 </failure>
   </testcase>
-  <testcase name="runScenario[10](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="47.06">
+  <testcase name="runScenario[11](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="36.824">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -108,10 +108,10 @@
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
 	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:25)
-	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:63)
+	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:67)
 </failure>
   </testcase>
-  <testcase name="runScenario[11](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="45.683">
+  <testcase name="runScenario[10](&quot;Unsuccessful sign up with valid name, duplicate email or duplicate mobile number&quot;, &quot;Unknown&quot;)" classname="testRunner.TestRunner" time="48.467">
     <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -119,27 +119,21 @@
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
 	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:25)
-	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:63)
+	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:67)
 </failure>
   </testcase>
   <system-out><![CDATA[
-@account_dashboard
-Scenario: All user photo element should be displayed on dashboard page # src/test/resources/features/accountdashboard.feature:14
-
-@account_dashboard
-Scenario Outline: Welcome message should be displayed on dashboard page                                   # src/test/resources/features/accountdashboard.feature:27
+@login @unsuccessful_login
+Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:18
 
 @login @unsuccessful_login
 Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:17
 
-@login @unsuccessful_login
-Scenario Outline: Unsuccessful login with invalid or empty mobile number # src/test/resources/features/login.feature:18
+@account_dashboard
+Scenario: All user photo element should be displayed on dashboard page # src/test/resources/features/accountdashboard.feature:14
 
-@login @successful_login2
-Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button        # src/test/resources/features/login.feature:56
-
-@login @successful_login2
-Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button # src/test/resources/features/login.feature:55
+@account_dashboard
+Scenario Outline: Welcome message should be displayed on dashboard page                                   # src/test/resources/features/accountdashboard.feature:28
 
 @login @successful_login
 Scenario Outline: Successful login with registered mobile number, email and password                              # src/test/resources/features/login.feature:39
@@ -147,107 +141,74 @@ Scenario Outline: Successful login with registered mobile number, email and pass
 @login @successful_login
 Scenario Outline: Successful login with registered mobile number, email and password                                           # src/test/resources/features/login.feature:40
 
+@login @successful_login2
+Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button # src/test/resources/features/login.feature:55
+
+@login @successful_login2
+Scenario Outline: Successful login with registered mobile number, email and password by clicking Login with Email button       # src/test/resources/features/login.feature:56
+
 @account_dashboard
 Scenario: All dashboard element should be displayed on dashboard page # src/test/resources/features/accountdashboard.feature:8
 
 @login @unsuccessful_login_with_new_mobile
 Scenario: Unsuccessful login with new mobile number                          # src/test/resources/features/login.feature:21
-  Given User is on new login page                                                                                               # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
-  Given User should be on login page                                                                                            # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
-  Given User is on new login page                                                                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
-  Given User should be on login page                                                                                     # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
   Given User is on new login page                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  Given User is on new login page                                                                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  Given User is on new login page                                                                                 # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  Given User should be on login page                                                                                     # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+  Given User is on new login page                                                                                              # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  Given User should be on login page                                                                                           # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+  Given User is on new login page                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  Given User is on new login page                                                                                              # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
   Given User enter "" in mobile number input box                         # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+  Given User enter "5846975120" in mobile number input box                                                                     # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+  Given User enter "@$#637*" in mobile number input box                  # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
+  When User clicks Login with Email button                                                                                     # in.finology.stepDefns.Login_Steps.user_clicks_login_with_email_button()
+  Then User should be redirected to Login Auth Page                                                                            # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
   When User clicks Login with Email button                                                                               # in.finology.stepDefns.Login_Steps.user_clicks_login_with_email_button()
   Then User should be redirected to Login Auth Page                                                                      # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+  Given User enter "5846975120" in mobile number input box                                                        # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
   When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-  Given User is on new login page                                                                                              # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
   Then Invalid mobile or required error "*Required" should be shown      # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
+  When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
   And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
 
     Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 18 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = , message = *Required, 
 
+  Then Invalid mobile or required error "Invalid Mobile" should be shown # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
+  And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
+
+    Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 17 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = @$#637*, message = Invalid Mobile, 
+
 
     Embedding features.login.feature_18_PASSED [image/png 144761 bytes]
 
+[INFO ] 2025-06-20 00:10:59.660 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 18 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = , message = *Required,  [TestNG-PoolService-5]
 
-[INFO ] 2025-06-16 20:06:02.706 finology.stepDefns.Hooks 140 - Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 18 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = , message = *Required,  [TestNG-PoolService-5]
-  When User clicks Login with Email button                                                                                      # in.finology.stepDefns.Login_Steps.user_clicks_login_with_email_button()
-  Then User should be redirected to Login Auth Page                                                                             # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
-  And User enter "5846975120" in the mobile or email input box and "finTestUserAcology" in the password input box        # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-  Given User enter "5846975120" in mobile number input box                                                                     # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
-  And User enter "testtuserac121@gmail.com" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-  And User clicks login button                                                                                           # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
-  And User clicks login button                                                                                                  # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
+
+    Embedding features.login.feature_17_PASSED [image/png 146448 bytes]
+
+[INFO ] 2025-06-20 00:11:00.031 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 17 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = @$#637*, message = Invalid Mobile,  [TestNG-PoolService-4]
+
   When User clicks Continue button                                                                                             # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
   Then User should be redirected to Login Auth Page                                                                            # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
+  And User enter "testuserac121@gmail.com" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+  And User enter "5846975120" in the mobile or email input box and "finTestUserAcology" in the password input box        # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+  When User clicks Continue button                                                                                # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
+  Then User should be redirected to Login Auth Page                                                               # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
 
 @Signup @successful_signup
-Scenario Outline: Successful sign up with valid name, valid email and valid mobile number                                       # src/test/resources/features/signUp.feature:18
-  And User should be redirected to account dashboard page                                                                # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
-  And User enter "testuserac121@gmail.com" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+Scenario Outline: Successful sign up with valid name, valid email and valid mobile number                                       # src/test/resources/features/signUp.feature:19
   And User clicks login button                                                                                                 # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
-  Given User is on new login page                                        # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  And User enter "testuserac121@gmail.com" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+  And User clicks login button                                                                                           # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
 
-[WARN ] 2025-06-16 20:06:17.366 finology.pages.AccountDashboardPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 114 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING [TestNG-PoolService-3]
-
-[WARN ] 2025-06-16 20:06:18.957 finology.pages.AccountDashboardPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 114 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING [TestNG-PoolService-2]
-
-[WARN ] 2025-06-16 20:06:19.097 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
- #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING [TestNG-PoolService-3]
-
-[WARN ] 2025-06-16 20:06:19.754 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
- #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING [TestNG-PoolService-2]
-  And User should be redirected to account dashboard page                                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
-  Given User is logged in and on account dashboard page                # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
-      java.lang.AssertionError: expected [true] but found [false]
-      	at org.testng.Assert.fail(Assert.java:111)
-      	at org.testng.Assert.failNotEquals(Assert.java:1590)
-      	at org.testng.Assert.assertTrue(Assert.java:57)
-      	at org.testng.Assert.assertTrue(Assert.java:67)
-      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:16)
-      	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
-  Given User is logged in and on account dashboard page                                                   # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
-      java.lang.AssertionError: expected [true] but found [false]
-      	at org.testng.Assert.fail(Assert.java:111)
-      	at org.testng.Assert.failNotEquals(Assert.java:1590)
-      	at org.testng.Assert.assertTrue(Assert.java:57)
-      	at org.testng.Assert.assertTrue(Assert.java:67)
-      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:16)
-      	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
-  Given User should be on account dashboard page                       # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
-  Given User should be on account dashboard page                                                          # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
-  When User clicks user profile                                        # in.finology.stepDefns.AccountDashboard_Steps.userClicksUserProfile()
-  When User should be on account dashboard page                                                           # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
-  Then All user photo elements should be displayed                     # in.finology.stepDefns.AccountDashboard_Steps.allUserPhotoElementsShouldBeDisplayed()
-  Then Welcome "Welcome to Finology. Access our state of the art products from here." should be displayed # in.finology.stepDefns.AccountDashboard_Steps.welcomeShouldBeDisplayed(java.lang.String)
-  And User should perform logout from account dashboard page           # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
-
-    Test Case Finished features/accountdashboard.feature : Welcome message should be displayed on dashboard page : 27 : @account_dashboard : FAILED Examples  :: 
-
-
-    Test Case Finished features/accountdashboard.feature : All user photo element should be displayed on dashboard page : 14 : @account_dashboard : FAILED Examples  :: 
-
-
-[WARN ] 2025-06-16 20:06:22.294 finology.pages.AccountDashboardPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 114 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 21 - WARNING [TestNG-PoolService-10]
-
-    Embedding features.accountdashboard.feature_27_FAILED [image/png 156261 bytes]
-
-
-[WARN ] 2025-06-16 20:06:22.740 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Account Dashboard Page
- #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 21 - WARNING [TestNG-PoolService-10]
-
-    Embedding features.accountdashboard.feature_14_FAILED [image/png 156579 bytes]
-
-
-[INFO ] 2025-06-16 20:06:22.741 finology.stepDefns.Hooks 140 - Test Case Finished features/accountdashboard.feature : Welcome message should be displayed on dashboard page : 27 : @account_dashboard : FAILED Examples  ::  [TestNG-PoolService-3]
-
-[INFO ] 2025-06-16 20:06:22.936 finology.stepDefns.Hooks 140 - Test Case Finished features/accountdashboard.feature : All user photo element should be displayed on dashboard page : 14 : @account_dashboard : FAILED Examples  ::  [TestNG-PoolService-2]
+@Signup @successful_signup
+Scenario Outline: Successful sign up with valid name, valid email and valid mobile number                                       # src/test/resources/features/signUp.feature:20
+  And User clicks login button                                                                                                 # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
+  And User should be redirected to account dashboard page                                                                # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+  And User enter "5846975120" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
+  And User clicks login button                                                                                    # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
   And User should perform logout from account dashboard page                                                             # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
 
     Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 55 : @login, @successful_login2 : PASSED Examples  :: password = finTestUserAcology, mobile number or email = 5846975120, 
@@ -255,77 +216,60 @@ Scenario Outline: Successful sign up with valid name, valid email and valid mobi
 
     Embedding features.login.feature_55_PASSED [image/png 98356 bytes]
 
+[INFO ] 2025-06-20 00:11:12.233 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 55 : @login, @successful_login2 : PASSED Examples  :: password = finTestUserAcology, mobile number or email = 5846975120,  [TestNG-PoolService-9]
 
-[INFO ] 2025-06-16 20:06:23.671 finology.stepDefns.Hooks 140 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 55 : @login, @successful_login2 : PASSED Examples  :: password = finTestUserAcology, mobile number or email = 5846975120,  [TestNG-PoolService-9]
-  And User should be redirected to account dashboard page                                                                       # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+
+@Signup @invalid_name_signup
+Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number       # src/test/resources/features/signUp.feature:35
+  And User should be redirected to account dashboard page                                                         # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+[WARN ] 2025-06-20 00:11:19.015 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 25 - WARNING [TestNG-PoolService-10]
+
+[WARN ] 2025-06-20 00:11:19.383 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Account Dashboard Page
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 25 - WARNING [TestNG-PoolService-10]
+
+  And User should be redirected to account dashboard page                                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
       java.lang.AssertionError: expected [true] but found [false]
       	at org.testng.Assert.fail(Assert.java:111)
       	at org.testng.Assert.failNotEquals(Assert.java:1590)
       	at org.testng.Assert.assertTrue(Assert.java:57)
       	at org.testng.Assert.assertTrue(Assert.java:67)
       	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-      	at in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page(AccountDashboard_Steps.java:21)
+      	at in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page(AccountDashboard_Steps.java:25)
       	at ✽.User should be redirected to account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/login.feature:49)
-  And User should perform logout from account dashboard page                                                                    # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
-
-    Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 56 : @login, @successful_login2 : FAILED Examples  :: password = finTestUserAcology, mobile number or email = testtuserac121@gmail.com, 
-
-
-    Embedding features.login.feature_56_FAILED [image/png 156138 bytes]
-
-
-[INFO ] 2025-06-16 20:06:24.294 finology.stepDefns.Hooks 140 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 56 : @login, @successful_login2 : FAILED Examples  :: password = finTestUserAcology, mobile number or email = testtuserac121@gmail.com,  [TestNG-PoolService-10]
-  Given User enter "@$#637*" in mobile number input box                  # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
-  When User clicks Continue button                                       # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-  Then Invalid mobile or required error "Invalid Mobile" should be shown # in.finology.stepDefns.Login_Steps.invalid_mobile_or_required_error_should_be_shown(java.lang.String)
-  And User should be on login page                                       # in.finology.stepDefns.Login_Steps.user_should_be_on_login_page()
-
-    Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 17 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = @$#637*, message = Invalid Mobile, 
-
-
-    Embedding features.login.feature_17_PASSED [image/png 146447 bytes]
-
-
-[INFO ] 2025-06-16 20:06:28.253 finology.stepDefns.Hooks 140 - Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 17 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = @$#637*, message = Invalid Mobile,  [TestNG-PoolService-4]
   And User should perform logout from account dashboard page                                                                   # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
 
-    Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 40 : @login, @successful_login : PASSED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = testuserac121@gmail.com, 
+    Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 56 : @login, @successful_login2 : FAILED Examples  :: password = finTestUserAcology, mobile number or email = testuserac121@gmail.com, 
 
 
-    Embedding features.login.feature_40_PASSED [image/png 98356 bytes]
+    Embedding features.login.feature_56_FAILED [image/png 156177 bytes]
+
+[INFO ] 2025-06-20 00:11:20.094 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 56 : @login, @successful_login2 : FAILED Examples  :: password = finTestUserAcology, mobile number or email = testuserac121@gmail.com,  [TestNG-PoolService-10]
+
+[WARN ] 2025-06-20 00:11:20.297 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 25 - WARNING [TestNG-PoolService-8]
+
+[WARN ] 2025-06-20 00:11:20.664 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Account Dashboard Page
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 25 - WARNING [TestNG-PoolService-8]
+
+  And User should be redirected to account dashboard page                                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
+      	at in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page(AccountDashboard_Steps.java:25)
+      	at ✽.User should be redirected to account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/login.feature:33)
+  And User should perform logout from account dashboard page                                                                   # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+
+    Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 40 : @login, @successful_login : FAILED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = testuserac121@gmail.com, 
 
 
-[INFO ] 2025-06-16 20:06:31.051 finology.stepDefns.Hooks 140 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 40 : @login, @successful_login : PASSED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = testuserac121@gmail.com,  [TestNG-PoolService-8]
+    Embedding features.login.feature_40_FAILED [image/png 157368 bytes]
 
-@Signup @successful_signup
-Scenario Outline: Successful sign up with valid name, valid email and valid mobile number                                       # src/test/resources/features/signUp.feature:19
+[INFO ] 2025-06-20 00:11:21.733 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 40 : @login, @successful_login : FAILED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = testuserac121@gmail.com,  [TestNG-PoolService-8]
 
-@Signup @invalid_name_signup
-Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number       # src/test/resources/features/signUp.feature:30
-
-@Signup @invalid_name_signup
-Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number       # src/test/resources/features/signUp.feature:31
-  Given User is on new login page                                                                                 # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
-  Given User enter "5846975120" in mobile number input box                                                        # in.finology.stepDefns.Login_Steps.user_enter_in_mobile_number_input_box(java.lang.String)
-  When User clicks Continue button                                                                                # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-  Then User should be redirected to Login Auth Page                                                               # in.finology.stepDefns.LoginAuth_Steps.user_should_be_redirected_to_login_auth_page()
-
-@Signup @invalid_name_signup
-Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number # src/test/resources/features/signUp.feature:42
-
-@Signup @invalid_email_signup
-Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number            # src/test/resources/features/signUp.feature:53
-  And User enter "5846975120" in the mobile or email input box and "finTestUserAcology" in the password input box # in.finology.stepDefns.LoginAuth_Steps.user_enter_in_the_mobile_or_email_input_box_and_in_the_password_input_box(java.lang.String,java.lang.String)
-
-@Signup @invalid_email_signup
-Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number            # src/test/resources/features/signUp.feature:54
-  And User clicks login button                                                                                    # in.finology.stepDefns.LoginAuth_Steps.user_clicks_login_button()
-  Given User is on new login page                                            # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
-  Given User is on new sign up page                                                                                             # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
-  And User should be redirected to account dashboard page                                                         # in.finology.stepDefns.AccountDashboard_Steps.user_should_be_redirected_to_account_dashboard_page()
-  Given Generate new mobile number and User enter in mobile number input box # in.finology.stepDefns.Login_Steps.generate_new_mobile_number_and_user_enter_in_mobile_number_input_box()
-  Given User is on new sign up page                                                                    # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
-  Given User is on new sign up page                                                                                             # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
   And User should perform logout from account dashboard page                                                      # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
 
     Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 39 : @login, @successful_login : PASSED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = 5846975120, 
@@ -333,17 +277,92 @@ Scenario Outline: Unsuccessful sign up with valid name, invalid email id and val
 
     Embedding features.login.feature_39_PASSED [image/png 98356 bytes]
 
+[INFO ] 2025-06-20 00:11:22.361 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 39 : @login, @successful_login : PASSED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = 5846975120,  [TestNG-PoolService-7]
 
-[INFO ] 2025-06-16 20:06:59.165 finology.stepDefns.Hooks 140 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 39 : @login, @successful_login : PASSED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = 5846975120,  [TestNG-PoolService-7]
+
+@Signup @invalid_name_signup
+Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number       # src/test/resources/features/signUp.feature:36
+
+@Signup @invalid_name_signup
+Scenario Outline: Unsuccessful sign up with empty name, valid email id and valid mobile number # src/test/resources/features/signUp.feature:47
 
 @Signup @invalid_email_signup
-Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number # src/test/resources/features/signUp.feature:55
+Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number            # src/test/resources/features/signUp.feature:58
+  Given User is on new login page                                            # in.finology.stepDefns.Login_Steps.user_is_on_new_login_page()
+  Given User is on new sign up page                                                                                             # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+[WARN ] 2025-06-20 00:11:31.650 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-2]
 
-[WARN ] 2025-06-16 20:06:59.795 finology.pages.AccountDashboardPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 114 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING [TestNG-PoolService-1]
+[WARN ] 2025-06-20 00:11:32.188 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-2]
 
-[WARN ] 2025-06-16 20:06:59.985 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
- #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 16 - WARNING [TestNG-PoolService-1]
+  Given User is on new sign up page                                                                                             # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+  Given User is logged in and on account dashboard page                # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
+      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:20)
+      	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+  Given User should be on account dashboard page                       # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  When User clicks user profile                                        # in.finology.stepDefns.AccountDashboard_Steps.userClicksUserProfile()
+  Then All user photo elements should be displayed                     # in.finology.stepDefns.AccountDashboard_Steps.allUserPhotoElementsShouldBeDisplayed()
+  And User should perform logout from account dashboard page           # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+
+    Test Case Finished features/accountdashboard.feature : All user photo element should be displayed on dashboard page : 14 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology, 
+
+
+    Embedding features.accountdashboard.feature_14_FAILED [image/png 156699 bytes]
+
+[INFO ] 2025-06-20 00:11:33.263 finology.hooks.Hooks 152 - Test Case Finished features/accountdashboard.feature : All user photo element should be displayed on dashboard page : 14 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology,  [TestNG-PoolService-2]
+
+[WARN ] 2025-06-20 00:11:35.848 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-3]
+
+  Given Generate new mobile number and User enter in mobile number input box # in.finology.stepDefns.Login_Steps.generate_new_mobile_number_and_user_enter_in_mobile_number_input_box()
+[WARN ] 2025-06-20 00:11:36.164 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-3]
+
+  Given User is logged in and on account dashboard page                                                   # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
+      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:20)
+      	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
+  Given User should be on account dashboard page                                                          # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  When User should be on account dashboard page                                                           # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  Then Welcome "Welcome to Finology. Access our state of the art products from here." should be displayed # in.finology.stepDefns.AccountDashboard_Steps.welcomeShouldBeDisplayed(java.lang.String)
+  And User should perform logout from account dashboard page                                              # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
+
+    Test Case Finished features/accountdashboard.feature : Welcome message should be displayed on dashboard page : 28 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology, 
+
+
+    Embedding features.accountdashboard.feature_28_FAILED [image/png 156570 bytes]
+
+[INFO ] 2025-06-20 00:11:36.765 finology.hooks.Hooks 152 - Test Case Finished features/accountdashboard.feature : Welcome message should be displayed on dashboard page : 28 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology,  [TestNG-PoolService-3]
+
+  Given User enters new name, email id and mobile number                                                                        # in.finology.stepDefns.SignUp_Steps.user_enters_new_name_email_id_and_mobile_number()
+
+@Signup @invalid_email_signup
+Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number            # src/test/resources/features/signUp.feature:59
+  Given User enters new name, email id and mobile number                                                                        # in.finology.stepDefns.SignUp_Steps.user_enters_new_name_email_id_and_mobile_number()
+
+@Signup @invalid_email_signup
+Scenario Outline: Unsuccessful sign up with valid name, invalid email id and valid mobile number # src/test/resources/features/signUp.feature:60
+  When User clicks sign up button                                                                                               # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+  When User clicks sign up button                                                                                               # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+[WARN ] 2025-06-20 00:11:41.726 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-1]
+
+[WARN ] 2025-06-20 00:11:42.959 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-1]
+
+  When User clicks Continue button                                           # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
   Given User is logged in and on account dashboard page               # in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage()
       java.lang.AssertionError: expected [true] but found [false]
       	at org.testng.Assert.fail(Assert.java:111)
@@ -351,118 +370,47 @@ Scenario Outline: Unsuccessful sign up with valid name, invalid email id and val
       	at org.testng.Assert.assertTrue(Assert.java:57)
       	at org.testng.Assert.assertTrue(Assert.java:67)
       	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:16)
+      	at in.finology.stepDefns.AccountDashboard_Steps.userIsLoggedInAndOnAccountDashboardPage(AccountDashboard_Steps.java:20)
       	at ✽.User is logged in and on account dashboard page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/accountdashboard.feature:6)
   Given User should be on account dashboard page                      # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
+  Then User should be redirected to sign up page                             # in.finology.stepDefns.SignUp_Steps.user_should_be_redirected_to_sign_up_page()
+
+    Test Case Finished features/login.feature : Unsuccessful login with new mobile number : 21 : @login, @unsuccessful_login_with_new_mobile : PASSED Examples  :: mobile number = 3091573576, 
+
   When User should be on account dashboard page                       # in.finology.stepDefns.AccountDashboard_Steps.userShouldBeOnAccountDashboardPage()
   Then All dashboard elements should be displayed                     # in.finology.stepDefns.AccountDashboard_Steps.allDashboardElementsShouldBeDisplayed()
   And User should perform logout from account dashboard page          # in.finology.stepDefns.AccountDashboard_Steps.user_should_perform_logout_from_account_dashboard_page()
 
-    Test Case Finished features/accountdashboard.feature : All dashboard element should be displayed on dashboard page : 8 : @account_dashboard : FAILED Examples  :: 
-
-  Given User enters "TestUserRieeeeeeeeeeeee", "testuserrieeeeeeeeeeeee2726@gmail.com" and "9437525638"                         # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
-
-    Embedding features.accountdashboard.feature_8_FAILED [image/png 156516 bytes]
+    Test Case Finished features/accountdashboard.feature : All dashboard element should be displayed on dashboard page : 8 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology, 
 
 
-[INFO ] 2025-06-16 20:07:00.450 finology.stepDefns.Hooks 140 - Test Case Finished features/accountdashboard.feature : All dashboard element should be displayed on dashboard page : 8 : @account_dashboard : FAILED Examples  ::  [TestNG-PoolService-1]
+    Embedding features.accountdashboard.feature_8_FAILED [image/png 156241 bytes]
 
-@Signup @unsuccessful_duplicate_account_signup
-Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number      # src/test/resources/features/signUp.feature:69
-  Given User enters "@Lakesh Sahu", "randomNewEmail2423@gmail.com" and "9868546793"                    # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+[INFO ] 2025-06-20 00:11:43.823 finology.hooks.Hooks 152 - Test Case Finished features/accountdashboard.feature : All dashboard element should be displayed on dashboard page : 8 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology,  [TestNG-PoolService-1]
+
+
+    Embedding features.login.feature_21_PASSED [image/png 164295 bytes]
+
+[INFO ] 2025-06-20 00:11:43.925 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Unsuccessful login with new mobile number : 21 : @login, @unsuccessful_login_with_new_mobile : PASSED Examples  :: mobile number = 3091573576,  [TestNG-PoolService-6]
+
   Given User is on new sign up page                                                                    # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
-  When User clicks sign up button                                                                                               # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  Given User enters "Reriserrrrrrrrrrrrrr", "reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com" and "8335957041"                   # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
-  When User clicks sign up button                                                                      # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  Then Invalid name Error "Your name can contain only alphabets." should be shown below name input box # in.finology.stepDefns.SignUp_Steps.invalid_name_error_should_be_shown_below_name_input_box(java.lang.String)
-  When User clicks sign up button                                                                                               # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  When User clicks Continue button                                           # in.finology.stepDefns.Login_Steps.user_clicks_continue_button()
-  Then User should be redirected to sign up page                             # in.finology.stepDefns.SignUp_Steps.user_should_be_redirected_to_sign_up_page()
-
-    Test Case Finished features/login.feature : Unsuccessful login with new mobile number : 21 : @login, @unsuccessful_login_with_new_mobile : PASSED Examples  :: 
-
-
-    Embedding features.login.feature_21_PASSED [image/png 164844 bytes]
-
-
-[INFO ] 2025-06-16 20:07:05.885 finology.stepDefns.Hooks 140 - Test Case Finished features/login.feature : Unsuccessful login with new mobile number : 21 : @login, @unsuccessful_login_with_new_mobile : PASSED Examples  ::  [TestNG-PoolService-6]
+  Given User is on new sign up page                                                                    # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
 
 @Signup @unsuccessful_duplicate_account_signup
-Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number # src/test/resources/features/signUp.feature:70
-
-[WARN ] 2025-06-16 20:07:08.984 finology.pages.OTPVerificationPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-8]
-  And User should not be redirected to otp verification page                                           # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
-
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 30 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmail2423@gmail.com, mobile number = 9868546793, name = @Lakesh Sahu, message = Your name can contain only alphabets., 
-
-
-    Embedding features.signUp.feature_30_PASSED [image/png 170252 bytes]
-
-
-[INFO ] 2025-06-16 20:07:09.492 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 30 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmail2423@gmail.com, mobile number = 9868546793, name = @Lakesh Sahu, message = Your name can contain only alphabets.,  [TestNG-PoolService-8]
+Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number      # src/test/resources/features/signUp.feature:73
+  Given User enters "@Lakesh Sahu", "randomNewEmail2423@gmail.com" and "9868546793"                    # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
 
 @Signup @unsuccessful_duplicate_account_signup
-Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number            # src/test/resources/features/signUp.feature:71
-  Given User is on new sign up page                                                              # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
-  Given User enters "Raj$User12", "randomNewEmailMe2123@gmail.com" and "1257465983"                    # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number # src/test/resources/features/signUp.feature:74
   When User clicks sign up button                                                                      # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-
-[WARN ] 2025-06-16 20:07:15.467 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] Invalid name error message below name input box matches with "Your name can contain only alphabets."
- #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.SignUp_Steps invalid_name_error_should_be_shown_below_name_input_box 39 - WARNING [TestNG-PoolService-9]
+  Given User enters "Rajq$User12", "randomNewEmailMe2123@gmail.com" and "1257465983"                   # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
   Then Invalid name Error "Your name can contain only alphabets." should be shown below name input box # in.finology.stepDefns.SignUp_Steps.invalid_name_error_should_be_shown_below_name_input_box(java.lang.String)
-      java.lang.AssertionError: expected [true] but found [false]
-      	at org.testng.Assert.fail(Assert.java:111)
-      	at org.testng.Assert.failNotEquals(Assert.java:1590)
-      	at org.testng.Assert.assertTrue(Assert.java:57)
-      	at org.testng.Assert.assertTrue(Assert.java:67)
-      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-      	at in.finology.stepDefns.SignUp_Steps.invalid_name_error_should_be_shown_below_name_input_box(SignUp_Steps.java:39)
-      	at ✽.Invalid name Error "Your name can contain only alphabets." should be shown below name input box(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:25)
-  And User should not be redirected to otp verification page                                           # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
-
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 31 : @Signup, @invalid_name_signup : FAILED Examples  :: email id = randomNewEmailMe2123@gmail.com, mobile number = 1257465983, name = Raj$User12, message = Your name can contain only alphabets., 
-
-
-    Embedding features.signUp.feature_31_FAILED [image/png 169346 bytes]
-
-
-[INFO ] 2025-06-16 20:07:15.878 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 31 : @Signup, @invalid_name_signup : FAILED Examples  :: email id = randomNewEmailMe2123@gmail.com, mobile number = 1257465983, name = Raj$User12, message = Your name can contain only alphabets.,  [TestNG-PoolService-9]
-  Given User enters "", "lakeshsahu758@gmail.com" and "5784692345"                               # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
-
-[WARN ] 2025-06-16 20:07:17.536 finology.pages.OTPVerificationPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPage 64 Exception while verifying on OTP Verification Page #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-5]
-
-[WARN ] 2025-06-16 20:07:17.900 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to OTP Verification Page with valid user credentials
- #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-5]
-  Then User should redirect to OTP verification page                                                                            # in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page()
-      java.lang.AssertionError: expected [true] but found [false]
-      	at org.testng.Assert.fail(Assert.java:111)
-      	at org.testng.Assert.failNotEquals(Assert.java:1590)
-      	at org.testng.Assert.assertTrue(Assert.java:57)
-      	at org.testng.Assert.assertTrue(Assert.java:67)
-      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-      	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:17)
-      	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:12)
-  And Finology logo, home button, enter otp text, otp input box, verify otp button should be displayed on OTP verification page # in.finology.stepDefns.OTPVerification_Steps.finology_logo_home_button_enter_otp_text_otp_input_box_verify_otp_button_should_be_displayed_on_OTP_verification_page()
-
-    Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 18 : @Signup, @successful_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 9437525638, name = TestUserRieeeeeeeeeeeee, 
-
-
-    Embedding features.signUp.feature_18_FAILED [image/png 175560 bytes]
-
-
-[INFO ] 2025-06-16 20:07:18.499 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 18 : @Signup, @successful_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 9437525638, name = TestUserRieeeeeeeeeeeee,  [TestNG-PoolService-5]
-  When User clicks sign up button                                                                # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  Then Empty name Error "*Required" should be shown below name input box                         # in.finology.stepDefns.SignUp_Steps.empty_name_error_should_be_shown_below_name_input_box(java.lang.String)
-  Given User is on new sign up page                                                                         # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
-
-[WARN ] 2025-06-16 20:07:20.305 finology.pages.OTPVerificationPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+[WARN ] 2025-06-20 00:11:53.711 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
  #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPage 64 Exception while verifying on OTP Verification Page #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-4]
 
-[WARN ] 2025-06-16 20:07:20.683 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to OTP Verification Page with valid user credentials
+[WARN ] 2025-06-20 00:11:54.046 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to OTP Verification Page with valid user credentials
  #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-4]
-  Given User is on new sign up page                                                                         # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+
   Then User should redirect to OTP verification page                                                                            # in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page()
       java.lang.AssertionError: expected [true] but found [false]
       	at org.testng.Assert.fail(Assert.java:111)
@@ -471,92 +419,148 @@ Scenario Outline: Unsuccessful sign up with valid name, duplicate email or dupli
       	at org.testng.Assert.assertTrue(Assert.java:67)
       	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
       	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:17)
-      	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:12)
+      	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:13)
   And Finology logo, home button, enter otp text, otp input box, verify otp button should be displayed on OTP verification page # in.finology.stepDefns.OTPVerification_Steps.finology_logo_home_button_enter_otp_text_otp_input_box_verify_otp_button_should_be_displayed_on_OTP_verification_page()
 
-    Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 19 : @Signup, @successful_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr, 
+    Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 19 : @Signup, @successful_signup : FAILED Examples  :: email id = destiny.king@gmail.com, mobile number = 0065815112, name = Machelle Trantow, 
+
+[WARN ] 2025-06-20 00:11:54.638 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPage 64 Exception while verifying on OTP Verification Page #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-5]
 
 
-    Embedding features.signUp.feature_19_FAILED [image/png 175543 bytes]
+    Embedding features.signUp.feature_19_FAILED [image/png 174750 bytes]
+
+[INFO ] 2025-06-20 00:11:54.654 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 19 : @Signup, @successful_signup : FAILED Examples  :: email id = destiny.king@gmail.com, mobile number = 0065815112, name = Machelle Trantow,  [TestNG-PoolService-4]
+
+  Given User is on new sign up page                                                            # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+  When User clicks sign up button                                                                      # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+[WARN ] 2025-06-20 00:11:55.106 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to OTP Verification Page with valid user credentials
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-5]
+
+  Then Invalid name Error "Your name can contain only alphabets." should be shown below name input box # in.finology.stepDefns.SignUp_Steps.invalid_name_error_should_be_shown_below_name_input_box(java.lang.String)
+  Then User should redirect to OTP verification page                                                                            # in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
+      	at in.finology.stepDefns.OTPVerification_Steps.user_should_redirect_to_otp_verification_page(OTPVerification_Steps.java:17)
+      	at ✽.User should redirect to OTP verification page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:13)
+  And Finology logo, home button, enter otp text, otp input box, verify otp button should be displayed on OTP verification page # in.finology.stepDefns.OTPVerification_Steps.finology_logo_home_button_enter_otp_text_otp_input_box_verify_otp_button_should_be_displayed_on_OTP_verification_page()
+
+    Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 20 : @Signup, @successful_signup : FAILED Examples  :: email id = kurt.keeling@gmail.com, mobile number = 0896292574, name = Wilda Jenkins, 
 
 
-[INFO ] 2025-06-16 20:07:21.876 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 19 : @Signup, @successful_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr,  [TestNG-PoolService-4]
-  Given User is on new sign up page                                                              # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+    Embedding features.signUp.feature_20_FAILED [image/png 175464 bytes]
 
-[WARN ] 2025-06-16 20:07:24.899 finology.pages.OTPVerificationPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+[INFO ] 2025-06-20 00:11:55.913 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 20 : @Signup, @successful_signup : FAILED Examples  :: email id = kurt.keeling@gmail.com, mobile number = 0896292574, name = Wilda Jenkins,  [TestNG-PoolService-5]
+
+  Given User is on new sign up page                                                                         # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+[WARN ] 2025-06-20 00:11:58.695 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-9]
+
+  And User should not be redirected to otp verification page                                           # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 35 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmail2423@gmail.com, mobile number = 9868546793, name = @Lakesh Sahu, message = Your name can contain only alphabets., 
+
+
+    Embedding features.signUp.feature_35_PASSED [image/png 170252 bytes]
+
+[INFO ] 2025-06-20 00:11:59.328 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 35 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmail2423@gmail.com, mobile number = 9868546793, name = @Lakesh Sahu, message = Your name can contain only alphabets.,  [TestNG-PoolService-9]
+
+
+@Signup @unsuccessful_duplicate_account_signup
+Scenario Outline: Unsuccessful sign up with valid name, duplicate email or duplicate mobile number            # src/test/resources/features/signUp.feature:75
+  Given User enters "", "lakeshsahu758@gmail.com" and "5784692345"                             # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+[WARN ] 2025-06-20 00:12:00.732 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
  #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-10]
-  And User should not be redirected to otp verification page                                     # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
 
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 42 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = lakeshsahu758@gmail.com, mobile number = 5784692345, name = , message = *Required, 
+  And User should not be redirected to otp verification page                                           # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
 
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 36 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmailMe2123@gmail.com, mobile number = 1257465983, name = Rajq$User12, message = Your name can contain only alphabets., 
+
+
+    Embedding features.signUp.feature_36_PASSED [image/png 169619 bytes]
+
+[INFO ] 2025-06-20 00:12:01.418 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 36 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmailMe2123@gmail.com, mobile number = 1257465983, name = Rajq$User12, message = Your name can contain only alphabets.,  [TestNG-PoolService-10]
+
+  When User clicks sign up button                                                              # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+  Then Empty name Error "*Required" should be shown below name input box                       # in.finology.stepDefns.SignUp_Steps.empty_name_error_should_be_shown_below_name_input_box(java.lang.String)
   Given User enters "Rita", "rita2056gmail.com" and "9868546756"                                            # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
-
-    Embedding features.signUp.feature_42_PASSED [image/png 168238 bytes]
-
-
-[INFO ] 2025-06-16 20:07:25.448 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 42 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = lakeshsahu758@gmail.com, mobile number = 5784692345, name = , message = *Required,  [TestNG-PoolService-10]
+  Given User is on new sign up page                                                              # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
   When User clicks sign up button                                                                           # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  Given User enters "Ram Shyam", "shyammaster675@gmail" and "1257465943"                                    # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
   Then Error "Invalid Email" or "Please enter a valid email address." should be shown below email input box # in.finology.stepDefns.SignUp_Steps.error_should_be_shown_below_email_input_box(java.lang.String,java.lang.String)
-  When User clicks sign up button                                                                           # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  Given User enters "Hitesh", "" and "8646597458"                                                # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
-  Then Error "Invalid Email" or "Please enter a valid email address." should be shown below email input box # in.finology.stepDefns.SignUp_Steps.error_should_be_shown_below_email_input_box(java.lang.String,java.lang.String)
-  When User clicks sign up button                                                                # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  Then Error "*Required" or "*Required" should be shown below email input box                    # in.finology.stepDefns.SignUp_Steps.error_should_be_shown_below_email_input_box(java.lang.String,java.lang.String)
   Given User is on new sign up page                                                                     # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+  Given User is on new sign up page                                                                         # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+[WARN ] 2025-06-20 00:12:06.904 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-8]
 
-[WARN ] 2025-06-16 20:07:32.381 finology.pages.OTPVerificationPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-2]
-  Given User is on new sign up page                                                                # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
-  And User should not be redirected to otp verification page                                                # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+  And User should not be redirected to otp verification page                                   # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
 
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 53 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = rita2056gmail.com, mobile number = 9868546756, name = Rita, message2 = Please enter a valid email address., message1 = Invalid Email, 
-
-
-    Embedding features.signUp.feature_53_PASSED [image/png 165008 bytes]
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with empty name, valid email id and valid mobile number : 47 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = lakeshsahu758@gmail.com, mobile number = 5784692345, name = , message = *Required, 
 
 
-[INFO ] 2025-06-16 20:07:32.985 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 53 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = rita2056gmail.com, mobile number = 9868546756, name = Rita, message2 = Please enter a valid email address., message1 = Invalid Email,  [TestNG-PoolService-2]
+    Embedding features.signUp.feature_47_PASSED [image/png 168238 bytes]
 
-[WARN ] 2025-06-16 20:07:33.136 finology.pages.OTPVerificationPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-3]
-  And User should not be redirected to otp verification page                                                # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+[INFO ] 2025-06-20 00:12:07.416 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with empty name, valid email id and valid mobile number : 47 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = lakeshsahu758@gmail.com, mobile number = 5784692345, name = , message = *Required,  [TestNG-PoolService-8]
 
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 54 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = shyammaster675@gmail, mobile number = 1257465943, name = Ram Shyam, message2 = Please enter a valid email address., message1 = Invalid Email, 
-
-
-    Embedding features.signUp.feature_54_PASSED [image/png 165954 bytes]
-
-
-[INFO ] 2025-06-16 20:07:33.622 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 54 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = shyammaster675@gmail, mobile number = 1257465943, name = Ram Shyam, message2 = Please enter a valid email address., message1 = Invalid Email,  [TestNG-PoolService-3]
-  Given User is on new sign up page                                                                           # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
-
-[WARN ] 2025-06-16 20:07:35.024 finology.pages.OTPVerificationPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+[WARN ] 2025-06-20 00:12:10.317 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
  #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-7]
+
+  And User should not be redirected to otp verification page                                                # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 58 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = rita2056gmail.com, mobile number = 9868546756, name = Rita, message2 = Please enter a valid email address., message1 = Invalid Email, 
+
+
+    Embedding features.signUp.feature_58_PASSED [image/png 165008 bytes]
+
+[INFO ] 2025-06-20 00:12:10.876 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 58 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = rita2056gmail.com, mobile number = 9868546756, name = Rita, message2 = Please enter a valid email address., message1 = Invalid Email,  [TestNG-PoolService-7]
+
+  Given User enters "Hitesh", "" and "8646597458"                                                # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+  Given User enters "Ram Shyam", "shyammaster675@gmail" and "1257465943"                                    # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+  When User clicks sign up button                                                                # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+  When User clicks sign up button                                                                           # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+  Then Error "*Required" or "*Required" should be shown below email input box                    # in.finology.stepDefns.SignUp_Steps.error_should_be_shown_below_email_input_box(java.lang.String,java.lang.String)
+  Then Error "Invalid Email" or "Please enter a valid email address." should be shown below email input box # in.finology.stepDefns.SignUp_Steps.error_should_be_shown_below_email_input_box(java.lang.String,java.lang.String)
+  Given User enters "TestUserRieeeeeeeeeeeee", "testuserrieeeeeeeeeeeee2726@gmail.com" and "5598705134" # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+  Given User is on new sign up page                                                                # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+  Given User is on new sign up page                                                                           # in.finology.stepDefns.SignUp_Steps.user_is_on_new_sign_up_page()
+  When User clicks sign up button                                                                       # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+[WARN ] 2025-06-20 00:12:18.190 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-3]
+
+  Given User enters "Reriserrrrrrrrrrrrrr", "reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com" and "8335957041" # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
   And User should not be redirected to otp verification page                                     # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
 
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 55 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = , mobile number = 8646597458, name = Hitesh, message2 = *Required, message1 = *Required, 
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 60 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = , mobile number = 8646597458, name = Hitesh, message2 = *Required, message1 = *Required, 
+
+[WARN ] 2025-06-20 00:12:18.697 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-2]
 
 
-    Embedding features.signUp.feature_55_PASSED [image/png 163367 bytes]
+    Embedding features.signUp.feature_60_PASSED [image/png 163367 bytes]
+
+[INFO ] 2025-06-20 00:12:18.942 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 60 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = , mobile number = 8646597458, name = Hitesh, message2 = *Required, message1 = *Required,  [TestNG-PoolService-3]
+
+  And User should not be redirected to otp verification page                                                # in.finology.stepDefns.OTPVerification_Steps.user_should_not_be_redirected_to_otp_verification_page()
+
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 59 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = shyammaster675@gmail, mobile number = 1257465943, name = Ram Shyam, message2 = Please enter a valid email address., message1 = Invalid Email, 
 
 
-[INFO ] 2025-06-16 20:07:35.400 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 55 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = , mobile number = 8646597458, name = Hitesh, message2 = *Required, message1 = *Required,  [TestNG-PoolService-7]
-  Given User enters "TestUserRieeeeeeeeeeeee", "testuserrieeeeeeeeeeeee2726@gmail.com" and "5598705134" # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
-  Given User enters "Reriserrrrrrrrrrrrrr", "otherneewuueeemail211317@gmail.com" and "8335957041"  # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
-  When User clicks sign up button                                                                       # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  When User clicks sign up button                                                                  # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-  Given User enters "Reriserrrrrrrrrrrrrr", "reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com" and "8335957041" # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+    Embedding features.signUp.feature_59_PASSED [image/png 165954 bytes]
+
+[INFO ] 2025-06-20 00:12:19.550 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 59 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = shyammaster675@gmail, mobile number = 1257465943, name = Ram Shyam, message2 = Please enter a valid email address., message1 = Invalid Email,  [TestNG-PoolService-2]
+
   When User clicks sign up button                                                                             # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
-
-[WARN ] 2025-06-16 20:07:52.492 finology.pages.LoginPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+  Given User enters "Reriserrrrrrrrrrrrrr", "otherneewuueeemail211317@gmail.com" and "8335957041"  # in.finology.stepDefns.SignUp_Steps.user_enters_and(java.lang.String,java.lang.String,java.lang.String)
+  When User clicks sign up button                                                                  # in.finology.stepDefns.SignUp_Steps.user_clicks_sign_up_button()
+[WARN ] 2025-06-20 00:12:31.298 finology.pages.LoginPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
  #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-1]
 
-[WARN ] 2025-06-16 20:07:52.662 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+[WARN ] 2025-06-20 00:12:31.610 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
  #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-1]
 
-[WARN ] 2025-06-16 20:07:52.732 finology.pages.LoginPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-6]
   Then User should be redirected to login page                                                          # in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page()
       java.lang.AssertionError: expected [true] but found [false]
       	at org.testng.Assert.fail(Assert.java:111)
@@ -565,43 +569,22 @@ Scenario Outline: Unsuccessful sign up with valid name, duplicate email or dupli
       	at org.testng.Assert.assertTrue(Assert.java:67)
       	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
       	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:25)
-      	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:63)
+      	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:67)
   And Already account "You already have an account. Please Login to continue." should be shown          # in.finology.stepDefns.Login_Steps.already_account_should_be_shown(java.lang.String)
 
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 69 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 5598705134, name = TestUserRieeeeeeeeeeeee, 
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 73 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 5598705134, name = TestUserRieeeeeeeeeeeee, 
 
 
-[WARN ] 2025-06-16 20:07:52.901 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
- #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-6]
+    Embedding features.signUp.feature_73_FAILED [image/png 175631 bytes]
 
-    Embedding features.signUp.feature_69_FAILED [image/png 175444 bytes]
+[INFO ] 2025-06-20 00:12:32.129 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 73 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 5598705134, name = TestUserRieeeeeeeeeeeee,  [TestNG-PoolService-1]
 
+[WARN ] 2025-06-20 00:12:34.988 finology.pages.LoginPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-4]
 
-[INFO ] 2025-06-16 20:07:52.993 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 69 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 5598705134, name = TestUserRieeeeeeeeeeeee,  [TestNG-PoolService-1]
-  Then User should be redirected to login page                                                     # in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page()
-      java.lang.AssertionError: expected [true] but found [false]
-      	at org.testng.Assert.fail(Assert.java:111)
-      	at org.testng.Assert.failNotEquals(Assert.java:1590)
-      	at org.testng.Assert.assertTrue(Assert.java:57)
-      	at org.testng.Assert.assertTrue(Assert.java:67)
-      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
-      	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:25)
-      	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:63)
-  And Already account "You already have an account. Please Login to continue." should be shown     # in.finology.stepDefns.Login_Steps.already_account_should_be_shown(java.lang.String)
+[WARN ] 2025-06-20 00:12:35.251 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-4]
 
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 70 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = otherneewuueeemail211317@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr, 
-
-
-    Embedding features.signUp.feature_70_FAILED [image/png 175628 bytes]
-
-
-[INFO ] 2025-06-16 20:07:53.276 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 70 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = otherneewuueeemail211317@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr,  [TestNG-PoolService-6]
-
-[WARN ] 2025-06-16 20:07:55.064 finology.pages.LoginPage 162 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
- #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-8]
-
-[WARN ] 2025-06-16 20:07:55.246 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
- #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-8]
   Then User should be redirected to login page                                                                # in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page()
       java.lang.AssertionError: expected [true] but found [false]
       	at org.testng.Assert.fail(Assert.java:111)
@@ -610,58 +593,82 @@ Scenario Outline: Unsuccessful sign up with valid name, duplicate email or dupli
       	at org.testng.Assert.assertTrue(Assert.java:67)
       	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
       	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:25)
-      	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:63)
+      	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:67)
   And Already account "You already have an account. Please Login to continue." should be shown                # in.finology.stepDefns.Login_Steps.already_account_should_be_shown(java.lang.String)
 
-    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 71 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr, 
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 75 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr, 
 
 
-    Embedding features.signUp.feature_71_FAILED [image/png 175528 bytes]
+    Embedding features.signUp.feature_75_FAILED [image/png 175444 bytes]
+
+[INFO ] 2025-06-20 00:12:35.751 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 75 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr,  [TestNG-PoolService-4]
+
+[WARN ] 2025-06-20 00:12:38.796 finology.pages.LoginPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-6]
+
+[WARN ] 2025-06-20 00:12:39.086 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-6]
+
+  Then User should be redirected to login page                                                     # in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page()
+      java.lang.AssertionError: expected [true] but found [false]
+      	at org.testng.Assert.fail(Assert.java:111)
+      	at org.testng.Assert.failNotEquals(Assert.java:1590)
+      	at org.testng.Assert.assertTrue(Assert.java:57)
+      	at org.testng.Assert.assertTrue(Assert.java:67)
+      	at in.finology.utils.CustomAsserts.assertTrue(CustomAsserts.java:14)
+      	at in.finology.stepDefns.Login_Steps.user_should_be_redirected_to_login_page(Login_Steps.java:25)
+      	at ✽.User should be redirected to login page(file:///D:/Selenium%20Projects/build%20out/Finology/src/test/resources/features/signUp.feature:67)
+  And Already account "You already have an account. Please Login to continue." should be shown     # in.finology.stepDefns.Login_Steps.already_account_should_be_shown(java.lang.String)
+
+    Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 74 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = otherneewuueeemail211317@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr, 
 
 
-[INFO ] 2025-06-16 20:07:55.602 finology.stepDefns.Hooks 140 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 71 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr,  [TestNG-PoolService-8]
+    Embedding features.signUp.feature_74_FAILED [image/png 175280 bytes]
+
+[INFO ] 2025-06-20 00:12:39.634 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 74 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = otherneewuueeemail211317@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr,  [TestNG-PoolService-6]
+
 ]]></system-out>
-  <system-err><![CDATA[Jun 16, 2025 8:05:47 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[Jun 20, 2025 12:10:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:05:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:10:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:05:49 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:10:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:05:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:10:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:05:52 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:10:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:05:55 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:10:44 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:06:15 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:06 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:06:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:07 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:06:36 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:16 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:06:41 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:24 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:06:48 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:25 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:06:50 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:27 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:06:51 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:39 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:07:00 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:43 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:07:03 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:51 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:07:07 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:11:53 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:07:11 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:12:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:07:17 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:12:01 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:07:26 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:12:04 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:07:27 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:12:09 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
-Jun 16, 2025 8:07:28 PM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+Jun 20, 2025 12:12:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 137, returning the closest version; found: 135; Please update to a Selenium version that supports CDP version 137
 ]]></system-err>
 </testsuite>

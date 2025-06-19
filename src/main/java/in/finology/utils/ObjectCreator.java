@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 import java.util.HashMap;
 
-// This class is used to create the Object of classes per thread for parallel execution
+// This class contains all the Class Objects
 public class ObjectCreator extends Base{
     private final WebDriver driver;
     private final String scenarioName;
@@ -23,7 +23,10 @@ public class ObjectCreator extends Base{
     public OTPVerificationPage otpVerificationPage;
     public SignUpPage signUpPage;
     public CommonMethods cm;
+
+    // Stores the arguments used in the feature files
     public HashMap<String, String> examplesKeyValue;
+
     public ExtentTest test;
 
     public ObjectCreator(WebDriver driver, String featureURI, String scenarioName, String scenarioLine, String scenarioTags) {
@@ -45,7 +48,6 @@ public class ObjectCreator extends Base{
         examplesKeyValue = new HashMap<>();
 
         test = reports.createTest(featureURI + " " + scenarioName + " " + scenarioLine + " " + scenarioTags);
-
     }
 
     public WebDriver getDriver() {

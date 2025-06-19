@@ -66,7 +66,7 @@ public class AccountSubscriptionPage extends CommonMethods {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(AccountSubscriptionPage.class);
+    private static final Logger log = LogManager.getLogger(AccountSubscriptionPage.class);
     private final String url;
 
     public AccountSubscriptionPage(WebDriver driver) {

@@ -62,7 +62,7 @@ public class LoginAuthPage extends CommonMethods {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(LoginAuthPage.class);
+    private static final Logger log = LogManager.getLogger(LoginAuthPage.class);
     private final String url;
 
     public LoginAuthPage(WebDriver driver) {

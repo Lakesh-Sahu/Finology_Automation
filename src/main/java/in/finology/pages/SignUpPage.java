@@ -57,7 +57,7 @@ public class SignUpPage extends CommonMethods {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(SignUpPage.class);
+    private static final Logger log = LogManager.getLogger(SignUpPage.class);
 //    private final String url = "https://www.finology.in/signup?ReturnUrl=%2Faccount%2Fdashboard";
     private final String url = "https://www.finology.in/signup";
 

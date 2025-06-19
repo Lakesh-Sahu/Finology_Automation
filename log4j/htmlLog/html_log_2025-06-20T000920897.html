@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Finology Application Log</title>
+<style type="text/css">
+<!--
+body, table {font-family:arial,sans-serif; font-size: medium
+;}th {background: #336699; color: #FFFFFF; text-align: left;}
+-->
+</style>
+</head>
+<body bgcolor="#FFFFFF" topmargin="6" leftmargin="6">
+<hr size="1" noshade="noshade">
+Log session start time Fri Jun 20 00:09:21 IST 2025<br>
+<br>
+<table cellspacing="0" cellpadding="4" border="1" bordercolor="#224466" width="100%">
+<tr>
+<th>Time</th>
+<th>Thread</th>
+<th>Level</th>
+<th>Logger</th>
+<th>File:Line</th>
+<th>Message</th>
+</tr>
+
+<tr>
+<td>17250</td>
+<td title="TestNG-PoolService-3 thread">TestNG-PoolService-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="in.finology.pages.AccountDashboardPage logger">in.finology.pages.AccountDashboardPage</td>
+<td>Base.java:173</td>
+<td title="Message">org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id: session deleted as the browser has closed the connection<br /> #1 org.openqa.selenium.support.ui.FluentWait until 203 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING</td>
+</tr>
+
+<tr>
+<td>17268</td>
+<td title="TestNG-PoolService-3 thread">TestNG-PoolService-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="in.finology.screenshot.Screenshot logger">in.finology.screenshot.Screenshot</td>
+<td>Base.java:173</td>
+<td title="Message">org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id<br /> #1 org.openqa.selenium.remote.RemoteWebDriver getScreenshotAs 334 #2 in.finology.screenshot.Screenshot capture 26 Taking screenshot at capture : Fail #3 in.finology.utils.Base logWarningInExtentReport 253 - WARNING</td>
+</tr>
+
+<tr>
+<td>17284</td>
+<td title="TestNG-PoolService-3 thread">TestNG-PoolService-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="in.finology.utils.CustomAsserts logger">in.finology.utils.CustomAsserts</td>
+<td>CustomAsserts.java:124</td>
+<td title="Message">Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in<br /> #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING</td>
+</tr>
+
+<tr>
+<td>17295</td>
+<td title="TestNG-PoolService-3 thread">TestNG-PoolService-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="in.finology.screenshot.Screenshot logger">in.finology.screenshot.Screenshot</td>
+<td>Base.java:173</td>
+<td title="Message">org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id<br /> #1 org.openqa.selenium.remote.RemoteWebDriver getScreenshotAs 334 #2 in.finology.screenshot.Screenshot capture 26 Taking screenshot at capture : Fail #3 in.finology.utils.CustomAsserts logWarningInExtentReportForCustomAssert 133 - WARNING</td>
+</tr>
+
+<tr>
+<td>17330</td>
+<td title="TestNG-PoolService-3 thread">TestNG-PoolService-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="in.finology.screenshot.Screenshot logger">in.finology.screenshot.Screenshot</td>
+<td>Base.java:173</td>
+<td title="Message">org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id<br /> #1 org.openqa.selenium.remote.RemoteWebDriver getScreenshotAs 334 #2 in.finology.screenshot.Screenshot captureAsBYTE 43 Taking screenshot at captureAsBYTE : Fail #3 in.finology.hooks.Hooks attachInCucumberReport 184 - WARNING</td>
+</tr>
+
+<tr>
+<td>17334</td>
+<td title="TestNG-PoolService-3 thread">TestNG-PoolService-3</td>
+<td title="Level">INFO</td>
+<td title="in.finology.hooks.Hooks logger">in.finology.hooks.Hooks</td>
+<td>Base.java:152</td>
+<td title="Message">Test Case Finished features/accountdashboard.feature : Welcome message should be displayed on dashboard page : 28 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology, </td>
+</tr>
+
+<tr>
+<td>17342</td>
+<td title="TestNG-PoolService-3 thread">TestNG-PoolService-3</td>
+<td title="Level"><font color="#993300"><strong>WARN</strong></font></td>
+<td title="in.finology.screenshot.Screenshot logger">in.finology.screenshot.Screenshot</td>
+<td>Base.java:173</td>
+<td title="Message">org.openqa.selenium.NoSuchSessionException Throwable Message : invalid session id<br /> #1 org.openqa.selenium.remote.RemoteWebDriver getScreenshotAs 334 #2 in.finology.screenshot.Screenshot capture 26 Taking screenshot at capture : Fail #3 in.finology.hooks.Hooks afterScenario 95 - WARNING</td>
+</tr>

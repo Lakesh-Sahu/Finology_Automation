@@ -10,7 +10,7 @@ import java.io.File;
 import java.util.HashMap;
 
 public class DataFromExcel extends Base {
-    private static Logger log = LogManager.getLogger(DataFromExcel.class);
+    private static final Logger log = LogManager.getLogger(DataFromExcel.class);
 
     File file;
     String sheetName;
@@ -20,7 +20,7 @@ public class DataFromExcel extends Base {
         this.sheetName = sheetName;
     }
 
-    // Return the single value of single key
+    // Return the single value of a single key
     public String getDataOf(String keyHeaderName, String key, String returnColnHeaderName) {
 
         try {
@@ -90,7 +90,7 @@ public class DataFromExcel extends Base {
                     }
                 }
 
-                // Get the value of required key (skipping the header row)
+                // Get the value of the required key (skipping the header row)
                 for (int rowIdx = ++firstRowNum; rowIdx < lastRowNum; rowIdx++) {
 
                     XSSFCell currKeyCell = sheet.getRow(rowIdx).getCell(keyColnIdx);

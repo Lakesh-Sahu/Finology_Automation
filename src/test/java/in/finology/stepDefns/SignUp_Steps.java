@@ -28,6 +28,17 @@ public class SignUp_Steps extends CommonMethods {
         assertTrue(ObjectManager.getObject().signUpPage.enterSignUpDetails(name, emailId, mobileNumber), "User is able to enter name, email id, and mobile number on Sign Up Page");
     }
 
+    @Given("User enters new name, email id and mobile number")
+    public void user_enters_new_name_email_id_and_mobile_number() {
+        String newName = nameGenerator();
+        String newEmail = emailGenerator();
+        String newMobileNumber = mobileNumberGenerator();
+        setExamplesKeyValueInHashMap("name", newName);
+        setExamplesKeyValueInHashMap("email id", newEmail);
+        setExamplesKeyValueInHashMap("mobile number", newMobileNumber);
+        assertTrue(ObjectManager.getObject().signUpPage.enterSignUpDetails(newName, newEmail, newMobileNumber), "User is able to enter new name, email id, and mobile number on Sign Up Page");
+    }
+
     @When("User clicks sign up button")
     public void user_clicks_sign_up_button() {
         assertTrue(ObjectManager.getObject().signUpPage.clickSignUpBtn(), "User is able to click Signup button on Signup Page");

@@ -15,7 +15,7 @@ public class GoogleSignInPage extends CommonMethods {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(GoogleSignInPage.class);
+    private static final Logger log = LogManager.getLogger(GoogleSignInPage.class);
     private final String urlPart;
 
     public GoogleSignInPage(WebDriver driver) {

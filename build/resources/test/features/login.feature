@@ -53,4 +53,4 @@ Feature:
 
       | mobile number or email  | password           |
       | 5846975120              | finTestUserAcology |
-      | testtuserac121@gmail.com | finTestUserAcology |
+      | testuserac121@gmail.com | finTestUserAcology |

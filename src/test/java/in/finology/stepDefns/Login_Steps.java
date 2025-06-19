@@ -51,7 +51,9 @@ public class Login_Steps extends CommonMethods {
 
     @Given("Generate new mobile number and User enter in mobile number input box")
     public void generate_new_mobile_number_and_user_enter_in_mobile_number_input_box() {
-        assertTrue(ObjectManager.getObject().loginPage.enterMobileNumber(mobileNumberGenerateAndAppend()), "User is able to generate and enter new mobile number in mobile number input box for Login");
+        String mobileNumber = mobileNumberGenerateAndAppend();
+        setExamplesKeyValueInHashMap("mobile number", mobileNumber);
+        assertTrue(ObjectManager.getObject().loginPage.enterMobileNumber(mobileNumber), "User is able to generate and enter new mobile number in mobile number input box for Login");
     }
 
     @When("User clicks Login with Email button")

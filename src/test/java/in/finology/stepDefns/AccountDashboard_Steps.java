@@ -13,7 +13,11 @@ public class AccountDashboard_Steps extends CommonMethods {
 
     @Given("User is logged in and on account dashboard page")
     public void userIsLoggedInAndOnAccountDashboardPage() {
-        assertTrue( ObjectManager.getObject().loginAuthPage.performLoginUsingMobileNumberOrEmail("testuserac121@gmail.com", "finTestUserAcology") && ObjectManager.getObject().accountDashboardPage.verifyOnDashboardPage() && ObjectManager.getObject().accountDashboardPage.userPhotoImgBtnIsDisplayed(), "User is on Dashboard Page and logged in");
+        String mobileNumberOrEmail = "testuserac121@gmail.com";
+        String password = "finTestUserAcology";
+        setExamplesKeyValueInHashMap("mobileNumberOrEmail", mobileNumberOrEmail);
+        setExamplesKeyValueInHashMap("password", password);
+        assertTrue( ObjectManager.getObject().loginAuthPage.performLoginUsingMobileNumberOrEmail(mobileNumberOrEmail, password) && ObjectManager.getObject().accountDashboardPage.verifyOnDashboardPage() && ObjectManager.getObject().accountDashboardPage.userPhotoImgBtnIsDisplayed(), "User is on Dashboard Page and logged in");
     }
 
     @Then("User should be redirected to account dashboard page")

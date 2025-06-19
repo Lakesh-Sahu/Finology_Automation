@@ -121,7 +121,7 @@ public class HomePage extends CommonMethods {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(HomePage.class);
+    private static final Logger log = LogManager.getLogger(HomePage.class);
     private final String url = "https://www.finology.in/";
 
     public HomePage(WebDriver driver) {

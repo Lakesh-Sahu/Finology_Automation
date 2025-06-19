@@ -21,6 +21,7 @@ Feature:
     Given User should be on account dashboard page
     When User should be on account dashboard page
     Then Welcome "<message>" should be displayed
+    And User should perform logout from account dashboard page
 
     Examples:
       | message                                                              |

@@ -5,12 +5,14 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import in.finology.screenshot.Screenshot;
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.Map;
 
@@ -54,6 +56,16 @@ public class Base {
         } catch (Exception e) {
             logWarningInLogFileAndExtentReport(log, e, "Unable to getExamplesKeyValueFromHahMap in Base class");
             return "";
+        }
+    }
+
+    // Copy the alternate image that will be used if taking screenshot fails
+    public static void copyAlternateErrorImageToExtentReportDirectory() {
+        try {
+            File sourceFile = new File(System.getProperty("user.dir") + "/src/main/resources/Error_while_capturing_screenshot.png");
+            File destFile = new File(System.getProperty("user.dir") + "/extentReports/" + singleTimeStamp + "/screenshots/Error_while_capturing_screenshot.png");
+            FileUtils.copyFile(sourceFile, destFile);
+        } catch (Exception ignore) {
         }
     }
 
@@ -140,7 +152,7 @@ public class Base {
             currLog.log(level, message);
         } catch (Exception e) {
             logWarningInLogFile(currLog, e, message + "###############\nFailed to write the test log level to the Log File within the logLevelInLogFile method of the Base class " + getStackTraceFromThrowable(e, 10) + "\n###############");
-            System.out.println("###############\nFailed to write the test log level to the Log File within the logLevelInLogFile method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
+            System.err.println("###############\nFailed to write the test log level to the Log File within the logLevelInLogFile method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
         }
     }
 
@@ -151,8 +163,7 @@ public class Base {
             currLog.log(level, childSelfParentString);
         } catch (Exception ee) {
             logWarningInLogFile(currLog, e, message + "###############\nFailed to write the test log level to the Log File within the logLevelInLogFileWithException method of the Base class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
-            System.out.println("###############\nFailed to write the test log level to the Log File within the logLevelInLogFileWithException method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
-//            logWarningInLogFileAndExtentReport(currLog, ee, "Unable to logLevelInLogFile in Base class");
+            System.err.println("###############\nFailed to write the test log level to the Log File within the logLevelInLogFileWithException method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
         }
     }
 
@@ -161,9 +172,7 @@ public class Base {
             String childSelfParentString = getChildSelfParentFromThrowable(e, message);
             currLog.warn(childSelfParentString);
         } catch (Exception ee) {
-//            logWarningInExtentReport(currLog,  e,  "##### Could not write test log warning in Log File for logWarningInLogFile : " + getStackTraceFromThrowable(ee, 10));
-//                ObjectManager.getObject().test.warning("Could not write Base class log warning in log file for logWarningInLogFile : " + getStackTraceFromThrowable(ee, 10));
-            System.out.println("###############\nFailed to write the test log warning to the Log File within the logWarningInLogFile method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
+            System.err.println("###############\nFailed to write the test log warning to the Log File within the logWarningInLogFile method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
         }
     }
 
@@ -173,7 +182,7 @@ public class Base {
             ObjectManager.getObject().test.log(status, details, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerForScreenshot)).build());
         } catch (Exception e) {
             logStepInExtentReportWithoutScreenshot(status, details + "###############\nFailed to write the test log step to the Extent Report within the logStepInExtentReport method of the Base class " + getStackTraceFromThrowable(e, 10) + "\n###############");
-            System.out.println("###############\nFailed to write the test log step to the Extent Report within the logStepInExtentReport method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
+            System.err.println("###############\nFailed to write the test log step to the Extent Report within the logStepInExtentReport method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
         }
     }
 
@@ -181,7 +190,7 @@ public class Base {
         try {
             ObjectManager.getObject().test.log(status, details);
         } catch (Exception e) {
-            System.out.println("###############\nFailed to write the test log step to the Extent Report within the logStepInExtentReportWithoutScreenshot method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
+            System.err.println("###############\nFailed to write the test log step to the Extent Report within the logStepInExtentReportWithoutScreenshot method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
         }
     }
 
@@ -191,8 +200,7 @@ public class Base {
             ObjectManager.getObject().test.log(status, childSelfParentString, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(getCallerInfoFromThrowableForScreenshot(e) + " - " + status.getName())).build());
         } catch (Exception ee) {
             logStatusInExtentReportWithoutScreenshot(currLog, status, e, message + "###############\nFailed to write the test log status to the Extent Report within the logStatusInExtentReport method of the Base class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
-            System.out.println("###############\nFailed to write the test log status to the Extent Report within the logStatusInExtentReport method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
-//            logWarningInLogFileAndExtentReport(currLog, ee, "Unable to logStatusInExtentReport in Base class");
+            System.err.println("###############\nFailed to write the test log status to the Extent Report within the logStatusInExtentReport method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
         }
     }
 
@@ -201,8 +209,7 @@ public class Base {
             String childSelfParentString = getChildSelfParentFromThrowable(e, message);
             ObjectManager.getObject().test.log(status, childSelfParentString);
         } catch (Exception ee) {
-            System.out.println("###############\nFailed to write the test log status to the Extent Report within the logStatusInExtentReportWithoutScreenshot method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
-//            logWarningInLogFileAndExtentReport(currLog, ee, "Unable to logStatusInExtentReportWithoutScreenshot in Base class");
+            System.err.println("###############\nFailed to write the test log status to the Extent Report within the logStatusInExtentReportWithoutScreenshot method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
         }
     }
 
@@ -220,8 +227,7 @@ public class Base {
             ObjectManager.getObject().test.info(callerInfoMessageForExtent, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(callerInfoForScreenshot + " - INFO")).build());
         } catch (Exception e) {
             logInfoInExtentReportWithoutScreenshot(message);
-            System.out.println("###############\nFailed to write the test log info to the Extent Report within the logInfoInExtentReport method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
-//            logWarningInLogFileAndExtentReport(log, e, "Unable to logInfoInExtentReport in Base class");
+            System.err.println("###############\nFailed to write the test log info to the Extent Report within the logInfoInExtentReport method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
         }
     }
 
@@ -237,8 +243,7 @@ public class Base {
             String callerInfoMessageForExtent = className + " " + methodName + " " + lineNumber + " " + tags + " " + message + " - INFO";
             ObjectManager.getObject().test.info(callerInfoMessageForExtent);
         } catch (Exception e) {
-            System.out.println("###############\nFailed to write the test log info to the Extent Report within the logInfoInExtentReportWithoutScreenshot method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
-//            logWarningInLogFileAndExtentReport(log, e, "Unable to logInfoInExtentReport in Base class");
+            System.err.println("###############\nFailed to write the test log info to the Extent Report within the logInfoInExtentReportWithoutScreenshot method of the Base class " + Arrays.toString(e.getStackTrace()) + "\n###############");
         }
     }
 
@@ -249,9 +254,7 @@ public class Base {
         } catch (Exception ee) {
             logWarningInLogFile(log, e,"###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReport method of the Base class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
             logWarningInExtentReportWithoutScreenshot(e, message + "###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReport method of the Base class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
-            System.out.println("###############\nException in the logWarningInExtentReport method in the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
-//            currLog.fatal("Could not write test log warning in Extent Report for logWarningInExtentReport : {}", getStackTraceFromThrowable(e, 10));
-//            ObjectManager.getObject().test.warning("Could not write test log warning in Extent Report for logWarningInExtentReport : " + getStackTraceFromThrowable(e, 10));
+            System.err.println("###############\nException in the logWarningInExtentReport method in the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
         }
     }
 
@@ -261,41 +264,13 @@ public class Base {
             ObjectManager.getObject().test.warning(childSelfParentString);
         } catch (Exception ee) {
             logWarningInLogFile(log, ee,"###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportWithoutScreenshot method of the Base class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
-            System.out.println("###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportWithoutScreenshot method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
+            System.err.println("###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportWithoutScreenshot method of the Base class " + Arrays.toString(ee.getStackTrace()) + "\n###############");
         }
     }
 
     public static void logWarningInLogFileAndExtentReport(Logger currLog, Throwable e, String message) {
-//        try {
         logWarningInLogFile(currLog, e, message);
         logWarningInExtentReport(currLog, e, message);
-//        } catch (Exception ei) {
-//            logStepInLogFile(currLog, Level.FATAL, "Could not write test log warning in log file or in Extent Report for logWarningInLogFileAndExtentReport : " + getStackTraceFromThrowable(e, 10));
-//            logStepInExtentReportWithoutScreenshot(Status.WARNING, "Could not write test log warning in log file or in Extent Report for logWarningInLogFileAndExtentReport : " + getStackTraceFromThrowable(e, 10));
-//        }
-
-
-//        try {
-//            String childSelfParentString = getChildSelfParentFromThrowable(e, message);
-//
-//            try {
-//                currLog.warn(childSelfParentString);
-//            } catch (Exception ee) {
-//                ObjectManager.getObject().test.warning("Could not write test log warning in log file for logWarningInLogFileAndExtentReport : " + getStackTraceFromThrowable(e, 10));
-//                currLog.fatal("Could not write test log warning in log file for logWarningInLogFileAndExtentReport : {}", getStackTraceFromThrowable(e, 10));
-//            }
-//
-//            try {
-//                ObjectManager.getObject().test.warning(childSelfParentString, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(getCallerInfoFromThrowableForScreenshot(e) + " - WARN")).build());
-//            } catch (Exception ee) {
-//                currLog.fatal("Could not write test log warning in Extent Report for logWarningInLogFileAndExtentReport : {}", getStackTraceFromThrowable(e, 10));
-//                ObjectManager.getObject().test.warning("Could not write test log warning in Extent Report for logWarningInLogFileAndExtentReport : " + getStackTraceFromThrowable(e, 10));
-//            }
-//
-//        } catch (Exception ei) {
-//            currLog.fatal("Could not write test log warning in log file or in Extent Report for logWarningInLogFileAndExtentReport : {}", getStackTraceFromThrowable(e, 10));
-//            ObjectManager.getObject().test.warning("Could not write test log warning in log file or in Extent Report for logWarningInLogFileAndExtentReport : " + getStackTraceFromThrowable(e, 10));
-//        }
     }
 
     public static void logWarningInLogAndExtentReportWithoutScreenshot(Logger currLog, Throwable e, String message) {

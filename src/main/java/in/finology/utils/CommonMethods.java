@@ -1,5 +1,6 @@
 package in.finology.utils;
 
+import com.github.javafaker.Faker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -11,10 +12,9 @@ import org.openqa.selenium.WebElement;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.Random;
 
 public class CommonMethods extends Base {
-    private static Logger log = LogManager.getLogger(CommonMethods.class);
+    private static final Logger log = LogManager.getLogger(CommonMethods.class);
 
     public boolean click(WebDriver driver, WebElement we) {
         try {
@@ -23,7 +23,7 @@ public class CommonMethods extends Base {
             Thread.sleep(1000);
             return true;
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while scrolling and clicking a WebElement on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while scrolling and clicking a WebElement on CommonMethods class");
             return false;
         }
     }
@@ -35,7 +35,7 @@ public class CommonMethods extends Base {
             Thread.sleep(1000);
             return true;
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while clearing and sending keys to a WebElement on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while clearing and sending keys to a WebElement on CommonMethods class");
             return false;
         }
     }
@@ -46,7 +46,7 @@ public class CommonMethods extends Base {
             JavascriptExecutor js = (JavascriptExecutor) driver;
             js.executeScript("arguments[0].scrollIntoView({behavior : 'smooth', block : 'center', inline : 'center'});", we);
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while scrolling to a WebElement on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while scrolling to a WebElement on CommonMethods class");
         }
     }
 
@@ -54,57 +54,47 @@ public class CommonMethods extends Base {
         try {
             return s1.replaceAll(" ", "").equalsIgnoreCase(s2.replaceAll(" ", ""));
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while comparing Two Strings by Remove Space and Ignore Case on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while comparing Two Strings by Remove Space and Ignore Case on CommonMethods class");
             return false;
+        }
+    }
+
+    public String nameGenerator() {
+        try {
+            Faker faker = new Faker();
+            return faker.name().firstName() + " " + faker.name().lastName();
+        } catch (Exception e) {
+            logWarningInLogFileAndExtentReport(log, e, "Exception while new name Generation in CommonMethods class");
+            return "";
         }
     }
 
     public String emailGenerator() {
         try {
-            long l = System.currentTimeMillis();
-            return "testuser" + String.valueOf(l).substring(6) + "@gmail.com";
+            Faker faker = new Faker();
+            return faker.internet().emailAddress();
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while new email Generation on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while new email Generation on CommonMethods class");
             return "";
         }
     }
 
     public String passwordGenerator() {
         try {
-            StringBuilder sb = new StringBuilder();
-            Random ran = new Random();
-
-            String start = String.valueOf(System.currentTimeMillis()).substring(6, 8);
-            String smallAlphabet = "abcdefghijklmnopqrstuvwxyz";
-            String capitalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            String symbol = "@#$*";
-
-            sb.append(capitalAlphabet.charAt(ran.nextInt(0, 26)));
-            sb.append(start);
-            sb.append(capitalAlphabet.charAt(ran.nextInt(0, 26)));
-            sb.append(smallAlphabet.charAt(ran.nextInt(0, 26)));
-            sb.append(smallAlphabet.charAt(ran.nextInt(0, 26)));
-            sb.append(smallAlphabet.charAt(ran.nextInt(0, 26)));
-            sb.append(symbol.charAt(ran.nextInt(0, 4)));
-            sb.append(capitalAlphabet.charAt(ran.nextInt(0, 26)));
-
-            return sb.toString();
+            Faker faker = new Faker();
+            return faker.internet().password(6, 12, true, true, true);
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while new password Generation on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while new password Generation on CommonMethods class");
             return "";
         }
     }
 
     public String mobileNumberGenerator() {
         try {
-            Random ran = new Random();
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < 10; i++) {
-                sb.append(ran.nextInt(0, 10));
-            }
-            return sb.toString();
+            Faker faker = new Faker();
+            return faker.phoneNumber().subscriberNumber(10);
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while mobileNumberGenerator on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while mobileNumberGenerator on CommonMethods class");
             return "";
         }
     }
@@ -113,13 +103,21 @@ public class CommonMethods extends Base {
         try {
             String number = mobileNumberGenerator();
 
-            File fileName = new File("src/main/resources/Data.xlsx");
+            File filePath = new File(System.getProperty("user.dir") + "/src/main/resources/Data.xlsx");
 
-            FileInputStream file = new FileInputStream(fileName);
+            XSSFWorkbook workbook;
 
-            XSSFWorkbook workbook = new XSSFWorkbook(file);
+            if (filePath.exists()) {
+                FileInputStream file = new FileInputStream(filePath);
+                workbook = new XSSFWorkbook(file);
+            } else {
+                workbook = new XSSFWorkbook();
+            }
 
             XSSFSheet sheet = workbook.getSheet("Login Mobile Number");
+            if (sheet == null) {
+                sheet = workbook.createSheet("Login Mobile Number");
+            }
 
             int lastRowNum = sheet.getLastRowNum();
 
@@ -127,7 +125,7 @@ public class CommonMethods extends Base {
 
             sheet.getRow(lastRowNum).createCell(0).setCellValue(number);
 
-            FileOutputStream os = new FileOutputStream("src/main/resources/Data.xlsx");
+            FileOutputStream os = new FileOutputStream(filePath);
             workbook.write(os);
 
             os.close();
@@ -135,7 +133,7 @@ public class CommonMethods extends Base {
 
             return number;
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while mobile Number Generation and Append to an Excel sheet on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while mobile Number Generation and Append to an Excel sheet on CommonMethods class");
             return "";
         }
     }
@@ -154,16 +152,17 @@ public class CommonMethods extends Base {
 
             return sheet.getRow(lastRowNum).getCell(0).getStringCellValue();
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Mobile Number of a specific index from Excel sheet on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while getting Mobile Number of a specific index from Excel sheet on CommonMethods class");
             return "";
         }
     }
 
+    // Store the keys and values of Examples used in the cucumber step under the step definition
     public void setExamplesKeyValueInHashMap(String key, String value) {
         try {
             ObjectManager.getObject().setExamplesKeyValueInHashMap(key, value);
         } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while setting examples key value in Hash Map on CommonMethods");
+            logWarningInLogFileAndExtentReport(log, e, "Exception while setting examples key value in Hash Map on CommonMethods class");
         }
     }
 }

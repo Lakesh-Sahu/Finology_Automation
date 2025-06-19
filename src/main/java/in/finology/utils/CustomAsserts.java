@@ -123,7 +123,7 @@ public class CustomAsserts extends Base {
             String childSelfParentString = getChildSelfParentFromThrowableForCustomAssertClass(e, message);
             log.warn(childSelfParentString);
         } catch (Exception ee) {
-            System.out.println("###############\nFailed to write the test log warning to the Log File within the logWarningInLogFileForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
+            System.err.println("###############\nFailed to write the test log warning to the Log File within the logWarningInLogFileForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
         }
     }
 
@@ -134,7 +134,7 @@ public class CustomAsserts extends Base {
         } catch (Exception ee) {
             logWarningInLogFile(log, e, "###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
             logWarningInExtentReportWithoutScreenshotForCustomAssert(e, message + " ###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
-            System.out.println("###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
+            System.err.println("###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
         }
     }
 
@@ -143,41 +143,14 @@ public class CustomAsserts extends Base {
             String childSelfParentString = getChildSelfParentFromThrowableForCustomAssertClass(e, message);
             ObjectManager.getObject().test.warning(childSelfParentString);
         } catch (Exception ee) {
-            logWarningInLogFileForCustomAssert(e,"###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportWithoutScreenshotForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
-            System.out.println("###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportWithoutScreenshotForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
+            logWarningInLogFileForCustomAssert(e, "###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportWithoutScreenshotForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
+            System.err.println("###############\nFailed to write the test log warning to the Extent Report within the logWarningInExtentReportWithoutScreenshotForCustomAssert method of the CustomAssert class " + getStackTraceFromThrowable(ee, 10) + "\n###############");
         }
     }
 
     public static void logWarningInLogFileAndExtentReportForCustomAssertClass(Throwable e, String message) {
-//        try {
-            logWarningInLogFileForCustomAssert(e, message);
-            logWarningInExtentReportForCustomAssert(e, message);
-//        } catch (Exception ee) {
-//            logWarningInLogFileForCustomAssert(ee, "Could not write test log warning in log file or in Extent Report for logWarningInLogFileAndExtentReportForCustomAssertClass : " + getStackTraceFromThrowable(ee, 10));
-//            ObjectManager.getObject().test.warning("Could not write test log warning in log file or in Extent Report for logWarningInLogFileAndExtentReportForCustomAssertClass: " + getStackTraceFromThrowable(ee, 10));
-//        }
-
-//        try {
-//            String childSelfParentString = getChildSelfParentFromThrowableForCustomAssertClass(e, message);
-//
-//            try {
-//                log.warn(childSelfParentString);
-//            } catch (Exception ee) {
-//                ObjectManager.getObject().test.warning("Could not write test log warning in log file for logWarningInLogFileAndExtentReportForCustomAssertClass : " + getStackTraceFromThrowable(e, 10));
-//                log.fatal("Could not write test log warning in log file for logWarningInLogFileAndExtentReportForCustomAssertClass : {}", getStackTraceFromThrowable(e, 10));
-//            }
-//
-//            try {
-//                ObjectManager.getObject().test.warning(childSelfParentString, MediaEntityBuilder.createScreenCaptureFromPath(Screenshot.capture(getCallerInfoForScreenshotExtentReportForCustomAssert(e) + " - WARN")).build());
-//            } catch (Exception ee) {
-//                log.fatal("Could not write test log warning in Extent Report for logWarningInLogFileAndExtentReportForCustomAssertClass : {}", getStackTraceFromThrowable(e, 10));
-//                ObjectManager.getObject().test.warning("Could not write test log warning in Extent Report for logWarningInLogFileAndExtentReportForCustomAssertClass : " + getStackTraceFromThrowable(e, 10));
-//            }
-//
-//        } catch (Exception ei) {
-//            log.fatal("Could not write test log warning in log file or in Extent Report for logWarningInLogFileAndExtentReportForCustomAssertClass : {}", getStackTraceFromThrowable(e, 10));
-//            ObjectManager.getObject().test.warning("Could not write test log warning in log file or in Extent Report for logWarningInLogFileAndExtentReportForCustomAssertClass: " + getStackTraceFromThrowable(e, 10));
-//        }
+        logWarningInLogFileForCustomAssert(e, message);
+        logWarningInExtentReportForCustomAssert(e, message);
     }
 
     public static String getChildSelfParentFromThrowableForCustomAssertClass(Throwable e, String message) {

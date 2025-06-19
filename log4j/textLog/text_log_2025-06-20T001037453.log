@@ -1,0 +1,120 @@
+[INFO ] 2025-06-20 00:10:59.660 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 18 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = , message = *Required,  [TestNG-PoolService-5]
+
+[INFO ] 2025-06-20 00:11:00.031 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Unsuccessful login with invalid or empty mobile number : 17 : @login, @unsuccessful_login : PASSED Examples  :: mobile number = @$#637*, message = Invalid Mobile,  [TestNG-PoolService-4]
+
+[INFO ] 2025-06-20 00:11:12.233 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 55 : @login, @successful_login2 : PASSED Examples  :: password = finTestUserAcology, mobile number or email = 5846975120,  [TestNG-PoolService-9]
+
+[WARN ] 2025-06-20 00:11:19.015 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 25 - WARNING [TestNG-PoolService-10]
+
+[WARN ] 2025-06-20 00:11:19.383 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Account Dashboard Page
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 25 - WARNING [TestNG-PoolService-10]
+
+[INFO ] 2025-06-20 00:11:20.094 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password by clicking Login with Email button : 56 : @login, @successful_login2 : FAILED Examples  :: password = finTestUserAcology, mobile number or email = testuserac121@gmail.com,  [TestNG-PoolService-10]
+
+[WARN ] 2025-06-20 00:11:20.297 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 25 - WARNING [TestNG-PoolService-8]
+
+[WARN ] 2025-06-20 00:11:20.664 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Account Dashboard Page
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps user_should_be_redirected_to_account_dashboard_page 25 - WARNING [TestNG-PoolService-8]
+
+[INFO ] 2025-06-20 00:11:21.733 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 40 : @login, @successful_login : FAILED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = testuserac121@gmail.com,  [TestNG-PoolService-8]
+
+[INFO ] 2025-06-20 00:11:22.361 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Successful login with registered mobile number, email and password : 39 : @login, @successful_login : PASSED Examples  :: password = finTestUserAcology, mobile number = 5846975120, mobile number or email = 5846975120,  [TestNG-PoolService-7]
+
+[WARN ] 2025-06-20 00:11:31.650 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-2]
+
+[WARN ] 2025-06-20 00:11:32.188 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-2]
+
+[INFO ] 2025-06-20 00:11:33.263 finology.hooks.Hooks 152 - Test Case Finished features/accountdashboard.feature : All user photo element should be displayed on dashboard page : 14 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology,  [TestNG-PoolService-2]
+
+[WARN ] 2025-06-20 00:11:35.848 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-3]
+
+[WARN ] 2025-06-20 00:11:36.164 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-3]
+
+[INFO ] 2025-06-20 00:11:36.765 finology.hooks.Hooks 152 - Test Case Finished features/accountdashboard.feature : Welcome message should be displayed on dashboard page : 28 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology,  [TestNG-PoolService-3]
+
+[WARN ] 2025-06-20 00:11:41.726 finology.pages.AccountDashboardPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to be "https://www.finology.in/account/dashboard". Current url: "https://www.finology.in/login/auth" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.AccountDashboardPage verifyOnDashboardPage 110 Exception while verifying on Account Dashboard Page #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-1]
+
+[WARN ] 2025-06-20 00:11:42.959 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is on Dashboard Page and logged in
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.AccountDashboard_Steps userIsLoggedInAndOnAccountDashboardPage 20 - WARNING [TestNG-PoolService-1]
+
+[INFO ] 2025-06-20 00:11:43.823 finology.hooks.Hooks 152 - Test Case Finished features/accountdashboard.feature : All dashboard element should be displayed on dashboard page : 8 : @account_dashboard : FAILED Examples  :: mobileNumberOrEmail = testuserac121@gmail.com, password = finTestUserAcology,  [TestNG-PoolService-1]
+
+[INFO ] 2025-06-20 00:11:43.925 finology.hooks.Hooks 152 - Test Case Finished features/login.feature : Unsuccessful login with new mobile number : 21 : @login, @unsuccessful_login_with_new_mobile : PASSED Examples  :: mobile number = 3091573576,  [TestNG-PoolService-6]
+
+[WARN ] 2025-06-20 00:11:53.711 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPage 64 Exception while verifying on OTP Verification Page #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-4]
+
+[WARN ] 2025-06-20 00:11:54.046 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to OTP Verification Page with valid user credentials
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-4]
+
+[WARN ] 2025-06-20 00:11:54.638 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPage 64 Exception while verifying on OTP Verification Page #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-5]
+
+[INFO ] 2025-06-20 00:11:54.654 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 19 : @Signup, @successful_signup : FAILED Examples  :: email id = destiny.king@gmail.com, mobile number = 0065815112, name = Machelle Trantow,  [TestNG-PoolService-4]
+
+[WARN ] 2025-06-20 00:11:55.106 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to OTP Verification Page with valid user credentials
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.OTPVerification_Steps user_should_redirect_to_otp_verification_page 17 - WARNING [TestNG-PoolService-5]
+
+[INFO ] 2025-06-20 00:11:55.913 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Successful sign up with valid name, valid email and valid mobile number : 20 : @Signup, @successful_signup : FAILED Examples  :: email id = kurt.keeling@gmail.com, mobile number = 0896292574, name = Wilda Jenkins,  [TestNG-PoolService-5]
+
+[WARN ] 2025-06-20 00:11:58.695 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-9]
+
+[INFO ] 2025-06-20 00:11:59.328 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 35 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmail2423@gmail.com, mobile number = 9868546793, name = @Lakesh Sahu, message = Your name can contain only alphabets.,  [TestNG-PoolService-9]
+
+[WARN ] 2025-06-20 00:12:00.732 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-10]
+
+[INFO ] 2025-06-20 00:12:01.418 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with invalid name, valid email id and valid mobile number : 36 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = randomNewEmailMe2123@gmail.com, mobile number = 1257465983, name = Rajq$User12, message = Your name can contain only alphabets.,  [TestNG-PoolService-10]
+
+[WARN ] 2025-06-20 00:12:06.904 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-8]
+
+[INFO ] 2025-06-20 00:12:07.416 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with empty name, valid email id and valid mobile number : 47 : @Signup, @invalid_name_signup : PASSED Examples  :: email id = lakeshsahu758@gmail.com, mobile number = 5784692345, name = , message = *Required,  [TestNG-PoolService-8]
+
+[WARN ] 2025-06-20 00:12:10.317 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-7]
+
+[INFO ] 2025-06-20 00:12:10.876 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 58 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = rita2056gmail.com, mobile number = 9868546756, name = Rita, message2 = Please enter a valid email address., message1 = Invalid Email,  [TestNG-PoolService-7]
+
+[WARN ] 2025-06-20 00:12:18.190 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-3]
+
+[WARN ] 2025-06-20 00:12:18.697 finology.pages.OTPVerificationPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to contain "https://www.finology.in/verification". Current url: "https://www.finology.in/signup" (tried for 5 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.OTPVerificationPage verifyOnOTPVerificationPageUnder5Seconds 55 Exception while verifying on OTP Verification Page Under 5 Seconds #3 in.finology.stepDefns.OTPVerification_Steps user_should_not_be_redirected_to_otp_verification_page 12 - WARNING [TestNG-PoolService-2]
+
+[INFO ] 2025-06-20 00:12:18.942 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 60 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = , mobile number = 8646597458, name = Hitesh, message2 = *Required, message1 = *Required,  [TestNG-PoolService-3]
+
+[INFO ] 2025-06-20 00:12:19.550 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, invalid email id and valid mobile number : 59 : @Signup, @invalid_email_signup : PASSED Examples  :: email id = shyammaster675@gmail, mobile number = 1257465943, name = Ram Shyam, message2 = Please enter a valid email address., message1 = Invalid Email,  [TestNG-PoolService-2]
+
+[WARN ] 2025-06-20 00:12:31.298 finology.pages.LoginPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-1]
+
+[WARN ] 2025-06-20 00:12:31.610 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-1]
+
+[INFO ] 2025-06-20 00:12:32.129 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 73 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = testuserrieeeeeeeeeeeee2726@gmail.com, mobile number = 5598705134, name = TestUserRieeeeeeeeeeeee,  [TestNG-PoolService-1]
+
+[WARN ] 2025-06-20 00:12:34.988 finology.pages.LoginPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-4]
+
+[WARN ] 2025-06-20 00:12:35.251 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-4]
+
+[INFO ] 2025-06-20 00:12:35.751 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 75 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = reriserrrrrrrrrrrrrrruserEmailMe2122@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr,  [TestNG-PoolService-4]
+
+[WARN ] 2025-06-20 00:12:38.796 finology.pages.LoginPage 173 - org.openqa.selenium.TimeoutException Throwable Message : Expected condition failed: waiting for url to match the regex "https://www.finology.in/login(?!/auth)". Current url: "https://www.finology.in/signup" (tried for 15 second(s) with 500 milliseconds interval)
+ #1 org.openqa.selenium.support.ui.FluentWait until 228 #2 in.finology.pages.LoginPage verifyOnLoginPage 79 Exception while verifying on Login Page #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-6]
+
+[WARN ] 2025-06-20 00:12:39.086 finology.utils.CustomAsserts 124 - Custom Assert : java.lang.AssertionError Throwable Message : expected [true] but found [false] User is redirected to Login Page after clicking Signup button
+ #1 org.testng.Assert assertTrue 67 #2 in.finology.utils.CustomAsserts assertTrue 14 #3 in.finology.stepDefns.Login_Steps user_should_be_redirected_to_login_page 25 - WARNING [TestNG-PoolService-6]
+
+[INFO ] 2025-06-20 00:12:39.634 finology.hooks.Hooks 152 - Test Case Finished features/signUp.feature : Unsuccessful sign up with valid name, duplicate email or duplicate mobile number : 74 : @Signup, @unsuccessful_duplicate_account_signup : FAILED Examples  :: email id = otherneewuueeemail211317@gmail.com, mobile number = 8335957041, name = Reriserrrrrrrrrrrrrr,  [TestNG-PoolService-6]
+

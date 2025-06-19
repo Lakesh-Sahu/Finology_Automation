@@ -30,10 +30,6 @@ public class AccountDashboardPage extends CommonMethods {
     @FindBy(partialLinkText = "Go to Quest")
     private WebElement goToQuestBtn;
 
-    // Quest
-    @FindBy(partialLinkText = "Track Your Portfolio")
-    private WebElement trackYourPortfolioBtn;
-
     // Broker
     @FindBy(partialLinkText = "Go to Select")
     private WebElement goToSelectBtn;
@@ -88,7 +84,7 @@ public class AccountDashboardPage extends CommonMethods {
 
     WebDriver driver;
     WebDriverWait wait;
-    static Logger log = LogManager.getLogger(AccountDashboardPage.class);
+    private static final Logger log = LogManager.getLogger(AccountDashboardPage.class);
     private final String url;
 
     public AccountDashboardPage(WebDriver driver) {
@@ -183,15 +179,6 @@ public class AccountDashboardPage extends CommonMethods {
             return goToQuestBtn.isDisplayed();
         } catch (Exception e) {
             logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying go To Quest Button is Displayed on Account Dashboard Page");
-            return false;
-        }
-    }
-
-    public boolean trackYourPortfolioBtnIsDisplayed() {
-        try {
-            return trackYourPortfolioBtn.isDisplayed();
-        } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while while verifying track Your Portfolio Button is Displayed on Account Dashboard Page");
             return false;
         }
     }
@@ -313,16 +300,6 @@ public class AccountDashboardPage extends CommonMethods {
             return true;
         } catch (Exception e) {
             logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Go To Quest Button on Account Dashboard Page");
-            return false;
-        }
-    }
-
-    public boolean clickTrackYourPortfolioBtn() {
-        try {
-            trackYourPortfolioBtn.click();
-            return true;
-        } catch (Exception e) {
-            logWarningInLogFileAndExtentReport(log, e, "Exception while clicking Track Your Portfolio Button on Account Dashboard Page");
             return false;
         }
     }
@@ -507,7 +484,7 @@ public class AccountDashboardPage extends CommonMethods {
 
     public boolean verifyAllElementsAreDisplayed() {
         try {
-            return finologyLogoIsDisplayed() && welcomeTextIsDisplayed() && userPhotoImgBtnIsDisplayed() && goToRecipeBtnIsDisplayed() && goToQuestBtnIsDisplayed() && trackYourPortfolioBtnIsDisplayed() && goToSelectBtnIsDisplayed() && goToInsiderBtnIsDisplayed() && goToReserveBtnIsDisplayed() && sideBarHomeBtnIsDisplayed() && sideBarSubscriptionBtnIsDisplayed() && sideBarProfileBtnIsDisplayed() && sideBarPasswordBtnIsDisplayed() && sideBarSupportBtnIsDisplayed() && sideBarLogoutBtnIsDisplayed();
+            return finologyLogoIsDisplayed() && welcomeTextIsDisplayed() && userPhotoImgBtnIsDisplayed() && goToRecipeBtnIsDisplayed() && goToQuestBtnIsDisplayed() && goToSelectBtnIsDisplayed() && goToInsiderBtnIsDisplayed() && goToReserveBtnIsDisplayed() && sideBarHomeBtnIsDisplayed() && sideBarSubscriptionBtnIsDisplayed() && sideBarProfileBtnIsDisplayed() && sideBarPasswordBtnIsDisplayed() && sideBarSupportBtnIsDisplayed() && sideBarLogoutBtnIsDisplayed();
         } catch (Exception e) {
             logWarningInLogFileAndExtentReport(log, e, "Exception while verifying All Elements are Displayed on Account Dashboard Page");
             return false;
