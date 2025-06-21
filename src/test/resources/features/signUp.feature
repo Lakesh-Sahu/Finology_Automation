@@ -7,7 +7,6 @@ Feature:
 
   @successful_signup
   Scenario Outline: Successful sign up with valid name, valid email and valid mobile number
-#    Given User enters "<name>", "<email id>" and "<mobile number>"
     Given User enters new name, email id and mobile number
     When User clicks sign up button
     Then User should redirect to OTP verification page
@@ -19,9 +18,19 @@ Feature:
       | 1               | Signup is unsupported in incognito. Please try in normal mode. |
       | 2               | Signup is unsupported in incognito. Please try in normal mode. |
 
+#   Enter new name, email id and mobile number in the example
+#  @successful_signup
+#  Scenario Outline: Successful sign up with valid name, valid email and valid mobile number
+#    Given User enters "<name>", "<email id>" and "<mobile number>"
+#    When User clicks sign up button
+#    Then User should redirect to OTP verification page
+#    And Finology logo, home button, enter otp text, otp input box, verify otp button should be displayed on OTP verification page
+#
+#    Examples:
 #      | name                     | email id                                        | mobile number | message                                                        |
 #      | TestUseerRieeeeeeeeeeeee | testusrerrieeeeeeeeeeeee2726@gmail.com          | 9437425638    | Signup is unsupported in incognito. Please try in normal mode. |
 #      | Reriseerrrrrrrrrrrrrr    | reriserrrrrrrrrrwrrrrruserEmailMe2122@gmail.com | 6975957041    | Signup is unsupported in incognito. Please try in normal mode. |
+
 
   @invalid_name_signup
   Scenario Outline: Unsuccessful sign up with invalid name, valid email id and valid mobile number
