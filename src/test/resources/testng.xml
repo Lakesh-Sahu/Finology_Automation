@@ -8,7 +8,7 @@
 
     <test name="Functional Tests">
         <classes>
-            <class name="testRunner.TestRunner" />
+            <class name="in.finology.testRunner.TestRunner" />
             <class name="in.finology.utils.Base" />
         </classes>
     </test>

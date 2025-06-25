@@ -1,4 +1,4 @@
-package testRunner;
+package in.finology.testRunner;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
