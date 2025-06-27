@@ -1,6 +1,10 @@
 ## 🛍️ Project Name: Finology Automation
 **Domain**: FinTech
 
+Finology Automation is an automated testing framework developed for a FinTech platform Finology.
+This automation suite validates key user journeys like user registration, login, product search,
+cart management, order placement, and payment — ensuring a reliable and seamless shopping experience.
+
 ---
 
 ## 📁 Project Structure
