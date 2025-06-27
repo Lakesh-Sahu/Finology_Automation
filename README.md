@@ -100,8 +100,8 @@ The project leverages TestNG for test orchestration, a Page Object Model for org
 ### 📦 Setup & Run
 
 1. **Clone the repository:**
-   `git clone https://github.com/Lakesh-Sahu/Finology_Automation.git`
-   cd `Finology_Automation`
+   `git clone https://github.com/Lakesh-Sahu/Finology_Automation.git`  
+    cd `Finology_Automation`
 
 2. **Configure parameters in `testng.xml`:**
    ```
@@ -120,19 +120,14 @@ The project leverages TestNG for test orchestration, a Page Object Model for org
 - **TestRunner:** A dedicated runner class integrates Cucumber with TestNG, coordinating feature execution, managing hooks (setup/teardown), and enabling advanced configurations like parallel scenario execution.
 
 ## 📊 Report
-- **Extent Reports:** Managed by ExtentReports and stored in the extentReports/ directory. 
-- Each test method and assertion logs detailed status such as pass, fail, skip, and warning for efficient debugging and traceability. 
+- **Extent Reports:** Managed by ExtentReports and stored in the extentReports/ directory. Each test method and assertion logs detailed status such as pass, fail, skip, and warning for efficient debugging and traceability. 
 
-- **Cucumber Reports:** Scenario-wise and step-wise execution reports in HTML format, located in the cucumberReports/ directory. 
-- These reports provide a clear overview of each feature's test flow. 
+- **Cucumber Reports:** Scenario-wise and step-wise execution reports in HTML format, located in the cucumberReports/ directory. These reports provide a clear overview of each feature's test flow. 
 
-- **Excel Summary:** Consolidated execution statistics for each test scenario (pass/fail/skip) exported to Excel format. 
-- Reports are stored in the excelReport/ directory for quick offline analysis.
+- **Excel Summary:** Consolidated execution statistics for each test scenario (pass/fail/skip) exported to Excel format. Reports are stored in the excelReport/ directory for quick offline analysis.
 
 ## 📝 Logs
-- **Log4j Logs:** All runtime logs are handled by Log4j and saved in the log4j/ directory.
-- Each log captures timestamped debug, info, and error-level events for detailed test execution traceability and troubleshooting support.
+- **Log4j Logs:** All runtime logs are handled by Log4j and saved in the log4j/ directory. Each log captures timestamped debug, info, and error-level events for detailed test execution traceability and troubleshooting support.
 
 ## 📌 Design Pattern
-- **Page Object Model (POM):** The framework adheres to the POM design pattern, enhancing the readability, maintainability, and reusability of the codebase.
-- Each web page is modeled as a dedicated Java class that encapsulates its elements and interactions, promoting modular and scalable test design.
+- **Page Object Model (POM):** The framework adheres to the POM design pattern, enhancing the readability, maintainability, and reusability of the codebase. Each web page is modeled as a dedicated Java class that encapsulates its elements and interactions, promoting modular and scalable test design.
