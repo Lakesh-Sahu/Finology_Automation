@@ -39,19 +39,19 @@ The project leverages TestNG for test orchestration, a Page Object Model for org
 
 ---
 
-✅ Features
+## ✅ Features
 
-## 🔁 Parallel Test Execution
+# 🔁 Parallel Test Execution
 
 * Enables high-speed execution using TestNG with ThreadLocal for thread-safe WebDriver instances and class objects.
 * Java Semaphore restricts active thread count using the configurable `maxParallelThreadAllowed` parameter.
 * All concurrency is controlled via testng.xml and the @DataProvider(parallel = true) configuration in the Test Runner class.
 
-🌐 Multiple-Browser Support
+# 🌐 Multiple-Browser Support
 - Supports running tests on Chrome, Edge, Firefox, and Safari.
 - Set the desired browser in the testng.xml file.
 
-📸 Screenshot on Failure
+# 📸 Screenshot on Failure
 - Automatically captures a screenshot when any test step or test case fails or test case passes and attach the screenshot to that step in the Extent Report.
 - Have proper exceptions message and line at which a test step fails with screenshots.
 - Useful for debugging and tracking test failures.
@@ -126,14 +126,14 @@ The project leverages TestNG for test orchestration, a Page Object Model for org
 
 ## 🚀 Getting Started
 
-## 🔧 Prerequisites
+# 🔧 Prerequisites
 
 * IDE
 * Java 14 or higher
 * Browsers: Chrome, Edge, Firefox, or Safari
 * Gradle or use gradlew
 
-## 📦 Setup & Run
+# 📦 Setup & Run
 
 1. **Clone the repository:**
    `git clone https://github.com/Lakesh-Sahu/Finology_Automation.git`
@@ -151,11 +151,11 @@ The project leverages TestNG for test orchestration, a Page Object Model for org
 
 ---
 
-📋 Test Configuration
+# 📋 Test Configuration
 - **TestNG:** TestNG configuration can be managed via the testng.xml file for specific testRunner, specific browser and maximum parallel thread count.
 - **TestRunner:** The suite defines a specific test runner class that integrates Cucumber with TestNG, managing scenario execution and hooks.
 
-📊 Report
+# 📊 Report
 - **Extent Reports:** Managed by ExtentReports and stored in the extentReports/ directory. 
 - Each test method and assertion logs detailed status such as pass, fail, skip, and warning for efficient debugging and traceability. 
 
@@ -165,10 +165,10 @@ The project leverages TestNG for test orchestration, a Page Object Model for org
 - **Excel Summary:** Consolidated execution statistics for each test scenario (pass/fail/skip) exported to Excel format. 
 - Reports are stored in the excelReport/ directory for quick offline analysis.
 
-📝 Logs
+# 📝 Logs
 - **Log4j Logs:** All runtime logs are handled by Log4j and saved in the log4j/ directory.
 - Each log captures timestamped debug, info, and error-level events for detailed test execution traceability and troubleshooting support.
 
-📌 Design Pattern
+# 📌 Design Pattern
 - **Page Object Model (POM):** The framework adheres to the POM design pattern, enhancing the readability, maintainability, and reusability of the codebase.
 - Each web page is modeled as a dedicated Java class that encapsulates its elements and interactions, promoting modular and scalable test design.
