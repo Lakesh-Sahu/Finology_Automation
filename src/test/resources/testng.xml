@@ -3,7 +3,7 @@
 <suite name="Test case suite Finology Web Application" verbose="1">
 
     <parameter name="browser" value="Chrome" />
-    <parameter name="maxParallelThreadAllowed" value="6" />
+    <parameter name="maxParallelThreadAllowed" value="4" />
     <parameter name="isFair" value="true" />
 
     <test name="Functional Tests">
