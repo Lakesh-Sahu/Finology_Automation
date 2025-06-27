@@ -117,7 +117,7 @@ The project leverages TestNG for test orchestration, a Page Object Model for org
 
 ## 📋 Test Configuration
 - **TestNG:** TestNG configuration can be managed via the testng.xml file for specific testRunner, specific browser and maximum parallel thread count.
-- **TestRunner:** The suite defines a specific test runner class that integrates Cucumber with TestNG, managing scenario execution and hooks.
+- **TestRunner:** A dedicated runner class integrates Cucumber with TestNG, coordinating feature execution, managing hooks (setup/teardown), and enabling advanced configurations like parallel scenario execution.
 
 ## 📊 Report
 - **Extent Reports:** Managed by ExtentReports and stored in the extentReports/ directory. 
