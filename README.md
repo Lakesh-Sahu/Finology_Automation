@@ -99,24 +99,25 @@ The project leverages TestNG for test orchestration, a Page Object Model for org
 
 ### 📦 Setup & Run
 
-1. **Clone the repository:**
+1. **Clone the repository**
    `git clone https://github.com/Lakesh-Sahu/Finology_Automation.git`  
     cd `Finology_Automation`
 
-2. **Configure parameters in `testng.xml`:**
+2. **Configure parameters in `testng.xml`**
    ```
    <parameter name="browserName" value="Chrome"/>
    <parameter name="maxParallelThreadAllowed" value="4"/>
    <parameter name="isFair" value="true"/>
    ```
 
-3. **Run Tests using Gradle:**
+3. **Run Tests using Gradle**
    `./gradlew clean test`
 
 ---
 
 ## 📋 Test Configuration
 - **TestNG:** TestNG configuration can be managed via the testng.xml file for specific testRunner, specific browser and maximum parallel thread count.
+
 - **TestRunner:** A dedicated runner class integrates Cucumber with TestNG, coordinating feature execution, managing hooks (setup/teardown), and enabling advanced configurations like parallel scenario execution.
 
 ## 📊 Report
